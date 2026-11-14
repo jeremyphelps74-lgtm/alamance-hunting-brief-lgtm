@@ -120,6 +120,36 @@ drawMap=function(R){baseDraw(R);const sv=document.querySelector('#mapbox svg.mp'
 (function wait(){if(typeof D!=='undefined'&&D&&D.geo){list();drawMap();}else setTimeout(wait,200);})();
 
 
+
+// ---- tabs: Stands / Map / Weather ----
+const pickCard=$f('#pickcard'),mapCard=$f('#mapHome').closest('.card'),wxCard=$f('#wxbd').closest('.card');
+pickCard.dataset.tab='stands';mapCard.dataset.tab='map';wxCard.dataset.tab='weather';
+const nav=document.createElement('div');nav.id='tabnav';
+nav.innerHTML='<button data-t="stands">🎯 Stands</button><button data-t="map">🗺️ Map</button><button data-t="weather">🌬️ Weather</button>';
+const tiles=$f('#tiles');tiles.parentNode.insertBefore(nav,tiles);
+const tcss=document.createElement('style');tcss.textContent=`
+#tabnav{position:sticky;top:0;z-index:50;display:flex;gap:6px;padding:8px 0;background:var(--bg)}
+#tabnav button{flex:1;border:1px solid var(--line);background:var(--card);color:var(--txt);border-radius:12px;padding:10px 4px;font:700 14px Inter,sans-serif}
+#tabnav button.on{background:var(--orange);border-color:var(--orange);color:#111}
+body[data-tab="stands"] .card[data-tab="map"],body[data-tab="stands"] .card[data-tab="weather"],
+body[data-tab="map"] .card[data-tab="stands"],body[data-tab="map"] .card[data-tab="weather"],
+body[data-tab="weather"] .card[data-tab="stands"],body[data-tab="weather"] .card[data-tab="map"]{display:none}
+body[data-tab="map"] #tiles{display:none}
+#toptog{width:100%;text-align:left;border:1px solid var(--gold);background:rgba(255,200,61,.10);color:var(--txt);border-radius:12px;padding:10px 12px;font:600 14px Inter,sans-serif;margin:4px 0 8px}
+#toptog b{color:var(--gold)}#topwrap:not(.open) #toppick{display:none}`;document.head.appendChild(tcss);
+function setTab(t){document.body.dataset.tab=t;nav.querySelectorAll('button').forEach(b=>b.classList.toggle('on',b.dataset.t===t));LS.set('hb_tab',t);
+  if(t==='map'&&typeof D!=='undefined'&&D&&D.geo){mapHome();drawMap();}
+  window.scrollTo({top:Math.max(0,nav.getBoundingClientRect().top+window.scrollY-2)});}
+nav.querySelectorAll('button').forEach(b=>b.onclick=()=>setTab(b.dataset.t));
+// collapse the best-stand box into a one-line button
+const tp=$f('#toppick');const tw=document.createElement('div');tw.id='topwrap';tp.parentNode.insertBefore(tw,tp);
+const tt=document.createElement('button');tt.id='toptog';tw.appendChild(tt);tw.appendChild(tp);
+tt.onclick=()=>{tw.classList.toggle('open');topLabel();};
+function topLabel(){try{const top=ranked().find(r=>r.status!=='taken');const o=top&&STAND[top.id];
+  tt.innerHTML=top?`★ Best pick: <b>#${esc(top.id)}</b>${o&&o.name&&!/^#/.test(o.name)?' '+esc(o.name):''} <span style="float:right;color:var(--mute)">${tw.classList.contains('open')?'Hide ▲':'Why + walk-in ▼'}</span>`:'No open stands';}catch(e){}}
+const dm2=drawMap;drawMap=function(R){dm2(R);topLabel();};
+setTab(LS.get('hb_tab','stands'));
+
 // ---- full-screen map ----
 const fs=document.createElement('style');fs.textContent=`
 body.fullmap{overflow:hidden}
