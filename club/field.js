@@ -223,6 +223,9 @@ function setFull(on){document.body.classList.toggle('fullmap',on);bfs.textConten
   if(view&&c){clampView();view.x=c[0]-view.w/2;view.y=c[1]-view.h/2;}drawMap();sizeFull();if(view){clampView();if(c){view.x=c[0]-view.w/2;view.y=c[1]-view.h/2;}}drawMap();
   if(!on)window.scrollTo({top:$f('#mapwrap').getBoundingClientRect().top+window.scrollY-10});}
 bfs.onclick=()=>setFull(!document.body.classList.contains('fullmap'));
+const fx=document.createElement('button');fx.id='fullx';fx.textContent='✕ Exit big map';document.body.appendChild(fx);fx.onclick=()=>setFull(false);
+const fxs=document.createElement('style');fxs.textContent=`#fullx{display:none;position:fixed;top:calc(env(safe-area-inset-top) + 10px);left:50%;transform:translateX(-50%);z-index:1100;background:var(--orange);color:#111;border:2px solid #111;border-radius:999px;padding:10px 18px;font:800 15px Inter,sans-serif;box-shadow:0 4px 14px rgba(0,0,0,.5)}
+body.fullmap #fullx{display:block}body.fullmap .basesel{margin-top:48px}`;document.head.appendChild(fxs);
 window.addEventListener('resize',()=>{if(document.body.classList.contains('fullmap')){sizeFull();if(view)clampView();drawMap();}});
 
 // offline (only on the real website)
