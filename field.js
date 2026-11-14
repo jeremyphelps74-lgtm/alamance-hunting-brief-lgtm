@@ -3,7 +3,7 @@
 const FK='hb_marks', TK='hb_track';
 const LS={get(k,d){try{const v=JSON.parse(localStorage.getItem(k));return v==null?d:v}catch(e){return d}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
 let MARKS=LS.get(FK,[]), TRACK=LS.get(TK,[]), TRACKING=false, GUIDE=false, RINGS=false, HEAD=null, PENDING=null;
-const TYPES={shot:{i:'🎯',c:'#ffc83d',n:'Shot site'},blood:{i:'🩸',c:'#ff2d2d',n:'Blood'},deer:{i:'🦌',c:'#8fbf4d',n:'Deer'},sign:{i:'🌿',c:'#c08a4a',n:'Sign'}};
+const TYPES={shot:{i:'🎯',c:'#ffc83d',n:'Shot site'},blood:{i:'🩸',c:'#ff2d2d',n:'Blood'},deer:{i:'🦌',c:'#8fbf4d',n:'Deer'},sign:{i:'🌿',c:'#c08a4a',n:'Sign'},rec:{i:'✅',c:'#5fc4ff',n:'Recovered'}};
 const CARD=['N','NNE','NE','ENE','E','ESE','SE','SSE','S','SSW','SW','WSW','W','WNW','NW','NNW'];
 const card=b=>CARD[Math.round(((b%360)+360)%360/22.5)%16];
 function bearing(a,b){const t=Math.PI/180,y=Math.sin((b[1]-a[1])*t)*Math.cos(b[0]*t),x=Math.cos(a[0]*t)*Math.sin(b[0]*t)-Math.sin(a[0]*t)*Math.cos(b[0]*t)*Math.cos((b[1]-a[1])*t);return (Math.atan2(y,x)/t+360)%360}
@@ -16,7 +16,7 @@ const ctl=$f('.mapctl');
 const box=document.createElement('div');box.id='fieldbox';
 box.innerHTML=`<div class="fhead">Field tools <small>(saved on this phone)</small></div>
 <div class="fbtns">
- <button data-m="deer">🦌 Deer</button><button data-m="sign">🌿 Sign</button><button data-m="shot">🎯 Shot</button><button data-m="blood">🩸 Blood here</button>
+ <button data-m="deer">🦌 Deer</button><button data-m="sign">🌿 Sign</button><button data-m="shot">🎯 Shot</button><button data-m="blood">🩸 Blood here</button><button data-m="rec">✅ Found</button>
 </div>
 <div class="fbtns">
  <button id="ftrack">〰 Track: off</button><button id="fguide">🧭 Guide: off</button><button id="frings">◎ Rings: off</button>
@@ -52,7 +52,7 @@ function putMark(t,lat,lon,acc,how){MARKS.push({t,lat:+lat.toFixed(6),lon:+lon.t
   meMsg(`${TYPES[t].i} ${TYPES[t].n}${t==='blood'?' #'+n:''} marked${how==='map'?' where you tapped':' at your spot'}${rel}. Add a note below.`);}
 let PLACE=null;
 function placeMode(t){PLACE=t;$f('#fplace').style.display='block';$f('#mapbox').classList.add('placing');
-  $f('#fplacetxt').textContent=`Tap the map where the ${t==='deer'?'deer was':t==='sign'?'sign is':'deer stood when you shot'}. Zoom in first for a closer spot.`;$f('#mapwrap').scrollIntoView({block:'start',behavior:'smooth'});}
+  $f('#fplacetxt').textContent=`Tap the map where the ${t==='deer'?'deer was':t==='sign'?'sign is':t==='rec'?'deer was recovered':'deer stood when you shot'}. Zoom in first for a closer spot.`;$f('#mapwrap').scrollIntoView({block:'start',behavior:'smooth'});}
 function endPlace(){PLACE=null;$f('#fplace').style.display='none';$f('#mapbox').classList.remove('placing');}
 $f('#fplacex').onclick=endPlace;
 $f('#fplaceme').onclick=()=>{const t=PLACE;endPlace();addMark(t);};
@@ -73,11 +73,12 @@ function list(){const L=$f('#flist');if(!MARKS.length&&TRACK.length<2){L.innerHT
   L.innerHTML=(trailSummary()?`<div class="fsum">🩸 ${esc(trailSummary())}</div>`:'')+
    MARKS.map((m,i)=>`<div class="fi"><span>${TYPES[m.t].i} ${hhmm(m.ts)}</span><input data-i="${i}" placeholder="note (buck, scrape, direction…)" value="${esc(m.note||'')}"><button class="x" data-del="${i}">✕</button></div>`).join('')+
    (TRACK.length>1?`<div class="fsum">〰 Track: ${TRACK.length} points since ${hhmm(TRACK[0][2])}</div>`:'')+
-   `<div class="fact"><button id="fshare">📤 Send to Claude</button><button id="fclear">🗑 Clear all</button></div>`;
+   `<div class="fact">${CLUBMODE?'':'<button id="fshare">📤 Send to Claude</button>'}<button id="fclub">👥 Send to club${unsent()?' ('+unsent()+')':' ✓'}</button><button id="fclear">🗑 Clear</button></div>`;
   L.querySelectorAll('input[data-i]').forEach(x=>x.onchange=()=>{MARKS[+x.dataset.i].note=x.value;save();});
   L.querySelectorAll('[data-del]').forEach(x=>x.onclick=()=>{MARKS.splice(+x.dataset.del,1);save();list();drawMap();});
-  $f('#fshare').onclick=async()=>{const t=shareText();try{if(navigator.share){await navigator.share({text:t});return}}catch(e){}
+  const fsh=$f('#fshare');if(fsh)fsh.onclick=async()=>{const t=shareText();try{if(navigator.share){await navigator.share({text:t});return}}catch(e){}
     try{await navigator.clipboard.writeText(t);meMsg('Copied. Paste it into your Claude chat.');}catch(e){meMsg('Copy failed. Long-press to copy:\n'+t);}};
+  $f('#fclub').onclick=sendClub;
   $f('#fclear').onclick=()=>{if(Date.now()-clearArm<4000){MARKS=[];TRACK=[];save();list();drawMap();meMsg('Marks and track cleared.');clearArm=0;}else{clearArm=Date.now();$f('#fclear').textContent='Tap again to clear';}};}
 
 // track + position hook
@@ -120,6 +121,46 @@ drawMap=function(R){baseDraw(R);const sv=document.querySelector('#mapbox svg.mp'
 (function wait(){if(typeof D!=='undefined'&&D&&D.geo){list();drawMap();}else setTimeout(wait,200);})();
 
 
+
+
+// ---- club sharing (Google Form → Sheet) ----
+const CLUBMODE=!!window.CLUB;
+const FORM='https://docs.google.com/forms/d/e/1FAIpQLSf1w85uLUggm4mzQLEej-leYSOE0HfxpZrheFG15-XADt4tfQ/formResponse';
+const ENT={when:'entry.2006520658',name:'entry.854423478',stand:'entry.1711447138',what:'entry.478433125',count:'entry.289696493',dir:'entry.1471151470',lat:'entry.840621409',lon:'entry.359953880',notes:'entry.1376660535'};
+const CSV='https://docs.google.com/spreadsheets/d/e/2PACX-1vSILql_KgPsJOYaxNwjwyzE9ohCw-pMZFfhHHRRcxn4U12kG7vHdwBxDup70lrFJP8WPqviTAwinzse/pub?gid=2130860769&single=true&output=csv';
+function unsent(){return MARKS.filter(m=>!m.sent).length}
+function nearStand(lat,lon){let b=null,bd=1e9;Object.values(STAND).forEach(s=>{if(s.leaveOut)return;const d=M([lat,lon],[s.lat,s.lon]);if(d<bd){bd=d;b=s}});return b&&bd<370?b.id:''}
+function myName(){let n=LS.get('hb_name','');if(!n){const i=$f('#fname');n=i?i.value.trim():'';}return n}
+async function sendClub(){const name=myName();if(!name){meMsg('Type your first name in the box above Field tools, then tap Send again.');const i=$f('#fname');if(i)i.focus();return}
+  const todo=MARKS.filter(m=>!m.sent);if(!todo.length){meMsg('Nothing new to send.');return}
+  let ok=0;for(const m of todo){const d=new Date(m.ts);const p=new URLSearchParams();
+    p.set(ENT.when,`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')} ${String(d.getHours()).padStart(2,'0')}:${String(d.getMinutes()).padStart(2,'0')}`);
+    p.set(ENT.name,name);p.set(ENT.stand,nearStand(m.lat,m.lon));p.set(ENT.what,TYPES[m.t].n);p.set(ENT.count,'1');p.set(ENT.dir,'');
+    p.set(ENT.lat,String(m.lat));p.set(ENT.lon,String(m.lon));p.set(ENT.notes,(m.note||'')+(m.how==='map'?' [placed on map]':' [GPS]'));
+    try{await fetch(FORM,{method:'POST',mode:'no-cors',body:p});m.sent=true;ok++;}catch(e){break}}
+  save();list();meMsg(ok===todo.length?`👥 Sent ${ok} report${ok>1?'s':''} to the club sheet. They'll show on everyone's map within a few minutes.`:`Sent ${ok} of ${todo.length}. No signal? Tap Send again later; unsent marks stay saved.`);loadClub(true);}
+// name box
+const nb=document.createElement('div');nb.style.cssText='display:flex;gap:6px;align-items:center;margin-bottom:6px';
+nb.innerHTML='<span style="font-size:13px;color:var(--mute);white-space:nowrap">Your name</span><input id="fname" placeholder="first name (for club reports)" style="flex:1;min-width:0;background:var(--card);border:1px solid var(--line);color:var(--txt);border-radius:8px;padding:6px 8px;font-size:14px">';
+box.insertBefore(nb,box.querySelector('.fbtns'));$f('#fname').value=LS.get('hb_name','');$f('#fname').onchange=e=>LS.set('hb_name',e.target.value.trim());
+// read club reports
+let CLUBR=[],SHOWCLUB=LS.get('hb_showclub',true);
+function parseCSV(t){const R=[];let row=[],f='',q=false;for(let i=0;i<t.length;i++){const c=t[i];if(q){if(c=='"'){if(t[i+1]=='"'){f+='"';i++}else q=false}else f+=c}else if(c=='"')q=true;else if(c==','){row.push(f);f=''}else if(c=='\n'||c=='\r'){if(c=='\r'&&t[i+1]=='\n')i++;row.push(f);R.push(row);row=[];f=''}else f+=c}if(f||row.length){row.push(f);R.push(row)}return R}
+async function loadClub(force){try{const r=await fetch(CSV+'&t='+(force?Date.now():Math.floor(Date.now()/120000)));if(!r.ok)return;const rows=parseCSV(await r.text()).slice(1).filter(x=>x[7]&&x[8]);
+  CLUBR=rows.map(x=>({ts:x[0],when:x[1],name:x[2],stand:x[3],what:x[4],n:x[5],dir:x[6],lat:+x[7],lon:+x[8],note:x[9]||''})).filter(x=>isFinite(x.lat)&&isFinite(x.lon)&&!/^test/i.test(x.name));
+  LS.set('hb_clubcache',CLUBR);clubList();drawMap();}catch(e){CLUBR=LS.get('hb_clubcache',[]);clubList();}}
+const ICON=w=>/blood/i.test(w)?'🩸':/recover|found/i.test(w)?'✅':/shot/i.test(w)?'🎯':/sign|scrape|rub/i.test(w)?'🌿':'🦌';
+const cl=document.createElement('div');cl.id='clublist';cl.style.cssText='margin-top:8px';box.appendChild(cl);
+function clubList(){const recent=[...CLUBR].reverse().slice(0,15);
+  cl.innerHTML=`<div style="display:flex;justify-content:space-between;align-items:center;font-weight:700;margin:4px 0">👥 Club reports <button id="fclubtog" style="flex:0 0 auto;padding:5px 10px">${SHOWCLUB?'On map ✓':'Show on map'}</button></div>`+
+   (recent.length?recent.map(x=>`<div class="fi" style="display:block"><b>${ICON(x.what)} ${esc(x.what)}</b>${x.stand?' · near #'+esc(x.stand):''} · ${esc(x.name)}<br><small style="color:var(--mute)">${esc(x.when||x.ts)}${x.note?' · '+esc(x.note.replace(/ \[(placed on map|GPS)\]$/,'')):''}</small></div>`).join(''):'<div class="fsum">No club reports yet.</div>');
+  $f('#fclubtog').onclick=()=>{SHOWCLUB=!SHOWCLUB;LS.set('hb_showclub',SHOWCLUB);clubList();drawMap();};}
+const dm3=drawMap;drawMap=function(R){dm3(R);if(!SHOWCLUB||!CLUBR.length)return;const sv=document.querySelector('#mapbox svg.mp');if(!sv)return;let s='';
+  CLUBR.forEach(x=>{const c=px(x.lat,x.lon);s+=`<g><rect x="${c[0]-13}" y="${c[1]-13}" width="26" height="26" rx="6" transform="rotate(45 ${c[0]} ${c[1]})" fill="#b98cff" stroke="#000" stroke-width="3"/><text x="${c[0]}" y="${c[1]+7}" text-anchor="middle" font-size="18">${ICON(x.what)}</text><title>${esc(x.when+' · '+x.name+' · '+x.what+(x.note?' · '+x.note:''))}</title></g>`});
+  sv.insertAdjacentHTML('beforeend',s);if(ME){const g=sv.querySelector('g.me');if(g)sv.appendChild(g);}if(typeof applyView==='function'&&view)applyView();};
+CLUBR=LS.get('hb_clubcache',[]);clubList();
+(function w2(){if(typeof D!=='undefined'&&D&&D.geo){loadClub();setInterval(loadClub,180000);}else setTimeout(w2,300)})();
+if(CLUBMODE){const ft=box.querySelector('.fhead');if(ft)ft.innerHTML='Report what you see <small>(tap a button, tap the map, then 👥 Send to club)</small>';}
 
 // ---- tabs: Stands / Map / Weather ----
 const pickCard=$f('#pickcard'),mapCard=$f('#mapHome').closest('.card'),wxCard=$f('#wxbd').closest('.card');

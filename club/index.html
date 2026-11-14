@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><script>window.CLUB=true</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Club Brief · Alamance Club</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#12140f; --card:#1c2018; --card2:#232920; --line:#333b2c;
+  --txt:#ecefe6; --mute:#9aa58f; --orange:#ff6a13; --gold:#ffc83d; --green:#8fbf4d; --blue:#5fc4ff; --red:#ff5a4f;
+}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--txt);font-family:Inter,system-ui,sans-serif;-webkit-text-size-adjust:100%}
+body{padding-bottom:40px}
+.wrap{max-width:560px;margin:0 auto;padding:0 12px}
+header{padding:12px 12px 6px}
+.hrow{display:flex;justify-content:space-between;align-items:center;max-width:560px;margin:0 auto}
+.brand{font-family:Oswald,sans-serif;letter-spacing:.06em;text-transform:uppercase;font-size:13px;color:var(--orange)}
+h1{font-family:Oswald,sans-serif;font-size:26px;margin:2px 0 0;letter-spacing:.02em}
+.chip{display:inline-block;font-size:12px;font-weight:600;padding:4px 9px;border-radius:999px;background:var(--card2);border:1px solid var(--line);color:var(--txt);margin:6px 6px 0 0}
+.chip.o{background:rgba(255,106,19,.15);border-color:var(--orange);color:#ffb487}
+.upd{font-size:11px;color:var(--mute);margin-top:6px}
+.tiles{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:5px;margin:6px 0 10px}
+.tile{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:8px 2px;text-align:center;min-width:0}
+.tile .k{font-size:9.5px;white-space:nowrap;text-transform:uppercase;letter-spacing:.08em;color:var(--mute)}
+.tile .v{font-family:Oswald,sans-serif;font-size:16px;margin-top:2px;white-space:nowrap}
+.tile .v small{font-size:11px;margin-left:1px}
+.tile.hot{border-color:var(--orange);background:rgba(255,106,19,.12)}
+.tile.hot .v{color:#ffb487}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;margin:10px 0;overflow:hidden}
+.card>.hd{display:flex;align-items:center;justify-content:space-between;padding:12px 14px 4px}
+.ttl{font-family:Oswald,sans-serif;text-transform:uppercase;letter-spacing:.06em;font-size:15px}
+.bd{padding:6px 14px 14px}
+.pro,.con{display:block;font-size:12.5px;line-height:1.35;margin-top:3px;color:#cfe3b8}.con{color:#e8b8a8}.np{font-size:13px;line-height:1.4;margin:5px 0;color:#cfd6c6}.np b{color:#fff}.np{cursor:pointer;padding:8px 10px;background:rgba(255,90,79,.05);border-top:1px solid var(--line)}.np .go{color:#ffc27a;font-weight:600;white-space:nowrap}
+.sec{display:flex!important;justify-content:space-between;align-items:center;gap:8px;padding:10px 12px!important;margin:12px 0 4px;border-radius:10px;font-family:Oswald,sans-serif!important;font-size:18px!important;font-weight:600;letter-spacing:.5px!important;text-transform:uppercase!important;cursor:pointer;list-style:none;border:none!important}
+.sec small{font-family:Inter,sans-serif;font-size:11.5px;text-transform:none;letter-spacing:0;font-weight:500;opacity:.85;text-align:right}
+.sec.rec{background:rgba(110,200,90,.18);color:#9be37a!important;border-left:5px solid #6ec85a!important}
+.sec.more2{background:rgba(255,200,61,.15);color:#ffc83d!important;border-left:5px solid #ffc83d!important}
+.sec.no{background:rgba(255,90,79,.15);color:#ff8a80!important;border-left:5px solid #ff5a4f!important}
+summary.sec::-webkit-details-marker{display:none}
+details[open]>summary.sec{border-radius:10px 10px 0 0}
+.yd{display:inline-block;font-size:11.5px;font-weight:600;color:#cfd6c6;background:rgba(255,255,255,.08);border-radius:10px;padding:1px 8px;margin-left:4px;white-space:nowrap}
+.wd{font-size:12.5px;color:#cfe3b8;margin:0 0 4px}
+.mapslot{list-style:none;display:block!important;padding:8px 0!important;border:none!important}
+.sslab{font-size:11.5px;text-transform:uppercase;letter-spacing:.8px;color:var(--mute);margin:2px 0 0}.ssrec{font-size:13px;color:#ffc27a;margin:-2px 0 8px;line-height:1.35}.ssrec b{color:#fff}.stbar{display:flex;gap:6px;margin:8px 0 6px}.stb{flex:1;font-size:12.5px;padding:7px 6px;border-radius:9px;background:rgba(255,255,255,.06);color:#cfd6c6;border:1px solid rgba(255,255,255,.15)}.stb.on{background:#ff8c00;color:#000;font-weight:700;border-color:#ff8c00}
+.cf{font-size:12.5px;line-height:1.4;color:#e8e0c8;background:rgba(255,255,255,.06);border-radius:6px;padding:5px 8px;margin:4px 0 6px}.cf b{color:#fff}
+.how{margin:8px 0;display:flex;flex-direction:column;gap:6px}.hwt{font-size:12px;text-transform:uppercase;letter-spacing:.8px;color:var(--mute)}
+.ht{display:flex;align-items:center;gap:10px;text-align:left;width:100%;padding:8px 10px;border-radius:10px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.14);color:#e8e8e0}
+.ht.on{border:2px solid #ff8c00;background:rgba(255,140,0,.14)}.ht:disabled{opacity:.45}
+.ht .hi{font-size:20px}.ht .hm{flex:1;display:flex;flex-direction:column}.ht .hm b{font-size:14px}.ht .hm small{font-size:12px;color:var(--mute)}
+.ht .hy{font-family:Oswald,sans-serif;font-size:20px;font-weight:600;color:#fff;text-align:right;line-height:1}.ht .hy small{display:block;font-family:Inter,sans-serif;font-size:10.5px;color:var(--mute);font-weight:500}
+.hs{font-size:11px;color:#ffc83d;font-weight:700}
+.step{display:flex;gap:10px;align-items:center;margin:14px 0 6px}.step .sn{width:26px;height:26px;border-radius:50%;background:#ff8c00;color:#000;font-weight:800;display:grid;place-items:center;flex:none;font-family:Oswald,sans-serif}
+.step b{display:block;font-size:15px}.step small{display:block;font-size:12px;color:var(--mute)}
+.plan{margin:10px 0 8px;padding:10px 12px;border-radius:10px;background:rgba(255,140,0,.13);border:1px solid rgba(255,140,0,.5)}.plan .pl1{font-size:15px}.plan small{display:block;font-size:12.5px;color:#e0cfa8;margin-top:3px}
+.walk{margin-top:8px;padding:8px 10px;background:rgba(255,140,0,.10);border-left:3px solid #ff8c00;border-radius:6px}.wt{font-weight:700;font-size:13px;margin-bottom:4px;color:#ffc27a}.ws{display:flex;gap:8px;font-size:13.5px;line-height:1.4;margin:3px 0}.wn{flex:0 0 22px;height:22px;border-radius:11px;background:#ff8c00;color:#000;font-weight:800;text-align:center;line-height:22px;font-size:12px}
+.why{font-size:13.5px;line-height:1.45;color:#cfd6c6}
+.pick{display:flex;gap:12px;align-items:center}
+.pnum{font-family:Oswald,sans-serif;font-size:44px;line-height:1;color:var(--gold);min-width:74px;text-align:center;background:var(--card2);border:1px solid var(--line);border-radius:14px;padding:8px 6px}
+.pname{font-weight:700;font-size:16px}
+.pwhy{font-size:13px;color:#cfd6c6;margin-top:3px;line-height:1.4}
+.warn{color:var(--gold);font-size:12.5px;margin-top:4px}
+.taken-in{display:flex;gap:6px;margin-top:12px}
+.taken-in input{flex:1;min-width:0;font:inherit;font-size:16px;padding:10px 12px;border-radius:12px;border:1px solid var(--line);background:#11140e;color:var(--txt)}
+button{font:inherit;font-weight:600;font-size:14px;padding:10px 14px;border-radius:12px;border:1px solid var(--line);background:var(--card2);color:var(--txt);cursor:pointer}
+button.pri{background:var(--orange);border-color:var(--orange);color:#1a0d02}
+.small{font-size:12px;color:var(--mute)}
+.takenlist{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.tk{font-size:12px;padding:4px 8px;border-radius:999px;background:rgba(255,90,79,.14);border:1px solid rgba(255,90,79,.5);color:#ffb3ad}
+.rank{list-style:none;margin:10px 0 0;padding:0}
+.rank li{display:flex;align-items:flex-start;gap:10px;padding:7px 0;border-top:1px solid var(--line)}
+.rank .t .m{color:var(--mute);font-size:12.5px}
+.rank .tg{font-size:13px;padding:4px 0;width:30px;height:30px;border-radius:50%;flex:none;color:var(--mute)}
+.rank li.more{display:block;padding:0}
+.rank li.more summary{padding:10px 0;font-size:13px;font-family:Inter,sans-serif;text-transform:none;letter-spacing:0;color:var(--mute)}
+.rank li.more .rank{margin:0;padding:0 0 0 6px;border-left:3px solid rgba(255,200,61,.5)}
+
+.rank .n{font-family:Oswald,sans-serif;width:26px;height:26px;border-radius:50%;display:grid;place-items:center;background:var(--card2);border:1.5px solid var(--gold);color:var(--gold);font-size:14px;flex:none}
+.rank li.bk .n{border-color:var(--blue);color:var(--blue)}
+.rank li.off{opacity:.45}
+.rank li.off .n{border-color:var(--red);color:var(--red)}
+.rank .t{flex:1;font-size:13.5px}
+.rank .t b{font-size:14.5px}
+.rank .t .s{display:block;color:var(--mute);font-size:12px;margin-top:2px}
+
+.mapbox{position:relative;width:100%;overflow:hidden;border-radius:12px;background:#000;touch-action:none;user-select:none;-webkit-user-select:none;cursor:grab}
+.mapbox.zin{cursor:grab}.mapbox:active{cursor:grabbing}
+.mapbox svg.ov{position:absolute;inset:0;pointer-events:none}
+.mapbox svg{display:block;width:100%;height:auto}
+.mapctl{display:flex;gap:6px;margin-top:8px}
+.basesel{display:flex;gap:4px;margin-bottom:8px;background:var(--card2);border:1px solid var(--line);border-radius:10px;padding:3px}
+.basesel button{flex:1;border:0;background:transparent;color:var(--mute);font:600 12px Inter,sans-serif;padding:7px 4px;border-radius:8px;cursor:pointer}
+.basesel button.on{background:var(--orange);color:#fff}
+.basenote{font-size:11px;color:var(--mute);margin:-4px 0 6px}
+.leg{display:flex;flex-wrap:wrap;gap:10px;font-size:11.5px;color:var(--mute);margin-top:8px}
+.leg i{display:inline-block;width:12px;height:12px;border-radius:50%;margin-right:4px;vertical-align:-2px}
+.windrow{display:flex;gap:14px;align-items:center}
+.wxh{font-size:15px;font-weight:600;line-height:1.35;margin:2px 0 10px}
+.wxt{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-bottom:10px}
+.wxt>div{background:var(--card2);border:1px solid var(--line);border-radius:12px;padding:8px 6px;text-align:center}
+.wxt .k{font-size:9.5px;text-transform:uppercase;letter-spacing:.08em;color:var(--mute)}
+.wxt .v{font-family:Oswald,sans-serif;font-size:19px;line-height:1.15;margin-top:2px}
+.wxt .s{font-size:11px;color:var(--mute);margin-top:2px;line-height:1.25}
+.wxl{display:flex;flex-direction:column;gap:3px}
+.wxr{display:grid;grid-template-columns:44px 56px 1fr 62px;align-items:center;gap:6px;padding:7px 8px;border-radius:10px;background:var(--card2);font-size:13px}
+.wxr.off{opacity:.55;background:transparent}
+.wxr.best{box-shadow:inset 3px 0 0 var(--gold)}
+.wxr .tm{font-weight:700}.wxr .tm small{display:block;font-weight:500;font-size:10px;color:var(--gold)}
+.wxr .tp b{font-size:15px}.wxr .tp small{display:block;font-size:10.5px;color:var(--mute)}
+.wxr .wd{display:flex;align-items:center;gap:6px}.wxr .wd .ar{display:inline-block;color:var(--orange);font-size:17px;font-weight:700;width:16px;text-align:center}
+.wxr .wd small{color:var(--mute)}
+.wxr .dr{display:flex;align-items:center;gap:5px;justify-content:flex-end;font-size:12px}
+.wxr .dr i{display:block;height:6px;border-radius:3px;background:var(--green)}
+.wxn{font-size:12.5px;color:#cfd6c6;margin-top:10px;line-height:1.5}.wxn b{color:var(--txt)}
+.windtxt .big{font-family:Oswald,sans-serif;font-size:28px}
+.windtxt .s{font-size:13px;color:#cfd6c6;margin-top:2px;line-height:1.4}
+details{border-top:1px solid var(--line)}
+details:first-of-type{border-top:none}
+summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;padding:14px;font-family:Oswald,sans-serif;text-transform:uppercase;letter-spacing:.06em;font-size:15px}
+summary::-webkit-details-marker{display:none}
+summary .sv{font-family:Inter,sans-serif;text-transform:none;letter-spacing:0;font-size:12.5px;color:var(--mute);font-weight:500;margin-left:auto;margin-right:10px;text-align:right}
+summary:after{content:"›";font-size:22px;color:var(--mute);transition:transform .2s}
+details[open] summary:after{transform:rotate(90deg)}
+.dbody{padding:0 14px 14px}
+.kv{display:grid;grid-template-columns:96px 1fr;gap:6px 10px;font-size:13.5px}
+.kv .k{color:var(--mute)}
+.chart{overflow-x:auto}
+.chart table{border-collapse:collapse;font-size:12px;min-width:100%}
+.chart td,.chart th{padding:6px 5px;text-align:center;white-space:nowrap}
+.chart tr.b td{vertical-align:bottom}
+.chart th{color:var(--mute);font-weight:500}
+.chart tr.sit td,.chart td.sit{background:rgba(255,200,61,.10)}
+.bar{display:block;margin:0 auto;width:14px;border-radius:4px 4px 0 0;background:linear-gradient(180deg,var(--orange),#a43c00)}
+.arrow{display:inline-block;font-size:15px}
+ul.l{margin:4px 0 0;padding-left:18px;font-size:13.5px;line-height:1.6}
+.sub{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--mute);margin:10px 0 2px}
+.check label{display:flex;gap:10px;align-items:center;padding:8px 0;border-top:1px solid var(--line);font-size:14px}
+.check input{width:20px;height:20px;accent-color:var(--orange)}
+.ssn{list-style:none;margin:0;padding:0}
+.ssn li{display:flex;gap:10px;align-items:flex-start;padding:9px 0;border-top:1px solid var(--line)}
+.ssn li:first-child{border-top:none}
+.dot{flex:none;width:10px;height:10px;border-radius:50%;margin-top:5px}
+.ssn .g{flex:1;font-size:14px}
+.ssn .g b{font-weight:700}
+.ssn .g .s{display:block;color:var(--mute);font-size:12px;margin-top:2px}
+.ssn .st{font-size:11.5px;font-weight:700;white-space:nowrap;padding:3px 8px;border-radius:999px}
+.st.open{background:rgba(143,191,77,.18);color:#b9e07f}
+.st.soon{background:rgba(255,200,61,.15);color:var(--gold)}
+.st.closed{background:var(--card2);color:var(--mute)}
+.st.sun{background:rgba(255,106,19,.15);color:#ffb487}
+.sinfo{margin-top:10px;background:var(--card2);border:1px solid var(--gold);border-radius:12px;padding:10px 12px}
+.sinfo .sh{display:flex;justify-content:space-between;align-items:center;gap:8px;font-size:15.5px}
+.sinfo .sh button{padding:4px 10px;font-size:13px}
+.sinfo .tag{display:inline-block;font-size:11px;font-weight:700;padding:2px 7px;border-radius:999px;margin:4px 6px 4px 0;background:var(--card);border:1px solid var(--line);color:var(--mute)}
+.sinfo .tag.fav{color:var(--gold);border-color:var(--gold)}
+.sinfo .tag.lo{color:#ffb3ad;border-color:rgba(255,90,79,.6)}
+.sinfo .kv{margin-top:6px}
+footer{font-size:11px;color:var(--mute);text-align:center;margin-top:14px;line-height:1.5}
+</style>
+<link rel="manifest" href="manifest.json"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="theme-color" content="#12140f"><link rel="apple-touch-icon" href="icon.png">
+</head>
+<body>
+<header><div class="hrow"><div>
+  <div class="brand">Alamance Club · Hunt Brief</div>
+  <h1 id="title">Loading…</h1>
+  <div id="chips"></div>
+</div></div></header>
+
+<div class="wrap">
+  <div class="tiles" id="tiles"></div>
+
+  <div class="card" id="pickcard">
+    <div class="hd"><div class="ttl">Your stand</div><span class="small" id="pickcount"></span></div>
+    <div class="bd">
+      <div class="step"><span class="sn">1</span><span><b>Who's already out?</b><small>Copy the sticky notes off the door</small></span></div>
+      <div class="taken-in">
+        <input id="takenInput" placeholder="e.g. Steve 5, Glenn 15" autocomplete="off">
+        <button class="pri" id="takenBtn">Update</button>
+      </div>
+      <div class="takenlist" id="takenlist"></div>
+      <div id="startsel" style="display:none"></div>
+      <div class="step"><span class="sn">2</span><span><b>Your best stand</b><small>Picked for the wind, recent deer and who's out</small></span></div>
+      <div id="toppick"></div>
+      <ul class="rank" id="rank"></ul>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="hd"><div class="ttl">Map</div><span class="small">Tap any stand for notes</span></div>
+    <div class="bd">
+      <div id="mapHome"><div id="mapwrap"><div class="basesel" id="basesel"><button data-b="map.jpg">Now · Oct 26</button><button data-b="map-aerial.jpg">Aerial</button><button data-b="map-topo.jpg">Topo</button></div>
+      <div class="basenote" id="basenote"></div><div class="mapbox" id="mapbox"></div>
+      <div class="mapctl"><button id="zin">Zoom +</button><button id="zout">Zoom −</button><button id="zfit">Fit</button><button id="zme">📍 Me</button></div><div id="mestat" style="display:none;margin:6px 0 2px;padding:8px 10px;border-radius:10px;background:rgba(43,140,255,.15);border:1px solid rgba(43,140,255,.5);font-weight:600"></div>
+      <div id="standinfo"></div></div></div>
+      <div class="leg">
+        <span><i style="background:var(--gold)"></i>Picks</span>
+        <span><i style="background:var(--blue)"></i>Backup</span>
+        <span><i style="background:#f2e3b3;border-radius:2px;height:4px;vertical-align:2px"></i>Trails</span>
+        <span><i style="background:#ff5a4f;border-radius:2px;height:5px;vertical-align:2px"></i>Not-picked route</span>
+        <span><i style="background:var(--red)"></i>Taken</span>
+        <span><i style="background:rgba(255,106,19,.6);border-radius:2px"></i>Your scent</span><span><i style="background:rgba(120,220,110,.6);border-radius:2px"></i>Where deer come from</span>
+        <span><i style="background:#ff8c00;border-radius:2px;height:5px;vertical-align:2px"></i>Best walk-in (numbered steps)</span><span><i style="background:transparent;border:2px dashed var(--blue);border-radius:2px"></i>Other walk-ins</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="hd"><div class="ttl" id="wxttl">Wind</div><span class="small" id="wxsub"></span></div>
+    <div class="bd" id="wxbd"></div>
+    <div class="bd windrow">
+      <svg width="96" height="96" viewBox="-50 -50 100 100" id="compass"></svg>
+      <div class="windtxt" id="windtxt"></div>
+    </div>
+  </div>
+
+  <div class="card" id="drill"></div>
+
+  <footer id="foot"></footer>
+</div>
+
+<script>
+const $=s=>document.querySelector(s);
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+let D, STAND={}, local=[], sel=null, view=null, MODE=null;
+const LS='huntbrief-taken-';
+const BASENOTE={'map.jpg':'Satellite, Oct 2026 (after the select cut).','map-aerial.jpg':'Sharp USDA aerial from before the 2026 cut: lanes, roads, field edges and ponds.','map-topo.jpg':'USGS topo: creeks (blue), contour lines, Stagg Creek to the east.'};
+let BASE=(function(){try{const b=JSON.parse(localStorage.getItem('hb_base'));return BASENOTE[b]?b:'map.jpg'}catch(e){return 'map.jpg'}})();
+function setBase(b){BASE=b;try{localStorage.setItem('hb_base',JSON.stringify(b))}catch(e){}
+  document.querySelectorAll('#basesel button').forEach(x=>x.classList.toggle('on',x.dataset.b===b));
+  const n=document.getElementById('basenote');if(n)n.textContent=BASENOTE[b];if(typeof D!=='undefined'&&D)drawMap();}
+function store(k,v){try{v===undefined?localStorage.removeItem(k):localStorage.setItem(k,JSON.stringify(v))}catch(e){}}
+function load(k){try{return JSON.parse(localStorage.getItem(k))}catch(e){return null}}
+function meters(a,b){const R=6371000,t=Math.PI/180;const dl=(b.lat-a.lat)*t,dn=(b.lon-a.lon)*t;const x=Math.sin(dl/2)**2+Math.cos(a.lat*t)*Math.cos(b.lat*t)*Math.sin(dn/2)**2;return 2*R*Math.asin(Math.sqrt(x))}
+const yd=m=>Math.round(m/0.9144);
+function px(lat,lon){const g=D.geo;return [(g.fx[0]*lon+g.fx[1]-g.x0)*g.scale,(g.fy[0]*lat+g.fy[1]-g.y0)*g.scale]}
+const DIRS=['N','NNE','NE','ENE','E','ESE','SE','SSE','S','SSW','SW','WSW','W','WNW','NW','NNW'];
+const dirDeg=s=>DIRS.indexOf(s)*22.5;
+
+function allTaken(){return [...(D.taken||[]),...local]}
+function parseTaken(str){
+  const out=[];let lastWho='Member';
+  const STOP=/^(is|are|was|will|be|going|gonna|headed|heading|to|in|at|on|the|stand|sitting|sits|took|has|have|got|taking|hunting|or|and|maybe|probably|said|says)$/i;
+  str.split(/[,;\n.]|\band\b|&/i).forEach(part=>{
+    const p=part.replace(/[’']s\b/g,' ').trim(); if(!p) return;
+    const toks=[...p.matchAll(/(?:#\s*)?\b(\d{1,2}[a-z]{0,2}|penthouse|joe|joe's|refuge|impoundment)\b/gi)].map(m=>m[1]);
+    if(!toks.length) return;
+    const words=p.split(/\s+/);let who=null;for(const w of words){const c=w.replace(/[^A-Za-z-]/g,'');if(!c)break;if(/^\d/.test(w)||/^#/.test(w))break;if(STOP.test(c))break;who=who?who+' '+c:c;if(who.split(' ').length>=2)break;}
+    who=who?who.replace(/\b\w/g,x=>x.toUpperCase()):lastWho; lastWho=who;
+    toks.forEach(tok=>{let key=tok.toUpperCase().replace(/'S$/,'');let ids=[];
+      if(key==='PENTHOUSE') ids=['P','1P'];
+      else if(key==='JOE') ids=['11']; else if(key==='REFUGE') ids=['REF']; else if(key==='IMPOUNDMENT') ids=['IMP'];
+      else if(STAND[key]) ids=[key];
+      else ids=Object.keys(STAND).filter(k=>k===key+'L'||k===key+'B');
+      if(key==='1') ids=['1','1P'];
+      if(D.groups&&D.groups[key]) ids=[...new Set([...ids,...D.groups[key]])];
+      ids.forEach(id=>out.push({id,who}));});
+  });
+  return out;
+}
+// ---- trail router: reroutes walk-ins around other hunters ----
+let GR=null;
+function buildGraph(){
+  const N=[],E=[],grid=new Map();const key=(x,y)=>Math.floor(x/10)+','+Math.floor(y/10);
+  const add=(x,y,t)=>{const id=N.length;N.push({x,y,t});E.push([]);const k=key(x,y);if(!grid.has(k))grid.set(k,[]);grid.get(k).push(id);return id};
+  const link=(a,b,t)=>{const d=Math.hypot(N[a].x-N[b].x,N[a].y-N[b].y);E[a].push([b,d,t]);E[b].push([a,d,t])};
+  (D.trails||[]).forEach(tr=>{const P=tr.pts.map(p=>px(p[0],p[1]));let prev=null;
+    for(let i=0;i<P.length-1;i++){const [ax,ay]=P[i],[bx,by]=P[i+1];const n=Math.max(1,Math.ceil(Math.hypot(bx-ax,by-ay)/6));
+      for(let j=0;j<n;j++){const id=add(ax+(bx-ax)*j/n,ay+(by-ay)*j/n,tr.id);if(prev!==null)link(prev,id,tr.id);prev=id;}}
+    const id=add(P[P.length-1][0],P[P.length-1][1],tr.id);if(prev!==null)link(prev,id,tr.id);});
+  N.forEach((a,i)=>{const cx=Math.floor(a.x/10),cy=Math.floor(a.y/10);for(let dx=-1;dx<=1;dx++)for(let dy=-1;dy<=1;dy++){(grid.get((cx+dx)+','+(cy+dy))||[]).forEach(j=>{if(j>i&&N[j].t!==a.t&&Math.hypot(N[j].x-a.x,N[j].y-a.y)<9)link(i,j,'x')})}});
+  GR={N,E};return GR;}
+function nearestNode(x,y){let b=-1,bd=1e9;GR.N.forEach((n,i)=>{const d=Math.hypot(n.x-x,n.y-y);if(d<bd&&GR.E[i].length){bd=d;b=i}});return b}
+function pxPerYd(){return -D.geo.fy[0]*D.geo.scale/111320*0.9144}
+function segDist(p,a,b){const dx=b[0]-a[0],dy=b[1]-a[1],L=dx*dx+dy*dy;let t=L?((p[0]-a[0])*dx+(p[1]-a[1])*dy)/L:0;t=Math.max(0,Math.min(1,t));return Math.hypot(p[0]-a[0]-t*dx,p[1]-a[1]-t*dy)}
+function polyDist(p,P){let m=1e9;for(let i=0;i<P.length-1;i++)m=Math.min(m,segDist(p,P[i],P[i+1]));return P.length===1?Math.hypot(p[0]-P[0][0],p[1]-P[0][1]):m}
+function dijkstra(s,t,cost){const n=GR.N.length,dist=new Float64Array(n).fill(Infinity),prev=new Int32Array(n).fill(-1),done=new Uint8Array(n);dist[s]=0;
+  const H=[[0,s]];const push=x=>{H.push(x);let i=H.length-1;while(i>0){const p=(i-1)>>1;if(H[p][0]<=H[i][0])break;[H[p],H[i]]=[H[i],H[p]];i=p}};
+  const pop=()=>{const top=H[0],last=H.pop();if(H.length){H[0]=last;let i=0;for(;;){let l=2*i+1,r=l+1,m=i;if(l<H.length&&H[l][0]<H[m][0])m=l;if(r<H.length&&H[r][0]<H[m][0])m=r;if(m===i)break;[H[m],H[i]]=[H[i],H[m]];i=m}}return top};
+  while(H.length){const [d,u]=pop();if(done[u])continue;done[u]=1;if(u===t)break;for(const [v,w] of GR.E[u]){const nd=d+w*cost(v);if(nd<dist[v]){dist[v]=nd;prev[v]=u;push([nd,v])}}}
+  if(!isFinite(dist[t]))return null;const path=[t];while(path[path.length-1]!==s)path.push(prev[path[path.length-1]]);return path.reverse();}
+function startsPx(){const S=[];if(D.club)S.push({name:'Clubhouse',p:px(...D.club)});if(D.parking)S.push({name:'Parking Pond',p:px(...D.parking)});return S}
+function routeFor(id,avoid,only){ // avoid: [{who,id,p:[x,y],route:[[x,y]..]}]
+  if(!GR)buildGraph();const o=STAND[id];if(!o)return null;const tp=px(o.lat,o.lon);const t=nearestNode(...tp);const Y=pxPerYd();
+  const cost=v=>{const n=GR.N[v],q=[n.x,n.y];if(Math.hypot(q[0]-tp[0],q[1]-tp[1])<110*Y)return 1;let c=1;
+    for(const a of avoid){const d=Math.hypot(q[0]-a.p[0],q[1]-a.p[1]);if(d<160*Y)c+=40*(1-d/(160*Y))+8;}return c};
+  let best=null;for(const st of startsPx().filter(x=>!only||x.name===only)){const s=nearestNode(...st.p);const pth=dijkstra(s,t,cost);if(!pth)continue;
+    let L=0,C=0;for(let i=1;i<pth.length;i++){const a=GR.N[pth[i-1]],b=GR.N[pth[i]];const d=Math.hypot(a.x-b.x,a.y-b.y);L+=d;C+=d*cost(pth[i])}
+    const off=Math.hypot(GR.N[t].x-tp[0],GR.N[t].y-tp[1]);C+=Math.hypot(GR.N[s].x-st.p[0],GR.N[s].y-st.p[1]);
+    if(!best||C<best.C)best={start:st,path:pth,L:L+off,C,off,tp};}
+  return best;}
+const tn=t=>(D.trailNames&&D.trailNames[t])||'the trail';
+function bearing(a,b){return (Math.atan2(b[0]-a[0],-(b[1]-a[1]))*180/Math.PI+360)%360}
+const card=d=>DIRS[Math.round(d/22.5)%16];
+function stepsFrom(best,id){const N=GR.N,P=best.path.map(i=>[N[i].x,N[i].y,N[i].t]);const Y=pxPerYd();const out=[];
+  const near=p=>{let b=null,bd=55*Y;Object.values(STAND).forEach(o=>{if(o.id===id)return;const q=px(o.lat,o.lon);const d=Math.hypot(q[0]-p[0],q[1]-p[1]);if(d<bd){bd=d;b=o}});return b};
+  const ahead=(i)=>{let j=i;while(j<P.length-1&&Math.hypot(P[j][0]-P[i][0],P[j][1]-P[i][1])<40)j++;return bearing(P[i],P[j])};
+  // build trail segments, then merge tiny junction pieces (<45 yd) into neighbours
+  let segs=[];for(let i=0;i<P.length-1;i++){let t=P[i+1][2]==='x'?P[i][2]:P[i+1][2];if(t==='x')t=segs.length?segs[segs.length-1].t:P[i][2];
+    const L=Math.hypot(P[i+1][0]-P[i][0],P[i+1][1]-P[i][1]);if(segs.length&&segs[segs.length-1].t===t){segs[segs.length-1].L+=L;segs[segs.length-1].j=i+1}else segs.push({t,i,j:i+1,L});}
+  let changed=true;while(changed&&segs.length>1){changed=false;for(let k=0;k<segs.length;k++){if(segs[k].L<45*Y){const m=k>0?k-1:k+1;const A=Math.min(k,m),B=Math.max(k,m);
+      const keep=segs[A].L>=segs[B].L?segs[A].t:segs[B].t;segs.splice(A,2,{t:keep,i:segs[A].i,j:segs[B].j,L:segs[A].L+segs[B].L});changed=true;break;}}
+    for(let k=1;k<segs.length;k++)if(segs[k].t===segs[k-1].t){segs[k-1].j=segs[k].j;segs[k-1].L+=segs[k].L;segs.splice(k,1);changed=true;break;}}
+  const AL={'12AL':'12A','12L':'12'};const nm=x=>AL[x]||x;const marks=[];Object.values(STAND).forEach(o=>{if(o.leaveOut||o.id===id)return;const q=px(o.lat,o.lon);let bi=-1,bd=32*Y;for(let i=0;i<P.length;i++){const dd=Math.hypot(P[i][0]-q[0],P[i][1]-q[1]);if(dd<bd){bd=dd;bi=i}}if(bi>=0)marks.push({id:o.id,i:bi})});marks.sort((a,b)=>a.i-b.i);
+  const toward=(i,ex)=>{const m=marks.find(m=>m.i>i+3&&nm(m.id)!==ex);return m?'#'+nm(m.id):'#'+id};
+  let lab=1,lastH=null;
+  const nextMark=(k,ex)=>{if(k+1<segs.length){const nb2=near(P[segs[k+1].i]);if(nb2&&nm(nb2.id)!==ex)return '#'+nm(nb2.id)}return null};
+  segs.forEach((sg,k)=>{const h=ahead(sg.i);let txt;
+    if(k===0)txt=`${best.start.name}: head ${card(h)} toward ${nextMark(k)||toward(sg.i)}.`;
+    else{const turn=((h-lastH+540)%360)-180;const lr=Math.abs(turn)<25?'Keep straight':turn>0?'Right':'Left';const nb=near(P[sg.i]);const go=Math.round(segs[k-1].L/Y/10)*10;
+      txt=`${nb?'#'+nm(nb.id)+' (~'+go+' yd)':'After ~'+go+' yd'}: ${lr==='Keep straight'?'keep '+card(h):'turn '+lr.toLowerCase()+' ('+card(h)+')'} toward ${nextMark(k,nb&&nm(nb.id))||toward(sg.i,nb&&nm(nb.id))}.`;}
+    out.push([P[sg.i][0],P[sg.i][1],String(lab++),txt]);
+    let j=Math.max(sg.i,sg.j-3);lastH=bearing(P[j],P[sg.j]);});
+  const offYd=Math.round(best.off/Y);const last=P[P.length-1];
+  out.push([last[0],last[1],String(lab++),offYd>25?`Step off ~${offYd} yd ${card(bearing(last,best.tp))} to #${id}.`:`#${id} is right there.`]);
+  return out.map(s=>{const ll=unpx(s[0],s[1]);return [ll[0],ll[1],s[2],s[3]]});}
+function unpx(x,y){const g=D.geo;return [((y/g.scale)+g.y0-g.fy[1])/g.fy[0],((x/g.scale)+g.x0-g.fx[1])/g.fx[0]]}
+function conflicts(routeLL,id,avoid){const Y=pxPerYd();const o=STAND[id];const tp=px(o.lat,o.lon);const P=routeLL.map(p=>px(...p));const hits=[];
+  for(const a of avoid){let m=1e9;const pts=[];for(let i=0;i<P.length-1;i++){const n=Math.max(1,Math.ceil(Math.hypot(P[i+1][0]-P[i][0],P[i+1][1]-P[i][1])/6));for(let j=0;j<=n;j++)pts.push([P[i][0]+(P[i+1][0]-P[i][0])*j/n,P[i][1]+(P[i+1][1]-P[i][1])*j/n])}
+    for(const q of pts){if(Math.hypot(q[0]-tp[0],q[1]-tp[1])<110*Y)continue;m=Math.min(m,Math.hypot(q[0]-a.p[0],q[1]-a.p[1]))}
+    if(m<140*Y)hits.push({who:a.who,id:a.id,yd:Math.round(m/Y)});}
+  const by={};hits.forEach(x=>{const k=x.who;if(!by[k]){by[k]={...x,ids:[x.id]}}else{by[k].ids.push(x.id);if(x.yd<by[k].yd){by[k].yd=x.yd;}}});
+  return Object.values(by).map(x=>({who:x.who,id:x.ids.length>1?x.ids.join('/'):x.id,yd:x.yd}));}
+const RCACHE={};
+function avoidList(){return allTaken().map(t=>{const o=STAND[t.id];if(!o)return null;const r=(D.candidates.find(c=>c.id===t.id)||(D.notPicked||[]).find(c=>c.id===t.id));return {who:t.who,id:t.id,p:px(o.lat,o.lon),route:r&&r.route?r.route.map(p=>px(...p)):null}}).filter(Boolean)}
+function applyReroute(r){const av=avoidList();if(!av.length||!r.route)return r;const k=r.id+'|'+av.map(a=>a.id).sort().join(',');
+  if(!(k in RCACHE)){const hits=conflicts(r.route,r.id,av);let res=null;
+    if(hits.length){const best=routeFor(r.id,av);if(best){const ll=best.path.map(i=>unpx(GR.N[i].x,GR.N[i].y));const h2=conflicts(ll,r.id,av);
+      if(h2.length<hits.length||(h2.length===hits.length&&h2.reduce((s,h)=>s+h.yd,0)>hits.reduce((s,h)=>s+h.yd,0)+40))res={route:ll,steps:stepsFrom(best,r.id),walk:`${best.start.name} → #${r.id} · ~${Math.round(best.L/pxPerYd()/10)*10} yd (rerouted)`,yd:Math.round(best.L/pxPerYd()/10)*10,fromRoute:true,hits:h2,was:hits};}
+      if(!res)res={hits,stuck:true};}
+    RCACHE[k]=res;}
+  const res=RCACHE[k];if(!res)return r;
+  if(res.stuck){r.notes.push(`Walk-in passes ${res.hits.map(h=>`${h.who} (#${h.id}) within ${h.yd} yd`).join(', ')}`);return r;}
+  Object.assign(r,{route:res.route,steps:res.steps,walk:res.walk,yd:res.yd,fromRoute:true});
+  r.notes.push(`Rerouted around ${[...new Set(res.was.map(h=>h.who+' (#'+h.id+')'))].join(', ')}`+(res.hits.length?`; still within ${res.hits[0].yd} yd of ${res.hits[0].who}`:''));
+  return r;}
+
+function ranked(){
+  const taken=allTaken(); const tset=new Set(taken.map(t=>t.id));
+  const list=D.candidates.map((c,i)=>{
+    const s=STAND[c.id]; const r={...c,s,base:i,status:'ok',notes:[]};
+    if(tset.has(c.id)){r.status='taken';r.notes.push('Taken by '+taken.find(t=>t.id===c.id).who);}
+    else taken.forEach(t=>{const o=STAND[t.id]; if(!o) return; const m=meters(s,o);
+      if(m<185){r.status='near';r.notes.push(`${t.who} in #${t.id} only ${yd(m)} yd away`);}
+      else if(m<320){r.notes.push(`${t.who} in #${t.id} is ${yd(m)} yd away`);}
+    });
+    return r;});
+  list.forEach(r=>{if(r.status!=='taken')applyReroute(r)});
+  const ord={ok:0,near:1,taken:2};
+  return list.sort((a,b)=>ord[a.status]-ord[b.status]||a.base-b.base);
+}
+
+function render(){
+  mapHome();
+  const h=D.hero;
+  $('#title').textContent=D.title+' · '+D.sit;
+  $('#chips').innerHTML=`<span class="chip">${esc(D.weapon)}</span>`+(D.legal.some(l=>/orange/i.test(l[0]))?'<span class="chip o">Blaze orange</span>':'');
+  $('#tiles').innerHTML=(D.sit==='Evening'?[['Get ready',h.wake,1],['Leave',h.leave,1],['In stand',h.inStand,1],['Sunset',h.sunset,0],['Legal end',h.legalEnd,0]]:[['Wake',h.wake,1],['Leave',h.leave,1],['In stand',h.inStand,1],['Legal',h.legalStart,0],['Sunrise',h.sunrise,0]]).filter(t=>t[1]).map(([k,v,hot])=>`<div class="tile ${hot?'hot':''}"><div class="k">${k}</div><div class="v">${esc(v).replace(/ (AM|PM)/,'<small>$1</small>')}</div></div>`).join('');
+  const R=ranked(); const avail=R.filter(r=>r.status!=='taken');
+  const top=avail[0];
+  $('#startsel').innerHTML=`<div class="stbar"><button class="stb ${!CAR?'on':''}" data-car="0">🛻 Just my truck</button><button class="stb ${CAR?'on':''}" data-car="1">🚗 Got the club car</button></div>`;
+  $('#pickcount').textContent=avail.length+' options open';
+  $('#toppick').innerHTML=top?`<div class="pick"><div class="pnum">#${esc(top.id)}</div><div><div class="pname">${esc(top.s.name)}</div>${top.pro?`<span class="pro">✓ ${esc(top.pro)}</span>`:''}${top.con?`<span class="con">✗ ${esc(top.con)}</span>`:''}${top.pro?'':`<div class="pwhy">${esc(top.why)}</div>`}${top.notes.map(n=>`<div class="warn">⚠ ${esc(n)}</div>`).join('')}</div></div>${walkHTML(top,null,true)}`:'<div class="why">Every pick is taken. Tell Claude what is open.</div>';
+  const taken=allTaken();
+  $('#takenlist').innerHTML=taken.map(t=>`<span class="tk">${esc(t.who)} · #${esc(t.id)}</span>`).join('')+(local.length?'<button class="tg" id="clr" style="font-size:12px;padding:4px 10px">Clear mine</button>':'');
+  if(local.length) $('#clr').onclick=()=>{local=[];store(LS+D.date,undefined);render()};
+  let n=0; const rows=R.map(r=>{const off=r.status==='taken'; if(!off) n++; const bk=!off&&n===4;
+    return `<li class="${off?'off':''} ${bk?'bk':''}" data-id="${esc(r.id)}"><span class="n">${off?'✕':n}</span><span class="t"><b>#${esc(r.id)}</b> <span class="m">${esc(r.s.kind)}${r.s.face?' · '+esc(r.s.face):''}${r.notes.length?' · <span style="color:var(--gold)">'+esc(r.notes[0])+'</span>':''}</span> ${ydTag(eff(r).yd,eff(r).dYd)}${(!off&&n===1)?`<span class="pro" style="color:#ffc83d">★ Your top pick: reasons and walk-in above</span>`:`${r.pro?`<span class="pro">✓ ${esc(r.pro)}</span>`:''}${r.con?`<span class="con">✗ ${esc(r.con)}</span>`:''}`}</span><button class="tg" data-t="${esc(r.id)}" aria-label="${off?'Mark open':'Mark taken'}">${off?'↺':'✕'}</button></li>`});
+  const SHOW=4;
+  const NP=(D.notPicked||[]).length?`<li class="more"><details ${MODE==='np'?'open':''} id="npD"><summary class="sec no"><span>✕ Why not these (${D.notPicked.length})</span><small>wrong wind, gun or day</small></summary>${D.notPicked.map(x=>`<div class="np" data-np="${esc(x.id)}"><b>#${esc(x.id)}</b> ${ydTag(eff(x).yd,eff(x).dYd)}<br>${esc(x.why)} <span class="go">Route ›</span></div>`).join('')}</details></li>`:'';
+  const REC=`<li class="sec rec"><span>✓ Recommended</span><small>right wind + recent deer</small></li>`;
+  mapHome();
+  $('#rank').innerHTML=REC+rows.slice(0,SHOW).join('')+(rows.length>SHOW?`<li class="more"><details ${MODE==='more'?'open':''} id="moreD"><summary class="sec more2"><span>● More stands (${rows.length-SHOW})</span><small>wind OK, less action</small></summary><ul class="rank">${rows.slice(SHOW).join('')}</ul></details></li>`:'')+NP;
+  const md=$('#moreD'), nd=$('#npD');
+  const setMode=(m,open)=>{if(open){MODE=m;sel=null;if(m==='more'&&nd)nd.open=false;if(m==='np'&&md)md.open=false;fitGroup(m);}else if(MODE===m){MODE=null;view=null;}drawMap();if(open)placeMap((m==='more'?md:nd).querySelector('summary'));else mapHome();};
+  if(md) md.addEventListener('toggle',()=>{if(md.open!==(MODE==='more'))setMode('more',md.open)});
+  if(nd) nd.addEventListener('toggle',()=>{if(nd.open!==(MODE==='np'))setMode('np',nd.open)});
+  document.querySelectorAll('#rank .tg').forEach(b=>b.onclick=e=>{e.stopPropagation();const id=b.dataset.t;
+    if(allTaken().some(t=>t.id===id)){local=local.filter(t=>t.id!==id);} else local.push({id,who:'Member'});
+    store(LS+D.date,local);render();});
+  document.querySelectorAll('#rank li[data-id]').forEach(li=>li.onclick=()=>{if(sel===li.dataset.id&&li.nextElementSibling&&li.nextElementSibling.classList.contains('mapslot')){sel=null;mapHome();drawMap();return;}sel=li.dataset.id;fitRoute(sel);drawMap();placeMap(li)});
+  document.querySelectorAll('#rank .np').forEach(el=>el.onclick=e=>{if(e.target.closest('#mapwrap'))return;e.stopPropagation();if(sel===el.dataset.np&&el.nextElementSibling&&el.nextElementSibling.classList.contains('mapslot')){sel=null;fitGroup('np');drawMap();placeMap(el.closest('details').querySelector('summary'));return;}sel=el.dataset.np;fitRoute(sel);drawMap();placeMap(el)});
+  drawMap(R);
+  drawWind(); drawWx(); drawDrill();
+}
+
+function drawMap(R){
+  R=R||ranked(); const g=D.geo; const W=g.w,H=g.h;
+  const avail=R.filter(r=>r.status!=='taken').slice(0,4);
+  const club=px(...D.club);
+  const tw=D.windTowardDeg*Math.PI/180; const pxm=-g.fy[0]*g.scale/111320; const L=150*0.9144*pxm;
+  if(!view){view={x:0,y:0,w:W,h:H};clampView();};
+  let s=`<svg class="mp" viewBox="${view.x} ${view.y} ${view.w} ${view.h}" xmlns="http://www.w3.org/2000/svg" ><image href="${BASE}" x="0" y="0" width="${W}" height="${H}" opacity="${BASE==='map-topo.jpg'?1:.85}" preserveAspectRatio="none"/>`;
+  (D.trails||[]).forEach(t=>{const p=t.pts.map(q=>px(q[0],q[1]).join(',')).join(' ');s+=`<polyline points="${p}" fill="none" stroke="#000" stroke-opacity=".35" stroke-width="6" stroke-linejoin="round"/><polyline points="${p}" fill="none" stroke="#f2e3b3" stroke-width="3" stroke-linejoin="round"/>`;});
+  if(!(MODE&&!sel))avail.forEach(r=>{const [x,y]=px(r.s.lat,r.s.lon);let pts=[[x,y]];for(let d=-22;d<=22;d+=4){const b=tw+d*Math.PI/180;pts.push([x+L*Math.sin(b),y-L*Math.cos(b)])}
+    s+=`<polygon points="${pts.map(p=>p.join(',')).join(' ')}" fill="rgba(255,106,19,.30)"/>`;});
+  if(sel&&STAND[sel]&&!avail.some(r=>r.id===sel)){const o=STAND[sel];const [x,y]=px(o.lat,o.lon);let pts=[[x,y]];for(let d=-22;d<=22;d+=4){const b=tw+d*Math.PI/180;pts.push([x+L*Math.sin(b),y-L*Math.cos(b)])}
+    s+=`<polygon points="${pts.map(p=>p.join(',')).join(' ')}" fill="rgba(255,106,19,.38)" stroke="#ff6a13" stroke-width="2" stroke-dasharray="6 5"/>`;}
+  avail.forEach((r,i)=>{if(r.alt&&(i===0||sel===r.id)){const ap=r.alt.map(p=>px(...p));s+=`<polyline points="${ap.map(p=>p.join(',')).join(' ')}" fill="none" stroke="#c9a8ff" stroke-width="4" stroke-dasharray="6 8" opacity=".95"/>`;}});
+  let STEPS='';const RC=['#ff8c00','#5fc4ff','#c9a8ff','#9be37a'];
+  const NPs=(D.notPicked||[]);const selR=sel&&(R.find(x=>x.id===sel)||NPs.find(x=>x.id===sel));
+  const isOn=(r,i)=>sel&&selR?r.id===sel:i===0;
+  const drawR=(r0,i,on,c)=>{let r=eff(r0);if(r.driveR){const dp=r.driveR.map(p=>px(...p)).map(p=>p.join(',')).join(' ');s+=`<polyline points="${dp}" fill="none" stroke="#000" stroke-opacity="${on?.6:.3}" stroke-width="${on?11:8}" stroke-linecap="round"/><polyline points="${dp}" fill="none" stroke="#e8eef5" stroke-width="${on?6:4}" stroke-dasharray="4 9" stroke-linecap="round" opacity="${on?1:.55}"/>`;r={...r,route:r.route.slice(r.driveR.length-1),fromRoute:true};}const pts=[...(r.fromRoute===false?[club]:[]),...r.route.map(p=>px(...p)),...(STAND[r.id]?[px(STAND[r.id].lat,STAND[r.id].lon)]:[])];const ps=pts.map(p=>p.join(',')).join(' ');
+    s+=`<polyline points="${ps}" fill="none" stroke="#000" stroke-opacity="${on?.6:.3}" stroke-width="${on?11:8}" stroke-linejoin="round" stroke-linecap="round"/><polyline points="${ps}" fill="none" stroke="${c}" stroke-width="${on?7:5}" ${on?'':'stroke-dasharray="14 10"'} stroke-linejoin="round" stroke-linecap="round" class="rt" data-on="${on?1:0}" opacity="${on?1:.55}"/>`;
+    if(on&&r.steps)r.steps.forEach(st=>{const [x,y]=px(st[0],st[1]);STEPS+=`<g class="mk" data-x="${x}" data-y="${y}"><circle cx="${x}" cy="${y}" r="16" fill="${c}" stroke="#000" stroke-width="3"/><text x="${x}" y="${y+7}" font-size="20" font-weight="800" text-anchor="middle" fill="#000">${esc(st[2])}</text></g>`;});};
+  if(!(MODE&&!sel))avail.map((r,i)=>[r,i]).filter(([r,i])=>!isOn(r,i)).forEach(([r,i])=>drawR(r,i,false,RC[i]||'#5fc4ff'));
+  if(selR&&STAND[selR.id]){const o=STAND[selR.id];const [x,y]=px(o.lat,o.lon);const fw=o.watch||o.face;if(DIRS.includes(fw))s+=`<polygon points="${wedge(x,y,dirDeg(fw),L*0.9,30)}" fill="rgba(120,220,110,.33)" stroke="#7bdc6e" stroke-width="2"/>`;}
+  if(selR&&selR.route){const np=!R.includes(selR);drawR(selR,0,true,np?'#ff5a4f':'#ff8c00');}
+  else if(!(MODE&&!sel)){const t=avail[0];if(t)drawR(t,0,true,'#ff8c00');}
+  if(MODE&&!sel){const G=groupList(MODE);const np=MODE==='np';const col=np?'#ff5a4f':'#5fc4ff';
+    G.forEach(r=>{if(r.route){const ps=r.route.map(p=>px(...p)).concat([px(r.s.lat,r.s.lon)]).map(p=>p.join(',')).join(' ');s+=`<polyline points="${ps}" fill="none" stroke="${col}" stroke-width="4" stroke-dasharray="10 8" opacity=".7"/>`;}});
+    G.forEach(r=>{const [x,y]=px(r.s.lat,r.s.lon);const fw=r.s.watch||r.s.face;const wd=DIRS.includes(fw)?dirDeg(fw):undefined;
+      if(wd!==undefined)s+=`<polygon points="${wedge(x,y,wd,L*0.9,30)}" fill="rgba(120,220,110,.33)" stroke="#7bdc6e" stroke-width="2"/>`;
+      s+=`<polygon points="${wedge(x,y,D.windTowardDeg,L*1.15,22)}" fill="rgba(255,106,19,.5)" stroke="#ff6a13" stroke-width="2" stroke-dasharray="6 5"/>`;});
+    const boxes=[];const W0=D.geo.w;
+    G.forEach((r,i)=>{const [x,y]=px(r.s.lat,r.s.lon);const t=(r.tag||'')+(eff(r).yd?' · '+eff(r).yd+' yd':'');const tw=Math.max(t.length*9.6,70)+24,th=52;
+      let bx=Math.min(Math.max(x-tw/2,10),W0-tw-10),by=y+28;
+      const hit=(X,Y)=>boxes.some(b=>X<b[0]+b[2]&&X+tw>b[0]&&Y<b[1]+b[3]&&Y+th>b[1]);
+      if(hit(bx,by))by=y-28-th; if(hit(bx,by)){bx=x+28;by=y-th/2;}
+      boxes.push([bx,by,tw,th]);
+      s+=`<g class="ring mk grp" data-x="${x}" data-y="${y}" data-id="${esc(r.id)}" style="cursor:pointer"><line x1="${x}" y1="${y}" x2="${bx+tw/2}" y2="${by+(by>y?0:th)}" stroke="${col}" stroke-width="2"/><circle cx="${x}" cy="${y}" r="20" fill="rgba(0,0,0,.5)" stroke="${col}" stroke-width="5"/><text x="${x}" y="${y+7}" font-size="19" font-weight="800" text-anchor="middle" fill="${col}">${np?'✕':i+5}</text><rect x="${bx}" y="${by}" width="${tw}" height="${th}" rx="8" fill="rgba(0,0,0,.78)" stroke="${col}" stroke-width="2"/><text x="${bx+12}" y="${by+22}" font-size="20" font-weight="800" fill="#fff">#${esc(r.id)}</text><text x="${bx+12}" y="${by+43}" font-size="16" font-weight="600" fill="${np?'#ffb3ad':'#bfe6ff'}">${esc(t)}</text></g>`;});}
+  allTaken().forEach(t=>{const o=STAND[t.id]; if(!o) return; const [x,y]=px(o.lat,o.lon);
+    s+=`<g class="mk" data-x="${x}" data-y="${y}"><circle cx="${x}" cy="${y}" r="20" fill="rgba(255,90,79,.25)" stroke="#ff5a4f" stroke-width="5"/><path d="M${x-10} ${y-10}L${x+10} ${y+10}M${x+10} ${y-10}L${x-10} ${y+10}" stroke="#fff" stroke-width="5"/><text x="${x+26}" y="${y+8}" font-size="26" font-weight="700" fill="#ffb3ad" stroke="#000" stroke-width="5" paint-order="stroke">${esc(t.who)} #${esc(t.id)}</text></g>`;});
+  const aid=new Set(avail.map(r=>r.id)), tid=new Set(allTaken().map(t=>t.id));
+  const gid=new Set(MODE&&!sel?groupList(MODE).map(r=>r.id):[]);D.stands.forEach(o=>{if(aid.has(o.id)||tid.has(o.id)||gid.has(o.id))return;const [x,y]=px(o.lat,o.lon);const on=sel===o.id;const lo=o.leaveOut;
+    s+=`<g class="ring mk" data-x="${x}" data-y="${y}" data-id="${esc(o.id)}" style="cursor:pointer" opacity="${lo&&!on?.55:1}"><circle cx="${x}" cy="${y}" r="26" fill="transparent"/><circle cx="${x}" cy="${y}" r="${on?14:10}" fill="${lo?'#8a8a8a':o.fav?'#ffc83d':'#fff'}" stroke="${on?'#ffc83d':'#000'}" stroke-width="${on?6:3}"/><text x="${x+15}" y="${y+7}" font-size="20" font-weight="700" fill="${lo?'#ccc':'#fff'}" stroke="#000" stroke-width="5" paint-order="stroke">#${esc(o.id)}</text></g>`;});
+  avail.forEach((r,i)=>{const [x,y]=px(r.s.lat,r.s.lon);const c=i===3?'#5fc4ff':'#ffc83d';const big=sel===r.id;
+    s+=`<g class="ring mk" data-x="${x}" data-y="${y}" data-id="${esc(r.id)}" style="cursor:pointer"><circle cx="${x}" cy="${y}" r="${big?30:24}" fill="rgba(0,0,0,.35)" stroke="${c}" stroke-width="${big?8:6}"/><text x="${x}" y="${y+9}" font-size="26" font-weight="800" text-anchor="middle" fill="${c}">${i===3?'B':i+1}</text><text x="${x+32}" y="${y+9}" font-size="28" font-weight="800" fill="${c}" stroke="#000" stroke-width="6" paint-order="stroke">#${esc(r.id)}</text></g>`;});
+  s+=STEPS;
+  if(D.parking){const [qx,qy]=px(...D.parking);s+=`<g class="mk" data-x="${qx}" data-y="${qy}"><rect x="${qx-13}" y="${qy-13}" width="26" height="26" rx="6" fill="#2f6fdf" stroke="#fff" stroke-width="3"/><text x="${qx}" y="${qy+8}" font-size="20" font-weight="800" text-anchor="middle" fill="#fff">P</text><text x="${qx+20}" y="${qy+8}" font-size="22" font-weight="700" fill="#fff" stroke="#000" stroke-width="5" paint-order="stroke">Parking Pond</text></g>`;}
+  s+=`<g class="mk" data-x="${club[0]}" data-y="${club[1]}"><circle cx="${club[0]}" cy="${club[1]}" r="10" fill="#fff" stroke="#000" stroke-width="3"/><text x="${club[0]-16}" y="${club[1]-18}" font-size="24" font-weight="700" text-anchor="end" fill="#fff" stroke="#000" stroke-width="5" paint-order="stroke">Clubhouse</text></g>`;
+  if(ME){const m=px(ME[0],ME[1]);const r=Math.max(8,ME[2]/0.9144*pxPerYd());s+=`<g class="me"><circle cx="${m[0]}" cy="${m[1]}" r="${r}" fill="rgba(66,165,255,.18)" stroke="rgba(66,165,255,.6)" stroke-width="2"/><circle cx="${m[0]}" cy="${m[1]}" r="11" fill="#2b8cff" stroke="#fff" stroke-width="4"/></g>`;}
+  s+='</svg>'; let o=`<svg class="ov" viewBox="0 0 ${W} ${H}" preserveAspectRatio="xMaxYMin meet" xmlns="http://www.w3.org/2000/svg">`;
+  const ax=W-120,ay=80,al=46; o+=`<g transform="translate(${ax},${ay}) rotate(${D.windTowardDeg})"><circle r="56" fill="rgba(0,0,0,.55)"/><path d="M0 ${al} L0 ${-al+14}" stroke="#fff" stroke-width="8"/><path d="M0 ${-al-6} L-16 ${-al+20} L16 ${-al+20}Z" fill="#fff"/></g><text x="${ax}" y="${ay+86}" font-size="24" font-weight="700" text-anchor="middle" fill="#fff" stroke="#000" stroke-width="5" paint-order="stroke">Wind ${esc(D.wind.from)}</text>`;
+  const L2=(x,y,t,a)=>`<text x="${x}" y="${y}" font-size="34" font-weight="800" text-anchor="${a||'middle'}" fill="#fff" stroke="#000" stroke-width="6" paint-order="stroke">${t}</text>`;
+  if(MODE&&!sel){const k=MODE==='np'?'Why not: green = where deer come from · orange = your scent today':'More stands: green = where deer come from · orange = your scent';o+=`<rect x="16" y="58" width="${W-200}" height="46" rx="10" fill="rgba(0,0,0,.75)"/><text x="${(W-184)/2+8}" y="89" font-size="24" font-weight="700" text-anchor="middle" fill="#fff">${k}</text>`;}
+  o+=L2(W/2,40,'N')+L2(W/2,H-14,'S')+L2(W-16,H/2+12,'E','end')+L2(16,H/2+12,'W','start');
+  const rx=70,ry=H-80,RR=52; o+=`<g transform="translate(${rx},${ry})"><circle r="${RR+8}" fill="rgba(0,0,0,.55)"/>`+[0,45,90,135,180,225,270,315].map(a=>{const L=a%90?RR*.6:RR;const r=a*Math.PI/180;return `<line x1="0" y1="0" x2="${(L*Math.sin(r)).toFixed(1)}" y2="${(-L*Math.cos(r)).toFixed(1)}" stroke="${a===0?'#ff6a13':'#fff'}" stroke-width="${a%90?3:5}" stroke-linecap="round"/>`}).join('')+`</g>`;
+  o+='</svg>';
+  $('#mapbox').innerHTML=s+o; applyView();
+  document.querySelectorAll('.ring').forEach(gEl=>gEl.onclick=()=>{sel=gEl.dataset.id;fitRoute(sel);drawMap();
+    document.querySelectorAll('#rank li').forEach(li=>li.style.background=li.dataset.id===sel?'rgba(255,200,61,.12)':'');
+    const si=$('#standinfo'); if(si.firstChild) si.scrollIntoView({behavior:'smooth',block:'nearest'});});
+  showInfo(sel);
+}
+function groupList(m){const R=ranked();if(m==='more')return R.filter(r=>r.status!=='taken').slice(4);if(m==='np')return (D.notPicked||[]).map(n=>Object.assign({},n,{s:STAND[n.id]})).filter(n=>n.s);return []}
+function fitGroup(m){const W=D.geo.w,H=D.geo.h;const L=groupList(m);const pts=[];L.forEach(r=>{pts.push(px(r.s.lat,r.s.lon))});if(!pts.length){view=null;return}
+  let x0=Math.min(...pts.map(p=>p[0])),x1=Math.max(...pts.map(p=>p[0])),y0=Math.min(...pts.map(p=>p[1])),y1=Math.max(...pts.map(p=>p[1]));
+  let w=Math.min(W,Math.max(x1-x0+300,(y1-y0+340)*W/H));const hh=w*(ASP||H/W);view={x:(x0+x1)/2-w/2,y:(y0+y1)/2-hh/2+90,w:w,h:hh};}
+function wedge(x,y,deg,len,half){const b=deg*Math.PI/180;let pts=[[x,y]];for(let d=-half;d<=half;d+=5){const a=b+d*Math.PI/180;pts.push([x+len*Math.sin(a),y-len*Math.cos(a)])}return pts.map(p=>p.join(',')).join(' ')}
+function mapToTop(){const t=document.querySelector('#toppick .plan')||document.querySelector('#toppick');if(t&&!sel&&!MODE){placeMap(t,true);const top=ranked().find(r=>r.status!=='taken');if(top){fitRoute(top.id);drawMap();}}}
+function mapHome(){const w=$('#mapwrap'),hm=$('#mapHome');if(w&&hm&&w.parentElement!==hm){const old=w.parentElement;hm.appendChild(w);if(old&&old.classList.contains('mapslot'))old.remove();}}
+function placeMap(afterEl,noScroll){const w=$('#mapwrap');if(!w||!afterEl)return;document.querySelectorAll('.mapslot').forEach(x=>{if(!x.contains(w))x.remove()});
+  const tag=afterEl.tagName==='LI'?'li':'div';const slot=document.createElement(tag);slot.className='mapslot';afterEl.after(slot);slot.appendChild(w);
+  document.querySelectorAll('.mapslot').forEach(x=>{if(x!==slot)x.remove()});if(!noScroll)setTimeout(()=>afterEl.scrollIntoView({behavior:'smooth',block:'start'}),30);}
+function ydTag(y,d){return y?`<span class="yd">${d?'🚗 '+d.toLocaleString()+' + ':''}🚶 ${y.toLocaleString()} yd</span>`:''}
+function dressFor(y){if(!y)return '';return y>=600?'Long walk: walk in light, jacket in the pack':y>=300?'Medium walk: jacket open or in the pack':'Short walk: fine to wear the jacket in'}
+let START_ALL='Best';try{START_ALL=localStorage.getItem('hb_start_all')||'Best'}catch(e){}
+const startOf=r=>/^Parking/.test(r.walk||'')?'Parking Pond':/^Clubhouse/.test(r.walk||'')?'Clubhouse':null;
+const EC={};
+function optFor(id,start){const av=avoidList();const k=id+'|'+start+'|'+av.map(a=>a.id).sort().join(',');if(!(k in EC)){const b=routeFor(id,av,start);EC[k]=b?{route:b.path.map(i=>unpx(GR.N[i].x,GR.N[i].y)),steps:stepsFrom(b,id),yd:Math.round(b.L/pxPerYd()/10)*10,start}:null;}return EC[k]}
+function bestStart(r){const cur=startOf(r);if(!cur)return {start:cur,why:''};const av=avoidList();
+  const opts=[{start:cur,route:r.route,yd:r.yd}];const other=cur==='Clubhouse'?'Parking Pond':'Clubhouse';const o=optFor(r.id,other);if(o)opts.push({start:other,route:o.route,yd:o.yd});
+  opts.forEach(x=>{x.hits=av.length?conflicts(x.route,r.id,av):[];x.score=(x.yd||9999)+x.hits.reduce((s,h)=>s+600+(140-h.yd)*5,0)+(r.lockStart&&x.start!==cur?400:0)});
+  opts.sort((a,b)=>a.score-b.score);const b=opts[0],alt=opts[1];
+  let why='';if(alt){if(b.hits.length<alt.hits.length)why=`keeps you clear of ${alt.hits.map(h=>h.who+' (#'+h.id+')').join(', ')}`;else if(r.lockStart&&b.start===cur)why=r.lockStart;else why=alt.yd&&b.yd?(alt.yd-b.yd>0?`${alt.yd-b.yd} yd shorter than from the ${alt.start}`:`about the same as from the ${alt.start}`):'';}
+  const rr=(r.notes||[]).find(n=>/^Rerouted around/.test(n));if(rr&&b.start===cur&&!/^keeps you clear/.test(why))why=rr.replace('Rerouted around','keeps you clear of')+(why?'; '+why:'');
+  if(b.hits.length)why+=(why?'; ':'')+`still passes ${b.hits[0].who} (#${b.hits[0].id}) at ~${b.hits[0].yd} yd`;
+  return {start:b.start,why};}
+let CAR=false;try{localStorage.setItem('hb_car','0')}catch(e){}
+const CAR_MIN=600, CAR_WALK=150;
+function llLenYd(R){let L=0;for(let i=1;i<R.length;i++)L+=meters({lat:R[i-1][0],lon:R[i-1][1]},{lat:R[i][0],lon:R[i][1]});return L/0.9144}
+function trailSeq(R){if(!GR)buildGraph();const out=[];R.forEach(p=>{const q=px(...p);let b=null,bd=12;GR.N.forEach(n=>{const d=Math.hypot(n.x-q[0],n.y-q[1]);if(d<bd){bd=d;b=n.t}});if(b&&b!=='x'&&out[out.length-1]!==b)out.push(b)});return out}
+function carVersion(r){const cur=startOf(r);let R=null;
+  if(cur==='Clubhouse')R=r.route;else{const o=optFor(r.id,'Clubhouse');if(o)R=o.route;}
+  if(!R||R.length<2)return null;const o=STAND[r.id];const full=[...R,[o.lat,o.lon]];const tot=Math.round(llLenYd(full));
+  if(tot<CAR_MIN)return {tooClose:true,tot};
+  const pts=[];let acc=0;for(let k=full.length-1;k>0;k--){const a=full[k],b=full[k-1];const seg=meters({lat:a[0],lon:a[1]},{lat:b[0],lon:b[1]})/0.9144;
+    for(let s=0;s<seg;s+=10){const w=acc+s;if(w>=CAR_WALK&&w<=350){const f=s/seg;pts.push({w,i:k,p:[a[0]+(b[0]-a[0])*f,a[1]+(b[1]-a[1])*f]})}}acc+=seg;if(acc>350)break;}
+  if(!pts.length)return {tooClose:true,tot};
+  const tw=D.windTowardDeg*Math.PI/180,wx=Math.sin(tw),wy=-Math.cos(tw);const sp=px(o.lat,o.lon);const others=avoidList();
+  const upw=(q,t)=>{const dx=t[0]-q[0],dy=t[1]-q[1],L=Math.hypot(dx,dy)||1;return (dx*wx+dy*wy)/L};
+  let best=null;pts.forEach(c=>{const q=px(...c.p);let sc=upw(q,sp)*3+c.w/350;
+    others.forEach(a=>{const d=Math.hypot(a.p[0]-q[0],a.p[1]-q[1])/pxPerYd();if(d<350)sc+=Math.max(0,upw(q,a.p))*3*(1-d/350)});
+    if(!best||sc<best.sc)best={...c,sc,u:upw(q,sp)}});
+  const i=best.i,drop=best.p;const windNote=best.u< -0.3?'downwind of the stand':best.u<0.4?'crosswind of the stand, so the wind carries the car smell past it':'best spot on this route, but the wind drifts toward the stand from here; park quiet, or skip the car and walk from the Parking Pond';
+  const driveR=[...full.slice(0,i),drop],walkR=[drop,...full.slice(i)];const dYd=Math.round(llLenYd(driveR)/10)*10,wYd=Math.round(llLenYd(walkR)/10)*10;
+  const Y=pxPerYd();const DP=driveR.map(p=>px(...p));const mk=[];Object.values(STAND).forEach(s=>{if(s.id===r.id)return;const q=px(s.lat,s.lon);let bi=-1,bd=40*Y;DP.forEach((p,i)=>{const dd=Math.hypot(p[0]-q[0],p[1]-q[1]);if(dd<bd){bd=dd;bi=i}});if(bi>=0)mk.push([bi,s.id])});mk.sort((a,b)=>a[0]-b[0]);
+  return {driveR,walkR,dYd,wYd,seqD:trailSeq(driveR),seqW:trailSeq(walkR),drop,tot,windNote,marks:mk.map(x=>x[1]).slice(0,4)};}
+function eff(r){if(!r||!r.route||!STAND[r.id])return r;if(CAR){const c=carVersion(r);const o=STAND[r.id];
+    if(c&&!c.tooClose&&/^(downwind|crosswind)/.test(c.windNote)){const last=c.seqW[c.seqW.length-1];return Object.assign({},r,{route:[...c.driveR,...c.walkR.slice(1)],driveR:c.driveR,fromRoute:true,yd:c.wYd,dYd:c.dYd,walk:`Club car → #${r.id} · drive ~${c.dYd} yd, walk ~${c.wYd} yd`,
+      steps:[[...c.driveR[0],'🚗',`Take the club car from the clubhouse garage; drive ~${c.dYd} yd${c.marks&&c.marks.length?' past '+c.marks.map(x=>'#'+x).join(', '):''} (route on the map).`],[...c.drop,'P',`Park and shut it off here, ~${c.wYd} yd short of the stand (${c.windNote}).`],[o.lat,o.lon,'🚶',`Walk the last ~${c.wYd} yd to #${r.id}.`]]});}
+    if(c&&c.tooClose)return Object.assign({},eff0(r),{carNote:`Only ~${c.tot} yd from the clubhouse: walk it, leave the car for someone going farther.`});}
+  return eff0(r);}
+function eff0(r){if(!r||!r.route||!STAND[r.id])return r;const want=START_ALL==='Best'?bestStart(r).start:START_ALL;const cur=startOf(r);if(!want||!cur||want===cur)return r;const o=optFor(r.id,want);if(!o)return r;
+  return Object.assign({},r,{route:o.route,steps:o.steps,yd:o.yd,fromRoute:true,walk:`${want} → #${r.id} · ~${o.yd} yd`});}
+function startSelHTML(){const opts=[['Best','⭐ Best per stand'],['Clubhouse','🏠 Clubhouse'],['Parking Pond','🅿 Parking Pond']];
+  const top=ranked().filter(r=>r.status!=='taken')[0];let rec='';if(top){const b=bestStart(top);if(b.start)rec=`<div class="ssrec">⭐ For #${esc(top.id)}, park at the <b>${esc(b.start)}</b>${b.why?' · '+esc(b.why):''}${top.lockStart?'':''}</div>`;}
+  const carRow=`<div class="sslab">Club car</div><div class="stbar"><button class="stb ${!CAR?'on':''}" data-car="0">🚶 Walking</button><button class="stb ${CAR?'on':''}" data-car="1">🚗 Got the club car</button></div>`;
+  if(CAR){const t2=top&&eff(top);return carRow+`<div class="ssrec">${t2&&t2.dYd?`🚗 For #${esc(top.id)}: drive ~${t2.dYd} yd from the garage, park, walk the last ~${t2.yd} yd.`:t2&&t2.carNote?'🚶 '+esc(t2.carNote):''} First come, first served; skip it for stands near the clubhouse.</div>`;}
+  return carRow+`<div class="sslab">Parking at</div><div class="stbar">${opts.map(([k,l])=>`<button class="stb ${START_ALL===k?'on':''}" data-st="${k}">${l}</button>`).join('')}</div>${rec}`}
+function startBar(r){if(!r||!r.route||!STAND[r.id])return '';const cur=startOf(r);if(!cur)return '';const want=cur;
+  const yds={};['Clubhouse','Parking Pond'].forEach(s=>{if(s===cur)yds[s]=r.yd;else{const o=optFor(r.id,s);yds[s]=o&&o.yd}});
+  if(!yds.Clubhouse||!yds['Parking Pond'])return '';return `<div class="stbar">${['Clubhouse','Parking Pond'].map(s=>`<button class="stb ${s===want?'on':''}" data-id="${esc(r.id)}" data-st="${s}">${s==='Clubhouse'?'🏠 Clubhouse':'🅿 Parking Pond'}${yds[s]?` · ${yds[s]} yd`:''}</button>`).join('')}</div>`;}
+let POND_DRIVE=null;
+function pondDrive(){if(POND_DRIVE)return POND_DRIVE;if(!GR)buildGraph();const S=startsPx();const c=S.find(x=>x.name==='Clubhouse'),pp=S.find(x=>x.name==='Parking Pond');if(!c||!pp)return null;
+  const pth=dijkstra(nearestNode(...c.p),nearestNode(...pp.p),()=>1);if(!pth)return null;let L=0;const seq=[];for(let i=1;i<pth.length;i++){const a=GR.N[pth[i-1]],b=GR.N[pth[i]];L+=Math.hypot(a.x-b.x,a.y-b.y);if(b.t!=='x'&&seq[seq.length-1]!==b.t)seq.push(b.t)}
+  POND_DRIVE={yd:Math.round(L/pxPerYd()/10)*10,seq};return POND_DRIVE}
+function clubFirst(r){const s=/^Parking/.test(r.walk||'')?'pond':'club';
+  if(s==='pond'){const d=pondDrive();return `<div class="cf">📝 <b>Clubhouse first:</b> stand # on the door, then drive your truck to the Parking Pond${d?` (~${d.yd} yd)`:''} and walk from there.</div>`}
+  if(/^Club car/.test(r.walk||''))return `<div class="cf">📝 <b>Clubhouse first:</b> stand # on the door, then grab the club car from the garage.</div>`;
+  return `<div class="cf">📝 <b>Clubhouse first:</b> stand # on the door, then walk from the clubhouse.</div>`}
+function howTo(r0){if(!r0||!r0.route||!STAND[r0.id])return '';const cur=startOf(r0);if(!cur)return '';
+  const yC=cur==='Clubhouse'?r0.yd:(optFor(r0.id,'Clubhouse')||{}).yd, yP=cur==='Parking Pond'?r0.yd:(optFor(r0.id,'Parking Pond')||{}).yd;
+  const pd=pondDrive();const cv=carVersion(r0);const best=bestStart(r0).start;
+  const mode=CAR?'car':START_ALL==='Best'?best:START_ALL;
+  const row=(k,icon,title,sub,ydw,star,ok)=>`<button class="ht ${mode===k?'on':''}" data-mode="${k}" ${ok?'':'disabled'}><span class="hi">${icon}</span><span class="hm"><b>${title}${star?' <span class="hs">⭐ best</span>':''}</b><small>${sub}</small></span><span class="hy">${ydw?ydw+' yd<small>walk</small>':'—'}</span></button>`;
+  let carSub='',carY=null,carOk=!!cv;if(cv&&cv.tooClose){carSub=`Too close to the clubhouse; walk it`;carOk=false}else if(cv){carSub=`Drive ${cv.dYd} yd, park ${cv.windNote.startsWith('downwind')?'downwind':cv.windNote.startsWith('crosswind')?'crosswind':'(wind drifts toward stand)'}`;carY=cv.wYd}else carSub='No club-car route';
+  return `<div class="how"><div class="hwt">How to get to #${esc(r0.id)}</div>
+   ${row('Clubhouse','🏠','Walk from the clubhouse','Sticky note, then walk',yC,best==='Clubhouse',!!yC)}
+   ${row('Parking Pond','🅿','Truck to the Parking Pond',pd?`Sticky note, drive ${pd.yd} yd, then walk`:'Sticky note, drive, walk',yP,best==='Parking Pond',!!yP)}
+   ${row('car','🚗','Club car (if it\'s free)',carSub,carY,false,carOk)}</div>`}
+function planHTML(r0){if(!r0||!r0.route||!STAND[r0.id])return '';const cur=startOf(r0);if(!cur)return '';const b=bestStart(r0);
+  const yC=cur==='Clubhouse'?r0.yd:(optFor(r0.id,'Clubhouse')||{}).yd, yP=cur==='Parking Pond'?r0.yd:(optFor(r0.id,'Parking Pond')||{}).yd;const pd=pondDrive();
+  const truck=b.start==='Parking Pond'?`🛻 <b>Park at the Parking Pond</b>, walk ~${yP} yd`:`🚶 <b>Walk from the clubhouse</b>, ~${yC} yd`;
+  const why=b.why?`<small>${esc(b.why)}</small>`:'';
+  if(!CAR)return `<div class="plan"><div class="pl1">${truck}</div>${why}</div>`;
+  const cv=carVersion(r0);
+  if(!cv||cv.tooClose)return `<div class="plan"><div class="pl1">${truck}</div><small>${cv&&cv.tooClose?'Too close to the clubhouse for the club car; leave it for someone going farther.':'No club-car route to this stand.'}</small></div>`;
+  const bad=!/^(downwind|crosswind)/.test(cv.windNote);
+  if(bad)return `<div class="plan"><div class="pl1">${truck}</div><small>Skip the club car here: every place to park it on the way in is upwind of the stand.</small></div>`;
+  return `<div class="plan"><div class="pl1">🚗 <b>Drive the club car ~${cv.dYd} yd</b>, park ${cv.windNote.startsWith('downwind')?'downwind':'crosswind'}, walk ~${cv.wYd} yd</div><small>Saves ~${Math.min(yC||1e9,yP||1e9)-cv.wYd} yd of walking.</small></div>`;}
+function walkHTML(r0,c,noHow){const r=eff(r0);if(!r||!r.steps)return '';return (noHow?planHTML(r0):howTo(r0))+`<div class="walk"${c?` style="border-color:${c};background:rgba(255,90,79,.10)"`:''}><div class="wt">Walk-in: ${esc(r.walk||'')}</div>${clubFirst(r)}${r.carNote?`<div class="wd" style="color:#ffc27a">🚗 ${esc(r.carNote)}</div>`:''}${r.yd?`<div class="wd">👕 ${esc(dressFor(r.yd))}</div>`:''}${r.steps.map(st=>`<div class="ws"><span class="wn"${c?` style="background:${c}"`:''}>${esc(st[2])}</span><span>${esc(st[3])}</span></div>`).join('')}</div>`}
+function fitRoute(id){const W=D.geo.w,H=D.geo.h;const r=eff(ranked().find(x=>x.id===id)||(D.notPicked||[]).find(x=>x.id===id));const o=STAND[id];
+  const pts=[...(r&&r.route?r.route:[]),...(o?[[o.lat,o.lon]]:[])].map(p=>px(...p));if(!pts.length){view=null;return}
+  let x0=Math.min(...pts.map(p=>p[0])),x1=Math.max(...pts.map(p=>p[0])),y0=Math.min(...pts.map(p=>p[1])),y1=Math.max(...pts.map(p=>p[1]));
+  let w=Math.max(x1-x0,(y1-y0)*W/H)*1.35+120;w=Math.min(W,Math.max(w,W*0.45));const hh=w*(ASP||H/W);view={x:(x0+x1)/2-w/2,y:(y0+y1)/2-hh/2,w:w,h:hh};}
+function showInfo(id){const box=$('#standinfo');const o=id&&STAND[id];if(!o){box.innerHTML='';return}
+  const R=ranked();const r=R.find(x=>x.id===id);const npr=(D.notPicked||[]).find(x=>x.id===id);const tk=allTaken().find(t=>t.id===id);
+  const row=(k,v)=>v?`<div class="k">${k}</div><div>${esc(v)}</div>`:'';
+  box.innerHTML=`<div class="sinfo"><div class="sh"><b>#${esc(o.id)} · ${esc(o.name.replace(/^#\S+\s*/,''))}</b><button id="sx">Close</button></div>
+  <div>${o.fav?'<span class="tag fav">★ Favorite</span>':''}${o.leaveOut?'<span class="tag lo">Leave out</span>':''}${r?`<span class="tag fav">Pick ${R.indexOf(r)+1} today</span>`:''}${(!r&&npr)?'<span class="tag lo">Not picked today</span>':''}${tk?`<span class="tag lo">Taken by ${esc(tk.who)}</span>`:''}</div>
+  <div class="kv">${row('Type',o.kind)}${row('Faces',o.face)}${row('Weapon',o.weap)}${row('Good winds',o.good)}${row('Bad winds',o.bad)}</div>
+  ${r?`<div class="sub">Why today</div>${r.pro?`<span class="pro">✓ ${esc(r.pro)}</span>`:''}${r.con?`<span class="con">✗ ${esc(r.con)}</span>`:''}${r.pro?'':`<div class="why" style="margin-top:6px">${esc(r.why)}</div>`}${walkHTML(r)}`:''}${(!r&&npr)?`<div class="sub" style="color:#ff8a80">Why not today</div><span class="con">✗ ${esc(npr.why)}</span>${walkHTML(npr,'#ff5a4f')}`:''}
+  <div class="sub">Notes</div><div class="why">${esc(o.info||o.note||'No notes yet.')}</div></div>`;
+  $('#sx').onclick=()=>{sel=null;drawMap();};
+}
+function chill(t,v){return (t<=50&&v>3)?Math.round(35.74+0.6215*t-35.75*v**0.16+0.4275*t*v**0.16):t}
+function drawWx(){
+  const x=D.wx; if(!x){$('#wxbd').style.display='none';return;}
+  $('#wxttl').textContent='Weather for your sit'; const wr=document.querySelector('.windrow'); if(wr) wr.style.display='none';
+  const hs=x.hours, sit=new Set(D.sitHours), inS=hs.filter(r=>sit.has(r[0]));
+  const T=inS.map(r=>r[1]), F=inS.map(r=>chill(r[1],r[3])), S=inS.map(r=>r[3]), G=inS.map(r=>r[4]);
+  const hasD=hs.some(r=>r[5]>0); const best=Math.max(...inS.map(r=>r[5])), dmax=Math.max(...hs.map(r=>r[5]));
+  const tiles=`<div class="wxt">
+   <div><div class="k">Temp</div><div class="v">${Math.min(...T)}–${Math.max(...T)}°</div><div class="s">feels ${Math.min(...F)}–${Math.max(...F)}°</div></div>
+   <div><div class="k">Wind</div><div class="v">${esc(inS[0][2])}→${esc(inS[inS.length-1][2])}</div><div class="s">${Math.min(...S)}–${Math.max(...S)} mph, gusts ${Math.max(...G)}</div></div>
+   <div><div class="k">Sky</div><div class="v">${esc(x.sky)}</div><div class="s">${esc(x.rain)}</div></div></div>`;
+  const rows=hs.map(r=>{const on=sit.has(r[0]);const f=chill(r[1],r[3]);const mk=(x.marks||{})[r[0]];
+    return `<div class="wxr ${on?'':'off'} ${hasD&&on&&r[5]===best?'best':''}"><div class="tm">${esc(r[0])}${mk?`<small>${esc(mk)}</small>`:''}</div>
+    <div class="tp"><b>${r[1]}°</b>${f<r[1]?`<small>feels ${f}°</small>`:''}</div>
+    <div class="wd"><span class="ar" style="transform:rotate(${dirDeg(r[2])+180}deg)">↑</span><span><b>${esc(r[2])}</b> ${r[3]} <small>g${r[4]}</small></span></div>
+    <div class="dr">${hasD?`<i style="width:${Math.max(4,Math.round((r[5]-50)/(dmax-50)*30))}px;${r[5]===best&&on?'background:var(--gold)':''}"></i>${r[5]}`:''}</div></div>`}).join('');
+  $('#wxbd').innerHTML=`<div class="wxh">${esc(x.headline)}</div>${tiles}
+   <div class="small" style="display:grid;grid-template-columns:44px 56px 1fr 62px;gap:6px;padding:0 8px 4px;color:var(--mute)"><span>Time</span><span>Temp</span><span>Wind from · mph</span><span style="text-align:right">${hasD?'Deer':''}</span></div>
+   <div class="wxl">${rows}</div>
+   <div class="wxn">${(x.notes||[]).map(n=>`<div><b>${esc(n[0])}:</b> ${esc(n[1])}</div>`).join('')}</div>
+   <div class="small" style="margin-top:6px">Bright rows = your sit; gold = best deer hour. Arrows point where the wind (and your scent) is going. Deer = HuntStand 0–100.${x.src?' Forecast: '+esc(x.src)+'.':''}</div>`;
+}
+function drawWind(){
+  const w=D.wind; const from=w.fromDeg;
+  $('#compass').innerHTML=`<circle r="46" fill="#11140e" stroke="#333b2c" stroke-width="2"/>`+['N','E','S','W'].map((d,i)=>{const a=i*Math.PI/2;return `<text x="${Math.sin(a)*36}" y="${-Math.cos(a)*36+4}" font-size="11" fill="#9aa58f" text-anchor="middle" font-family="Inter">${d}</text>`}).join('')+
+   `<g transform="rotate(${from+180})"><path d="M0 30 L0 -22" stroke="#ff6a13" stroke-width="5" stroke-linecap="round"/><path d="M0 -32 L-9 -16 L9 -16Z" fill="#ff6a13"/></g>`;
+  $('#windtxt').innerHTML=`<div class="big">${esc(w.from)} · ${esc(w.speed)}</div><div class="s">${esc(w.later)}</div><div class="s">${esc(w.note)}</div>`;
+}
+
+function seasonInfo(){
+  const day=new Date(D.date+'T12:00:00'); const isSun=day.getDay()===0;
+  const fmt=x=>new Date(x+'T12:00:00').toLocaleDateString('en-US',{month:'short',day:'numeric'});
+  return (D.seasons||[]).map(z=>{
+    let st='closed',lab='Closed',rank=3;
+    for(const [a,b] of z.segs){const A=new Date(a+'T00:00:00'),B=new Date(b+'T23:59:59');
+      if(day>=A&&day<=B){st='open';lab='Open · thru '+fmt(b);rank=0;if(z.noSunday&&isSun){st='sun';lab='Not on Sundays';rank=1}break;}
+      if(day<A){const n=Math.round((A-day)/864e5);if(rank>2){st='soon';lab=n<=45?'Opens in '+n+' d':'Opens '+fmt(a);rank=2}break;}}
+    return {...z,st,lab,rank,dates:z.segs.map(([a,b])=>fmt(a)+'–'+fmt(b)).join(', ')};
+  }).sort((a,b)=>a.rank-b.rank);
+}
+function drawDrill(){
+  const hr=D.hourly, max=Math.max(...hr.map(r=>r[5]));
+  const sit=new Set(D.sitHours);
+  const head='<tr><th></th>'+hr.map(r=>`<th class="${sit.has(r[0])?'sit':''}">${r[0]}</th>`).join('')+'</tr>';
+  const rowBar='<tr class="b"><td style="color:var(--mute)">Deer</td>'+hr.map(r=>`<td class="${sit.has(r[0])?'sit':''}"><span class="bar" style="height:${Math.round((r[5]-50)/(max-50)*44)+4}px"></span><div>${r[5]}</div></td>`).join('')+'</tr>';
+  const rowW='<tr><td style="color:var(--mute)">Wind</td>'+hr.map(r=>`<td class="${sit.has(r[0])?'sit':''}"><span class="arrow" style="transform:rotate(${dirDeg(r[2])+180}deg)">↑</span><div>${r[2]}</div><div style="color:var(--mute)">${r[3]}–${r[4]}</div></td>`).join('')+'</tr>';
+  const rowT='<tr><td style="color:var(--mute)">Temp</td>'+hr.map(r=>`<td class="${sit.has(r[0])?'sit':''}">${r[1]}°</td>`).join('')+'</tr>';
+  const o=D.outfit;
+  const ck=load('huntbrief-check-'+D.date)||{};
+  const sections=[
+    ['Why '+String(D.sit||'morning').toLowerCase(),D.why.split('.')[0]+'.',`<div class="why">${esc(D.why)}</div><div class="sub">${esc(D.altLabel||'Evening option')}</div><div class="kv">${D.evening.wake?`<div class="k">Get ready</div><div>${esc(D.evening.wake)}</div>`:''}<div class="k">Leave</div><div>${esc(D.evening.leave)}</div><div class="k">In stand</div><div>${esc(D.evening.inStand)}</div>${D.altLabel?'':`<div class="k">Legal end</div><div>${esc(D.hero.legalEnd)} (sunset ${esc(D.hero.sunset)})</div>`}<div class="k">Note</div><div>${esc(D.evening.note)}</div></div>`],
+    ...(D.wx?[]:[['Hour by hour','Deer score · wind · temp',`<div class="chart"><table>${head}${rowBar}${rowW}${rowT}</table></div><div class="small" style="margin-top:6px">Highlighted = your sit. Deer score is HuntStand's 0–100 activity forecast.</div>`],
+    ['Conditions',D.conditions[0][1].split('→')[0],`<div class="kv">${D.conditions.map(c=>`<div class="k">${esc(c[0])}</div><div>${esc(c[1])}</div>`).join('')}</div>`]]),
+    ['What to wear',(D.outfit&&D.outfit.summary)||'See outfit',`<div class="sub">Walk in</div><ul class="l">${o.walk.map(x=>`<li>${esc(x)}</li>`).join('')}</ul><div class="sub">At the stand</div><ul class="l">${o.stand.map(x=>`<li>${esc(x)}</li>`).join('')}</ul><div class="sub">Blaze orange</div><ul class="l">${o.orange.map(x=>`<li>${esc(x)}</li>`).join('')}</ul><div class="sub">Pack</div><div class="why">${esc(o.pack)}. ${esc(o.tip)}</div>`],
+    ['In season',seasonInfo().filter(z=>z.st==='open'||z.st==='sun').map(z=>z.short||z.game).filter((v,i,a)=>a.indexOf(v)===i).join(' · ')||'Nothing open',`<ul class="ssn">${seasonInfo().map(z=>`<li><span class="dot" style="background:${z.st==='open'?'#8fbf4d':z.st==='sun'?'#ff6a13':z.st==='soon'?'#ffc83d':'#4a5240'}"></span><span class="g"><b>${esc(z.game)}</b><span class="s">${esc(z.dates)} · ${esc(z.gear)}${z.note?' · '+esc(z.note):''}</span></span><span class="st ${z.st}">${esc(z.lab)}</span></li>`).join('')}</ul><div class="small" style="margin-top:8px">${esc(D.seasonsSource||'')}</div>`],
+    ['Legal',esc(D.legalSum||(D.legal[0]?D.legal[0][1].split(/[.(]/)[0]:'')),`<div class="kv">${D.legal.map(c=>`<div class="k">${esc(c[0])}</div><div>${esc(c[1])}</div>`).join('')}</div>`],
+    ['Checklist',`<span id="ckc"></span>`,`<div class="check">${D.checklist.map((c,i)=>`<label><input type="checkbox" data-i="${i}" ${ck[i]?'checked':''}>${esc(c)}</label>`).join('')}</div>`]
+  ];
+  $('#drill').innerHTML=sections.filter(s=>!(window.CLUB&&/^(What to wear|Checklist)/.test(s[0]))).map(([t,sv,b])=>`<details><summary>${t}<span class="sv">${sv}</span></summary><div class="dbody">${b}</div></details>`).join('');
+  const upd=()=>{if(!$('#ckc'))return;const c=document.querySelectorAll('.check input:checked').length;$('#ckc').textContent=c+'/'+D.checklist.length+' done'};
+  document.querySelectorAll('.check input').forEach(i=>i.onchange=()=>{const k=load('huntbrief-check-'+D.date)||{};k[i.dataset.i]=i.checked;store('huntbrief-check-'+D.date,k);upd()});
+  upd();
+  $('#foot').innerHTML=`Updated ${esc(D.updated)}<br>Pins ±100 yd · walk-in lines are rough, not trails · stand facing letters unconfirmed`;
+}
+$('#takenBtn').onclick=()=>{const v=$('#takenInput').value;const add=parseTaken(v);
+  if(!add.length){$('#takenInput').value='';$('#takenInput').placeholder='Try: Steve 5, Glenn 15';return}
+  add.forEach(a=>{if(!allTaken().some(t=>t.id===a.id))local.push(a)});store(LS+D.date,local);$('#takenInput').value='';render();mapToTop();
+  $('#pickcard').scrollIntoView({behavior:'smooth'});};
+$('#takenInput').addEventListener('keydown',e=>{if(e.key==='Enter')$('#takenBtn').click()});
+// ---- pan / pinch / wheel zoom ----
+var ASP=null;
+function clampView(){const W=D.geo.w,H=D.geo.h,a=ASP||H/W;view.w=Math.min(W,H/a,Math.max(W/5,view.w));view.h=view.w*a;
+  view.x=Math.min(W-view.w,Math.max(0,view.x));view.y=Math.min(H-view.h,Math.max(0,view.y));}
+function applyView(){clampView();const sv=$('#mapbox svg.mp');if(!sv)return;sv.setAttribute('viewBox',`${view.x} ${view.y} ${view.w} ${view.h}`);
+  const z=Math.pow(view.w/D.geo.w,0.6);
+  sv.querySelectorAll('.mk').forEach(g=>{const x=g.dataset.x,y=g.dataset.y;g.setAttribute('transform',`translate(${x} ${y}) scale(${z}) translate(${-x} ${-y})`);});
+  sv.querySelectorAll('.rt').forEach(l=>{if(l.dataset.on==='1'){l.setAttribute('stroke-width',7*z);}else{l.setAttribute('stroke-width',5*z);l.setAttribute('stroke-dasharray',`${14*z} ${10*z}`);}});}
+function toSvg(cx,cy){const r=$('#mapbox').getBoundingClientRect();return [view.x+(cx-r.left)/r.width*view.w,view.y+(cy-r.top)/r.height*view.h];}
+function zoomAt(f,px_,py_){const nw=Math.min(D.geo.w,Math.max(D.geo.w/5,view.w/f));const k=nw/view.w;
+  view.x=px_-(px_-view.x)*k;view.y=py_-(py_-view.y)*k;view.w=nw;applyView();}
+function zoomCenter(f){zoomAt(f,view.x+view.w/2,view.y+view.h/2);}
+const MB=$('#mapbox'), PT=new Map(); let moved=0, dragged=false;
+MB.addEventListener('pointerdown',e=>{PT.set(e.pointerId,{x:e.clientX,y:e.clientY,t:e.pointerType});if(PT.size===1){moved=0;dragged=false;}});
+window.addEventListener('pointermove',e=>{const p=PT.get(e.pointerId);if(!p||!view)return;
+  const r=MB.getBoundingClientRect(),k=view.w/r.width;
+  if(PT.size===1){const dx=e.clientX-p.x,dy=e.clientY-p.y;moved+=Math.abs(dx)+Math.abs(dy);if(moved>8)dragged=true;
+    if(view.w<D.geo.w-1){view.x-=dx*k;view.y-=dy*k;applyView();}
+    else if(p.t==='touch')window.scrollBy(0,-dy);
+  }else if(PT.size===2){const [a,b]=[...PT.entries()].map(([id,q])=>id===e.pointerId?{x:e.clientX,y:e.clientY}:q);
+    const o=[...PT.values()];const d0=Math.hypot(o[0].x-o[1].x,o[0].y-o[1].y),d1=Math.hypot(a.x-b.x,a.y-b.y);
+    const mx=(a.x+b.x)/2,my=(a.y+b.y)/2,ox=(o[0].x+o[1].x)/2,oy=(o[0].y+o[1].y)/2;
+    view.x-=(mx-ox)*k;view.y-=(my-oy)*k;applyView();
+    if(d0>10){const [sx,sy]=toSvg(mx,my);zoomAt(d1/d0,sx,sy);}dragged=true;}
+  p.x=e.clientX;p.y=e.clientY;});
+const up=e=>{PT.delete(e.pointerId);};
+window.addEventListener('pointerup',up);window.addEventListener('pointercancel',up);
+MB.addEventListener('click',e=>{if(dragged){e.stopPropagation();e.preventDefault();dragged=false;}},true);
+MB.addEventListener('wheel',e=>{if(!view)return;e.preventDefault();const [sx,sy]=toSvg(e.clientX,e.clientY);zoomAt(Math.exp(-e.deltaY*0.002),sx,sy);},{passive:false});
+MB.addEventListener('dblclick',e=>{const [sx,sy]=toSvg(e.clientX,e.clientY);zoomAt(2,sx,sy);});
+let ME=null,MEW=null;
+function meMsg(t){const n=$('#mestat');if(n){n.style.display=t?'block':'none';n.textContent=t;}}
+$('#zme').onclick=()=>{
+  if(MEW!==null){navigator.geolocation.clearWatch(MEW);MEW=null;ME=null;$('#zme').textContent='📍 Me';drawMap();meMsg('');return;}
+  if(!navigator.geolocation){meMsg('This browser has no GPS access');return;}
+  meMsg('Finding you…');
+  try{MEW=navigator.geolocation.watchPosition(p=>{ME=[p.coords.latitude,p.coords.longitude,p.coords.accuracy||10];$('#zme').textContent='📍 On';
+    const g=D.geo,m=px(ME[0],ME[1]),inMap=m[0]>=0&&m[1]>=0&&m[0]<=g.w&&m[1]<=g.h;
+    const dk=meters({lat:ME[0],lon:ME[1]},{lat:D.club[0],lon:D.club[1]});const far=dk>1609?`${(dk/1609.34).toFixed(1)} mi`:`${yd(dk)} yd`;meMsg(inMap?`📍 You're here: ${ME[0].toFixed(5)}, ${ME[1].toFixed(5)} (±${Math.round(ME[2]/0.9144)} yd) · ${far} from the clubhouse`:`📍 GPS works. You're off the club map, ${far} from the clubhouse (${ME[0].toFixed(4)}, ${ME[1].toFixed(4)}).`);drawMap();},
+   e=>{meMsg('Location blocked: '+(e.message||e.code)+'. This page may not be allowed to use GPS.');MEW=null;$('#zme').textContent='📍 Me';},
+   {enableHighAccuracy:true,maximumAge:5000,timeout:20000});}catch(e){meMsg('Location blocked here: '+e.message);MEW=null;}
+};
+$('#zin').onclick=()=>zoomCenter(1.6);
+$('#zout').onclick=()=>zoomCenter(1/1.6);
+document.querySelectorAll('#basesel button').forEach(x=>x.onclick=()=>setBase(x.dataset.b));
+$('#zfit').onclick=()=>{view=null;sel=null;MODE=null;mapHome();setTimeout(mapToTop,0);document.querySelectorAll('#rank details').forEach(x=>x.open=false);drawMap()};
+
+document.addEventListener('click',e=>{const b=e.target.closest('.stb,.ht');if(!b||b.disabled)return;e.stopPropagation();e.preventDefault();
+  if(b.dataset.mode!==undefined){const m=b.dataset.mode;if(m==='car'){CAR=true}else{CAR=false;START_ALL=m}try{localStorage.setItem('hb_car',CAR?'1':'0');localStorage.setItem('hb_start_all',START_ALL)}catch(_){}}
+  else if(b.dataset.car!==undefined){CAR=b.dataset.car==='1';START_ALL='Best';try{localStorage.setItem('hb_start_all','Best')}catch(_){}try{localStorage.setItem('hb_car',CAR?'1':'0')}catch(_){}}else{START_ALL=b.dataset.st;try{localStorage.setItem('hb_start_all',START_ALL)}catch(_){}}
+  const w=$('#mapwrap');const slot=w&&w.parentElement&&w.parentElement.classList.contains('mapslot')?w.parentElement:null;const anchor=slot&&slot.previousElementSibling;
+  const aid=anchor&&(anchor.dataset.id||anchor.dataset.np);const isSum=anchor&&anchor.tagName==='SUMMARY';
+  render();if(sel)fitRoute(sel);drawMap();
+  if(aid){const el=document.querySelector(`#rank li[data-id="${aid}"]`)||document.querySelector(`#rank .np[data-np="${aid}"]`);if(el){placeMap(el,true);}}else mapToTop();},true);
+fetch('data.json',{cache:'no-store'}).then(r=>r.json()).then(d=>{D=d;d.stands.forEach(s=>STAND[s.id]=s);local=load(LS+D.date)||[];render();setBase(BASE);mapToTop();})
+ .catch(e=>{$('#title').textContent='Could not load the brief';});
+</script>
+<script src="field.js?v=7"></script>
+</body>
+</html>

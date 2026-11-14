@@ -604,8 +604,8 @@ function drawDrill(){
     ['Legal',esc(D.legalSum||(D.legal[0]?D.legal[0][1].split(/[.(]/)[0]:'')),`<div class="kv">${D.legal.map(c=>`<div class="k">${esc(c[0])}</div><div>${esc(c[1])}</div>`).join('')}</div>`],
     ['Checklist',`<span id="ckc"></span>`,`<div class="check">${D.checklist.map((c,i)=>`<label><input type="checkbox" data-i="${i}" ${ck[i]?'checked':''}>${esc(c)}</label>`).join('')}</div>`]
   ];
-  $('#drill').innerHTML=sections.map(([t,sv,b])=>`<details><summary>${t}<span class="sv">${sv}</span></summary><div class="dbody">${b}</div></details>`).join('');
-  const upd=()=>{const c=document.querySelectorAll('.check input:checked').length;$('#ckc').textContent=c+'/'+D.checklist.length+' done'};
+  $('#drill').innerHTML=sections.filter(s=>!(window.CLUB&&/^(What to wear|Checklist)/.test(s[0]))).map(([t,sv,b])=>`<details><summary>${t}<span class="sv">${sv}</span></summary><div class="dbody">${b}</div></details>`).join('');
+  const upd=()=>{if(!$('#ckc'))return;const c=document.querySelectorAll('.check input:checked').length;$('#ckc').textContent=c+'/'+D.checklist.length+' done'};
   document.querySelectorAll('.check input').forEach(i=>i.onchange=()=>{const k=load('huntbrief-check-'+D.date)||{};k[i.dataset.i]=i.checked;store('huntbrief-check-'+D.date,k);upd()});
   upd();
   $('#foot').innerHTML=`Updated ${esc(D.updated)}<br>Pins ±100 yd · walk-in lines are rough, not trails · stand facing letters unconfirmed`;
@@ -672,6 +672,6 @@ document.addEventListener('click',e=>{const b=e.target.closest('.stb,.ht');if(!b
 fetch('data.json',{cache:'no-store'}).then(r=>r.json()).then(d=>{D=d;d.stands.forEach(s=>STAND[s.id]=s);local=load(LS+D.date)||[];render();setBase(BASE);mapToTop();})
  .catch(e=>{$('#title').textContent='Could not load the brief';});
 </script>
-<script src="field.js?v=6"></script>
+<script src="field.js?v=7"></script>
 </body>
 </html>

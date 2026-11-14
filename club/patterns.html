@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Deer patterns · Alamance Club</title>
+<style>
+:root{--bg:#12140f;--card:#1c2018;--card2:#232920;--line:#333b2c;--txt:#ecefe6;--mute:#9aa58f;--orange:#ff6a13;--gold:#ffc83d;--green:#8fbf4d;--blue:#5fc4ff;--red:#ff5a4f}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--txt);font-family:Inter,system-ui,sans-serif;padding:14px 12px 40px}
+.wrap{max-width:560px;margin:0 auto}h1{font-size:22px;margin:4px 0 2px}.sub{color:var(--mute);font-size:13px;margin-bottom:10px}
+a{color:var(--blue)}.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:10px;margin-bottom:12px}
+.f{display:flex;flex-wrap:wrap;gap:6px}.f select{flex:1 1 45%;background:var(--card2);color:var(--txt);border:1px solid var(--line);border-radius:10px;padding:8px;font-size:14px}
+svg{width:100%;height:auto;border-radius:10px;display:block}
+.leg{display:flex;flex-wrap:wrap;gap:10px;font-size:12px;color:var(--mute);margin-top:6px}.leg i{display:inline-block;width:11px;height:11px;border-radius:50%;margin-right:4px;vertical-align:-1px}
+table{width:100%;border-collapse:collapse;font-size:13px}th,td{padding:6px 4px;border-bottom:1px solid var(--line);text-align:left}th{color:var(--mute);font-weight:600}
+td.n{text-align:right}.ev{padding:7px 0;border-bottom:1px solid var(--line);font-size:13px}.ev b{color:var(--gold)}.ev small{color:var(--mute)}
+.note{font-size:12px;color:var(--mute)}
+</style></head><body><div class="wrap">
+<a href="./">← Hunt brief</a>
+<h1>Deer patterns</h1><div class="sub" id="sub"></div>
+<div class="card"><div class="f">
+<select id="fwho"><option value="">Everyone</option></select>
+<select id="fkind"><option value="">All deer</option><option value="buck">Bucks</option><option value="doe">Does</option><option value="fawn">Fawns</option><option value="unknown">Unknown</option></select>
+<select id="ftime"><option value="">Any time</option><option value="dawn">Dawn–8 AM</option><option value="morn">8–11 AM</option><option value="mid">11 AM–3 PM</option><option value="eve">3 PM–dark</option></select>
+<select id="fwind"><option value="">Any wind</option></select>
+</div></div>
+<div class="card"><svg id="map"></svg>
+<div class="leg"><span><i style="background:#ffc83d"></i>Buck</span><span><i style="background:#ff8fd1"></i>Doe</span><span><i style="background:#8fbf4d"></i>Fawn</span><span><i style="background:#cfcfcf"></i>Unknown</span><span>Dot size = number of deer</span></div>
+<div class="note">Spots are approximate (placed from stand + direction/distance in the log).</div></div>
+<div class="card"><b>By stand</b><table id="tbl"></table><div class="note">Sits = logged sits (yours and members' reports). Filters apply to deer counts.</div></div>
+<div class="card"><b>Sightings</b><div id="list"></div></div>
+</div>
+<script>
+const $=s=>document.querySelector(s);let D;
+const COL={buck:'#ffc83d',doe:'#ff8fd1',fawn:'#8fbf4d',unknown:'#cfcfcf'};
+const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+function px(lat,lon){const g=D.geo;return [(g.fx[0]*lon+g.fx[1]-g.x0)*g.scale,(g.fy[0]*lat+g.fy[1]-g.y0)*g.scale]}
+function slot(t){if(!t)return '';const h=+t.slice(0,2)+(+t.slice(3))/60;return h<8?'dawn':h<11?'morn':h<15?'mid':'eve'}
+function fmt(t){if(!t)return 'time ?';let [h,m]=t.split(':').map(Number);const ap=h>=12?'PM':'AM';h=h%12||12;return `${h}:${String(m).padStart(2,'0')} ${ap}`}
+function day(d){return new Date(d+'T12:00').toLocaleDateString([], {weekday:'short',month:'short',day:'numeric'})}
+function draw(){
+  const fw=$('#fwho').value,fk=$('#fkind').value,ft=$('#ftime').value,fwi=$('#fwind').value;
+  const E=D.events.filter(e=>(!fw||e.who===fw)&&(!fk||e.kind===fk)&&(!ft||slot(e.time)===ft)&&(!fwi||e.wind===fwi));
+  const g=D.geo;let s=`<image href="map.jpg" x="0" y="0" width="${g.w}" height="${g.h}"/>`;
+  D.stands.forEach(o=>{const c=px(o.lat,o.lon);s+=`<circle cx="${c[0]}" cy="${c[1]}" r="6" fill="#fff" stroke="#000" stroke-width="2"/><text x="${c[0]+9}" y="${c[1]+6}" font-size="18" font-weight="700" fill="#fff" stroke="#000" stroke-width="4" paint-order="stroke">#${esc(o.id)}</text>`});
+  E.forEach(e=>{const c=px(e.lat,e.lon);s+=`<circle cx="${c[0]}" cy="${c[1]}" r="${10+e.n*5}" fill="${COL[e.kind]}" fill-opacity=".8" stroke="#000" stroke-width="2"><title>${esc(day(e.date)+' '+fmt(e.time)+' · #'+e.stand+' · '+e.what)}</title></circle>`});
+  const cl=px(...D.club);s+=`<circle cx="${cl[0]}" cy="${cl[1]}" r="9" fill="#fff" stroke="#000" stroke-width="3"/><text x="${cl[0]-14}" y="${cl[1]-14}" text-anchor="end" font-size="20" font-weight="700" fill="#fff" stroke="#000" stroke-width="4" paint-order="stroke">Clubhouse</text>`;
+  const m=$('#map');m.setAttribute('viewBox',`0 0 ${g.w} ${g.h}`);m.innerHTML=s;
+  const by={};D.sits.filter(x=>!fw||x.who===fw).forEach(x=>{const b=by[x.stand]||(by[x.stand]={sits:0,hit:0,deer:0,buck:0});b.sits++;if(x.deer>0)b.hit++;});
+  E.forEach(e=>{const b=by[e.stand]||(by[e.stand]={sits:0,hit:0,deer:0,buck:0});b.deer+=e.n;if(e.kind==='buck')b.buck+=e.n;});
+  const rows=Object.entries(by).sort((a,b)=>b[1].deer-a[1].deer||b[1].sits-a[1].sits);
+  $('#tbl').innerHTML=`<tr><th>Stand</th><th class="n">Sits</th><th class="n">Sits w/ deer</th><th class="n">Deer</th><th class="n">Bucks</th></tr>`+rows.map(([k,v])=>`<tr><td>#${esc(k)}</td><td class="n">${v.sits||'–'}</td><td class="n">${v.sits?v.hit:'–'}</td><td class="n">${v.deer}</td><td class="n">${v.buck}</td></tr>`).join('');
+  $('#list').innerHTML=E.length?[...E].reverse().map(e=>`<div class="ev"><b>#${esc(e.stand)}</b> · ${esc(day(e.date))} ${esc(fmt(e.time))} · ${esc(e.who)}<br>${esc(e.what)}${e.dir?' · '+esc(e.dir):''}<br><small>${e.wind?'Wind '+esc(e.wind):'Wind ?'}${e.temp?' · '+e.temp+'°F':''}${e.note?' · '+esc(e.note):''}</small></div>`).join(''):'<div class="note">No sightings match these filters.</div>';
+  $('#sub').textContent=`${E.reduce((a,e)=>a+e.n,0)} deer in ${E.length} sightings · ${D.sits.length} logged sits · updated ${D.updated} · members shown by initials`;
+}
+fetch('sightings.json').then(r=>r.json()).then(j=>{D=j;
+  [...new Set(D.events.map(e=>e.who))].forEach(w=>$('#fwho').insertAdjacentHTML('beforeend',`<option>${esc(w)}</option>`));
+  [...new Set(D.events.map(e=>e.wind).filter(Boolean))].forEach(w=>$('#fwind').insertAdjacentHTML('beforeend',`<option>${esc(w)}</option>`));
+  document.querySelectorAll('select').forEach(s=>s.onchange=draw);draw();});
+</script></body></html>
