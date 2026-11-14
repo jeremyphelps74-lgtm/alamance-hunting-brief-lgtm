@@ -16,11 +16,12 @@ const ctl=$f('.mapctl');
 const box=document.createElement('div');box.id='fieldbox';
 box.innerHTML=`<div class="fhead">Field tools <small>(saved on this phone)</small></div>
 <div class="fbtns">
- <button data-m="shot">🎯 Shot</button><button data-m="blood">🩸 Blood</button><button data-m="deer">🦌 Deer</button><button data-m="sign">🌿 Sign</button>
+ <button data-m="deer">🦌 Deer</button><button data-m="sign">🌿 Sign</button><button data-m="shot">🎯 Shot</button><button data-m="blood">🩸 Blood here</button>
 </div>
 <div class="fbtns">
  <button id="ftrack">〰 Track: off</button><button id="fguide">🧭 Guide: off</button><button id="frings">◎ Rings: off</button>
 </div>
+<div id="fplace" style="display:none"><div id="fplacetxt"></div><div class="fbtns" style="margin:6px 0 0"><button id="fplaceme">📍 Use my spot</button><button id="fplacex">Cancel</button></div></div>
 <div id="fguidebox" style="display:none"><div id="farrow">↑</div><div id="fguidetxt"></div></div>
 <div id="flist"></div><a href="patterns.html" style="display:block;margin-top:8px;text-align:center;padding:9px;border-radius:10px;background:var(--card);border:1px solid var(--line);color:var(--txt);font-weight:600;text-decoration:none">📊 Deer patterns: every sighting on a map</a>`;
 const st=document.getElementById('mestat');(st||ctl).after(box);
@@ -33,6 +34,8 @@ const css=document.createElement('style');css.textContent=`
 #fguidebox{display:flex;align-items:center;gap:12px;padding:8px;border-radius:10px;background:rgba(43,140,255,.12);margin-bottom:6px}
 #farrow{font-size:44px;line-height:1;transition:transform .2s;color:#5fc4ff}
 #fguidetxt{font-weight:600}
+#fplace{padding:8px;border-radius:10px;background:rgba(255,200,61,.15);border:1px solid #ffc83d;margin-bottom:6px;font-weight:600}
+#mapbox.placing{outline:3px solid #ffc83d;outline-offset:-3px;cursor:crosshair}
 #flist .fi{display:flex;gap:6px;align-items:center;padding:5px 0;border-top:1px solid var(--line);font-size:13px}
 #flist .fi input{flex:1;min-width:0;background:var(--card);border:1px solid var(--line);color:var(--txt);border-radius:8px;padding:5px 6px;font-size:13px}
 #flist .fi .x{flex:0 0 auto;padding:4px 8px}
@@ -43,15 +46,25 @@ document.head.appendChild(css);
 function save(){LS.set(FK,MARKS);LS.set(TK,TRACK);}
 function centerOn(lat,lon){if(!view)return;const c=px(lat,lon);if(c[0]<view.x+view.w*0.15||c[0]>view.x+view.w*0.85||c[1]<view.y+view.h*0.15||c[1]>view.y+view.h*0.85){view.x=c[0]-view.w/2;view.y=c[1]-view.h/2;}}
 function needGPS(cb){if(ME){cb();return}PENDING=cb;if(MEW===null)$f('#zme').click();meMsg('Getting your GPS fix…');}
-function addMark(t){needGPS(()=>{MARKS.push({t,lat:+ME[0].toFixed(6),lon:+ME[1].toFixed(6),acc:Math.round(ME[2]/0.9144),ts:Date.now(),note:''});save();list();centerOn(ME[0],ME[1]);drawMap();
-  const n=MARKS.filter(m=>m.t===t).length;meMsg(`${TYPES[t].i} ${TYPES[t].n}${t==='blood'?' #'+n:''} marked at ${ME[0].toFixed(5)}, ${ME[1].toFixed(5)} (±${Math.round(ME[2]/0.9144)} yd)`);});}
-document.querySelectorAll('#fieldbox [data-m]').forEach(b=>b.onclick=()=>addMark(b.dataset.m));
+function addMark(t){needGPS(()=>{centerOn(ME[0],ME[1]);putMark(t,ME[0],ME[1],Math.round(ME[2]/0.9144),'gps');});}
+function putMark(t,lat,lon,acc,how){MARKS.push({t,lat:+lat.toFixed(6),lon:+lon.toFixed(6),acc,ts:Date.now(),note:'',how});save();list();drawMap();
+  const n=MARKS.filter(m=>m.t===t).length;let rel='';if(ME&&how==='map'){const d=M([ME[0],ME[1]],[lat,lon]);rel=` · ${yd(d)} yd ${card(bearing([ME[0],ME[1]],[lat,lon]))} of you`;}
+  meMsg(`${TYPES[t].i} ${TYPES[t].n}${t==='blood'?' #'+n:''} marked${how==='map'?' where you tapped':' at your spot'}${rel}. Add a note below.`);}
+let PLACE=null;
+function placeMode(t){PLACE=t;$f('#fplace').style.display='block';$f('#mapbox').classList.add('placing');
+  $f('#fplacetxt').textContent=`Tap the map where the ${t==='deer'?'deer was':t==='sign'?'sign is':'deer stood when you shot'}. Zoom in first for a closer spot.`;$f('#mapwrap').scrollIntoView({block:'start',behavior:'smooth'});}
+function endPlace(){PLACE=null;$f('#fplace').style.display='none';$f('#mapbox').classList.remove('placing');}
+$f('#fplacex').onclick=endPlace;
+$f('#fplaceme').onclick=()=>{const t=PLACE;endPlace();addMark(t);};
+function unpx(x,y){const g=D.geo;return [(y/g.scale+g.y0-g.fy[1])/g.fy[0],(x/g.scale+g.x0-g.fx[1])/g.fx[0]];}
+$f('#mapbox').addEventListener('click',e=>{if(!PLACE)return;e.stopPropagation();e.preventDefault();if(!view)return;const [sx,sy]=toSvg(e.clientX,e.clientY);const [la,lo]=unpx(sx,sy);const t=PLACE;endPlace();putMark(t,la,lo,null,'map');},true);
+document.querySelectorAll('#fieldbox [data-m]').forEach(b=>b.onclick=()=>b.dataset.m==='blood'?addMark('blood'):placeMode(b.dataset.m));
 
 function trailSummary(){const shot=[...MARKS].reverse().find(m=>m.t==='shot');const bl=MARKS.filter(m=>m.t==='blood'&&(!shot||m.ts>=shot.ts));
   if(!shot&&!bl.length)return '';const a=shot||bl[0],z=bl[bl.length-1];if(!z||z===a)return shot?'Shot site marked. Mark blood as you find it.':'';
   const d=M([a.lat,a.lon],[z.lat,z.lon]);return `Blood trail: ${bl.length} mark${bl.length>1?'s':''}, last one ${yd(d)} yd ${card(bearing([a.lat,a.lon],[z.lat,z.lon]))} of the ${shot?'shot site':'first blood'}${bl.length>1?`, heading ${card(bearing([bl[bl.length-2].lat,bl[bl.length-2].lon],[z.lat,z.lon]))}`:''}.`;}
 function shareText(){const d=new Date();let s=`Hunt marks ${d.toLocaleDateString()}\n`;
-  MARKS.forEach((m,i)=>{s+=`${hhmm(m.ts)} ${TYPES[m.t].n}: ${m.lat}, ${m.lon} (±${m.acc} yd)${m.note?' – '+m.note:''}\n`});
+  MARKS.forEach((m,i)=>{s+=`${hhmm(m.ts)} ${TYPES[m.t].n}: ${m.lat}, ${m.lon} ${m.how==='map'?'(placed on map)':'(GPS ±'+m.acc+' yd)'}${m.note?' – '+m.note:''}\n`});
   const ts=trailSummary();if(ts)s+=ts+'\n';
   if(TRACK.length>1){let L=0;for(let i=1;i<TRACK.length;i++)L+=M(TRACK[i-1],TRACK[i]);s+=`Track: ${TRACK.length} points, ${yd(L)} yd, ${hhmm(TRACK[0][2])}–${hhmm(TRACK[TRACK.length-1][2])}. Points: `+TRACK.filter((p,i)=>i%Math.max(1,Math.ceil(TRACK.length/40))===0||i===TRACK.length-1).map(p=>`${p[0].toFixed(5)},${p[1].toFixed(5)}`).join(' ')+'\n';}
   return s;}
