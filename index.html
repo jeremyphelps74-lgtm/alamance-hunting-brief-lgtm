@@ -159,6 +159,7 @@ ul.l{margin:4px 0 0;padding-left:18px;font-size:13.5px;line-height:1.6}
 .sinfo .kv{margin-top:6px}
 footer{font-size:11px;color:var(--mute);text-align:center;margin-top:14px;line-height:1.5}
 </style>
+<link rel="manifest" href="manifest.json"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="theme-color" content="#12140f"><link rel="apple-touch-icon" href="icon.png">
 </head>
 <body>
 <header><div class="hrow"><div>
@@ -671,5 +672,6 @@ document.addEventListener('click',e=>{const b=e.target.closest('.stb,.ht');if(!b
 fetch('data.json',{cache:'no-store'}).then(r=>r.json()).then(d=>{D=d;d.stands.forEach(s=>STAND[s.id]=s);local=load(LS+D.date)||[];render();setBase(BASE);mapToTop();})
  .catch(e=>{$('#title').textContent='Could not load the brief';});
 </script>
+<script src="field.js"></script>
 </body>
 </html>
