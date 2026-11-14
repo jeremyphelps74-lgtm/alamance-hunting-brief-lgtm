@@ -672,6 +672,6 @@ document.addEventListener('click',e=>{const b=e.target.closest('.stb,.ht');if(!b
 fetch('data.json',{cache:'no-store'}).then(r=>r.json()).then(d=>{D=d;d.stands.forEach(s=>STAND[s.id]=s);local=load(LS+D.date)||[];render();setBase(BASE);mapToTop();})
  .catch(e=>{$('#title').textContent='Could not load the brief';});
 </script>
-<script src="field.js?v=8"></script>
+<script src="field.js?v=9"></script>
 </body>
 </html>
