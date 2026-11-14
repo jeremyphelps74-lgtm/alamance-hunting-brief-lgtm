@@ -222,7 +222,7 @@ footer{font-size:11px;color:var(--mute);text-align:center;margin-top:14px;line-h
   <footer id="foot"></footer>
 </div>
 
-<script src="live.js?v=15"></script>
+<script src="live.js?v=16"></script>
 <script>
 const $=s=>document.querySelector(s);
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
@@ -404,7 +404,7 @@ function drawMap(R){
   let STEPS='';const RC=['#ff8c00','#5fc4ff','#c9a8ff','#9be37a'];
   const NPs=(D.notPicked||[]);const selR=sel&&(R.find(x=>x.id===sel)||NPs.find(x=>x.id===sel));
   const isOn=(r,i)=>sel&&selR?r.id===sel:i===0;
-  const drawR=(r0,i,on,c)=>{let r=eff(r0);if(r.driveR){const dp=r.driveR.map(p=>px(...p)).map(p=>p.join(',')).join(' ');s+=`<polyline points="${dp}" fill="none" stroke="#000" stroke-opacity="${on?.6:.3}" stroke-width="${on?11:8}" stroke-linecap="round"/><polyline points="${dp}" fill="none" stroke="#e8eef5" stroke-width="${on?6:4}" stroke-dasharray="4 9" stroke-linecap="round" opacity="${on?1:.55}"/>`;r={...r,route:r.route.slice(r.driveR.length-1),fromRoute:true};}const pts=[...(r.fromRoute===false?[club]:[]),...r.route.map(p=>px(...p)),...(STAND[r.id]?[px(STAND[r.id].lat,STAND[r.id].lon)]:[])];const ps=pts.map(p=>p.join(',')).join(' ');
+  const drawR=(r0,i,on,c)=>{let r=eff(r0);if(r.driveR){const dp=r.driveR.map(p=>px(...p)).map(p=>p.join(',')).join(' ');s+=`<polyline points="${dp}" fill="none" stroke="#000" stroke-opacity="${on?.6:.3}" stroke-width="${on?11:8}" stroke-linecap="round"/><polyline points="${dp}" fill="none" stroke="#e8eef5" stroke-width="${on?6:4}" stroke-dasharray="4 9" stroke-linecap="round" opacity="${on?1:.55}"/>`;r={...r,route:r.route.slice(r.driveR.length-1),fromRoute:true};}const pts=[...(r.fromRoute===false?[club]:[]),...(r.route||[]).map(p=>px(...p)),...(STAND[r.id]?[px(STAND[r.id].lat,STAND[r.id].lon)]:[])];const ps=pts.map(p=>p.join(',')).join(' ');
     s+=`<polyline points="${ps}" fill="none" stroke="#000" stroke-opacity="${on?.6:.3}" stroke-width="${on?11:8}" stroke-linejoin="round" stroke-linecap="round"/><polyline points="${ps}" fill="none" stroke="${c}" stroke-width="${on?7:5}" ${on?'':'stroke-dasharray="14 10"'} stroke-linejoin="round" stroke-linecap="round" class="rt" data-on="${on?1:0}" opacity="${on?1:.55}"/>`;
     if(on&&r.steps)r.steps.forEach(st=>{const [x,y]=px(st[0],st[1]);STEPS+=`<g class="mk" data-x="${x}" data-y="${y}"><circle cx="${x}" cy="${y}" r="16" fill="${c}" stroke="#000" stroke-width="3"/><text x="${x}" y="${y+7}" font-size="20" font-weight="800" text-anchor="middle" fill="#000">${esc(st[2])}</text></g>`;});};
   if(!(MODE&&!sel))avail.map((r,i)=>[r,i]).filter(([r,i])=>!isOn(r,i)).forEach(([r,i])=>drawR(r,i,false,RC[i]||'#5fc4ff'));
@@ -676,6 +676,6 @@ document.addEventListener('click',e=>{const b=e.target.closest('.stb,.ht');if(!b
 (function getData(n){return fetch('data.json',{cache:'no-store'}).then(r=>r.json()).catch(e=>{if(n>0)return new Promise(res=>setTimeout(res,1500)).then(()=>getData(n-1));throw e})})(3).then(d=>{D=d;d.stands.forEach(s=>STAND[s.id]=s);return (window.LIVEPATCH?LIVEPATCH():null)}).catch(e=>console.warn('live',e)).then(()=>{if(!D)throw 0;local=load(LS+D.date)||[];render();setBase(BASE);mapToTop();window.HB_READY=true;})
  .catch(e=>{$('#title').textContent='Could not load the brief';});
 </script>
-<script src="field.js?v=15"></script>
+<script src="field.js?v=16"></script>
 </body>
 </html>
