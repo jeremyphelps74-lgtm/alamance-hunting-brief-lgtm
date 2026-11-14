@@ -180,9 +180,8 @@ footer{font-size:11px;color:var(--mute);text-align:center;margin-top:14px;line-h
         <button class="pri" id="takenBtn">Update</button>
       </div>
       <div class="takenlist" id="takenlist"></div>
-      <div class="step"><span class="sn">2</span><span><b>What do you have?</b><small>The club car is first come, first served</small></span></div>
-      <div id="startsel"></div>
-      <div class="step"><span class="sn">3</span><span><b>Your best stand</b><small>Picked for the wind, recent deer and who's out</small></span></div>
+      <div id="startsel" style="display:none"></div>
+      <div class="step"><span class="sn">2</span><span><b>Your best stand</b><small>Picked for the wind, recent deer and who's out</small></span></div>
       <div id="toppick"></div>
       <ul class="rank" id="rank"></ul>
     </div>
@@ -469,7 +468,7 @@ function bestStart(r){const cur=startOf(r);if(!cur)return {start:cur,why:''};con
   const rr=(r.notes||[]).find(n=>/^Rerouted around/.test(n));if(rr&&b.start===cur&&!/^keeps you clear/.test(why))why=rr.replace('Rerouted around','keeps you clear of')+(why?'; '+why:'');
   if(b.hits.length)why+=(why?'; ':'')+`still passes ${b.hits[0].who} (#${b.hits[0].id}) at ~${b.hits[0].yd} yd`;
   return {start:b.start,why};}
-let CAR=false;try{CAR=localStorage.getItem('hb_car')==='1'}catch(e){}
+let CAR=false;try{localStorage.setItem('hb_car','0')}catch(e){}
 const CAR_MIN=600, CAR_WALK=150;
 function llLenYd(R){let L=0;for(let i=1;i<R.length;i++)L+=meters({lat:R[i-1][0],lon:R[i-1][1]},{lat:R[i][0],lon:R[i][1]});return L/0.9144}
 function trailSeq(R){if(!GR)buildGraph();const out=[];R.forEach(p=>{const q=px(...p);let b=null,bd=12;GR.N.forEach(n=>{const d=Math.hypot(n.x-q[0],n.y-q[1]);if(d<bd){bd=d;b=n.t}});if(b&&b!=='x'&&out[out.length-1]!==b)out.push(b)});return out}
@@ -673,6 +672,6 @@ document.addEventListener('click',e=>{const b=e.target.closest('.stb,.ht');if(!b
 fetch('data.json',{cache:'no-store'}).then(r=>r.json()).then(d=>{D=d;d.stands.forEach(s=>STAND[s.id]=s);local=load(LS+D.date)||[];render();setBase(BASE);mapToTop();})
  .catch(e=>{$('#title').textContent='Could not load the brief';});
 </script>
-<script src="field.js?v=4"></script>
+<script src="field.js?v=5"></script>
 </body>
 </html>
