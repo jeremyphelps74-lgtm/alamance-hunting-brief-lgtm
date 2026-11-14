@@ -158,6 +158,7 @@ ul.l{margin:4px 0 0;padding-left:18px;font-size:13.5px;line-height:1.6}
 .sinfo .tag.lo{color:#ffb3ad;border-color:rgba(255,90,79,.6)}
 .sinfo .kv{margin-top:6px}
 footer{font-size:11px;color:var(--mute);text-align:center;margin-top:14px;line-height:1.5}
+#livebar{margin:6px 0 2px}#livebar .lvm{font-size:12.5px;color:#cfd8c4;margin-bottom:6px}#livebar .lvm span{color:#9aa58f}#livebar .lvbs{display:flex;gap:6px;flex-wrap:wrap}#livebar .lvb{font-size:13px;padding:5px 11px;border-radius:999px;border:1px solid #3a4430;color:#dfe6d6;text-decoration:none;background:#171b13}#livebar .lvb.on{background:#ffc83d;color:#1a1a1a;border-color:#ffc83d;font-weight:700}
 </style>
 <link rel="manifest" href="manifest.json"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="theme-color" content="#12140f"><link rel="apple-touch-icon" href="icon.png">
 </head>
@@ -166,6 +167,7 @@ footer{font-size:11px;color:var(--mute);text-align:center;margin-top:14px;line-h
   <div class="brand">Alamance Club · Hunt Brief</div>
   <h1 id="title">Loading…</h1>
   <div id="chips"></div>
+  <div id="livebar"></div>
 </div></div></header>
 
 <div class="wrap">
@@ -220,6 +222,7 @@ footer{font-size:11px;color:var(--mute);text-align:center;margin-top:14px;line-h
   <footer id="foot"></footer>
 </div>
 
+<script src="live.js?v=14"></script>
 <script>
 const $=s=>document.querySelector(s);
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
@@ -605,7 +608,7 @@ function drawDrill(){
     ['Legal',esc(D.legalSum||(D.legal[0]?D.legal[0][1].split(/[.(]/)[0]:'')),`<div class="kv">${D.legal.map(c=>`<div class="k">${esc(c[0])}</div><div>${esc(c[1])}</div>`).join('')}</div>`],
     ['Checklist',`<span id="ckc"></span>`,`<div class="check">${D.checklist.map((c,i)=>`<label><input type="checkbox" data-i="${i}" ${ck[i]?'checked':''}>${esc(c)}</label>`).join('')}</div>`]
   ];
-  $('#drill').innerHTML=sections.filter(s=>!(window.CLUB&&/^(What to wear|Checklist)/.test(s[0]))).map(([t,sv,b])=>`<details><summary>${t}<span class="sv">${sv}</span></summary><div class="dbody">${b}</div></details>`).join('');
+  $('#drill').innerHTML=sections.filter(s=>!((window.CLUB||window.LIVEAUTO)&&/^(What to wear|Checklist)/.test(s[0]))).map(([t,sv,b])=>`<details><summary>${t}<span class="sv">${sv}</span></summary><div class="dbody">${b}</div></details>`).join('');
   const upd=()=>{if(!$('#ckc'))return;const c=document.querySelectorAll('.check input:checked').length;$('#ckc').textContent=c+'/'+D.checklist.length+' done'};
   document.querySelectorAll('.check input').forEach(i=>i.onchange=()=>{const k=load('huntbrief-check-'+D.date)||{};k[i.dataset.i]=i.checked;store('huntbrief-check-'+D.date,k);upd()});
   upd();
@@ -670,9 +673,9 @@ document.addEventListener('click',e=>{const b=e.target.closest('.stb,.ht');if(!b
   const aid=anchor&&(anchor.dataset.id||anchor.dataset.np);const isSum=anchor&&anchor.tagName==='SUMMARY';
   render();if(sel)fitRoute(sel);drawMap();
   if(aid){const el=document.querySelector(`#rank li[data-id="${aid}"]`)||document.querySelector(`#rank .np[data-np="${aid}"]`);if(el){placeMap(el,true);}}else mapToTop();},true);
-fetch('data.json',{cache:'no-store'}).then(r=>r.json()).then(d=>{D=d;d.stands.forEach(s=>STAND[s.id]=s);local=load(LS+D.date)||[];render();setBase(BASE);mapToTop();})
+fetch('data.json',{cache:'no-store'}).then(r=>r.json()).then(d=>{D=d;d.stands.forEach(s=>STAND[s.id]=s);return (window.LIVEPATCH?LIVEPATCH():null)}).catch(e=>console.warn('live',e)).then(()=>{if(!D)throw 0;local=load(LS+D.date)||[];render();setBase(BASE);mapToTop();})
  .catch(e=>{$('#title').textContent='Could not load the brief';});
 </script>
-<script src="field.js?v=13"></script>
+<script src="field.js?v=14"></script>
 </body>
 </html>
