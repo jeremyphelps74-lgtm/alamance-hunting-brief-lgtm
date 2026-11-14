@@ -1070,15 +1070,14 @@
    "name": "#13 new metal stand",
    "kind": "ladder",
    "face": "SW",
-   "note": "SW; new 1-person ladder, too exposed since the cut, likely to be moved: avoid for now",
+   "note": "SW; new 1-person ladder, opened up by the select cut, may be moved",
    "old": false,
    "lat": 36.1959856,
    "lon": -79.2708518,
    "weap": "—",
    "good": "",
    "bad": "",
-   "info": "New one-person ladder facing SW, but too exposed since the select cut. Club will probably move it. Avoid for now.",
-   "leaveOut": true
+   "info": "New one-person ladder facing SW. The select cut opened it up, so you can see farther but you're more exposed. The club may move it."
   },
   {
    "id": "14",
