@@ -54,7 +54,7 @@ function needGPS(cb){if(ME){cb();return}PENDING=cb;if(MEW===null)$f('#zme').clic
 function addMark(t){needGPS(()=>{centerOn(ME[0],ME[1]);putMark(t,ME[0],ME[1],Math.round(ME[2]/0.9144),'gps');});}
 function putMark(t,lat,lon,acc,how){MARKS.push({t,lat:+lat.toFixed(6),lon:+lon.toFixed(6),acc,ts:Date.now(),note:'',how});save();list();drawMap();
   const n=MARKS.filter(m=>m.t===t).length;let rel='';if(ME&&how==='map'){const d=M([ME[0],ME[1]],[lat,lon]);rel=` · ${yd(d)} yd ${card(bearing([ME[0],ME[1]],[lat,lon]))} of you`;}
-  meMsg(`${TYPES[t].i} ${TYPES[t].n}${t==='blood'?' #'+n:''} marked${how==='map'?' where you tapped':' at your spot'}${rel}. Add a note below, then tap 👥 Send to club.`);sendBar();}
+  meMsg(`${TYPES[t].i} ${TYPES[t].n}${t==='blood'?' #'+n:''} marked${how==='map'?' where you tapped':' at your spot'}${rel}.`);sendBar();popMark(MARKS.length-1);}
 let PLACE=null;
 function placeMode(t){PLACE=t;$f('#fplace').style.display='block';$f('#mapbox').classList.add('placing');
   $f('#fplacetxt').textContent=`Tap the map where the ${t==='deer'?'deer was':t==='sign'?'sign is':t==='rec'?'deer was recovered':'deer stood when you shot'}. Zoom in first for a closer spot.`;$f('#mapwrap').scrollIntoView({block:'start',behavior:'smooth'});}
@@ -173,6 +173,30 @@ const dm3=drawMap;drawMap=function(R){dm3(R);if(!SHOWCLUB||!CLUBR.length)return;
 CLUBR=LS.get('hb_clubcache',[]);clubList();
 (function w2(){if(typeof D!=='undefined'&&D&&D.geo){loadClub();setInterval(loadClub,180000);}else setTimeout(w2,300)})();
 if(CLUBMODE){const ft=box.querySelector('.fhead');if(ft)ft.innerHTML='Report what you see <small>(tap a button, tap the map, then 👥 Send to club)</small>';}
+
+
+// ---- pop-up after placing a mark ----
+const pcss=document.createElement('style');pcss.textContent=`
+#fpop{position:fixed;inset:0;z-index:1200;background:rgba(0,0,0,.55);display:none;align-items:flex-end;justify-content:center}
+#fpop .sh{width:100%;max-width:560px;background:var(--card);border:1px solid var(--line);border-radius:18px 18px 0 0;padding:16px 14px calc(env(safe-area-inset-bottom) + 16px)}
+#fpop h3{margin:0 0 4px;font-size:19px}#fpop .fsub{color:var(--mute);font-size:14px;margin-bottom:10px}
+#fpop .chips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px}#fpop .chips button{flex:1 1 22%;border:1px solid var(--line);background:var(--card2);color:var(--txt);border-radius:10px;padding:10px 4px;font:700 14px Inter,sans-serif}
+#fpop .chips button.on{background:rgba(255,200,61,.25);border-color:var(--gold)}
+#fpop input{width:100%;background:var(--card2);border:1px solid var(--line);color:var(--txt);border-radius:10px;padding:11px;font-size:16px;margin-bottom:10px}
+#fpop .go{width:100%;background:var(--orange);color:#111;border:0;border-radius:12px;padding:14px;font:800 17px Inter,sans-serif;margin-bottom:8px}
+#fpop .later{width:100%;background:transparent;color:var(--mute);border:1px solid var(--line);border-radius:12px;padding:11px;font:600 14px Inter,sans-serif}`;document.head.appendChild(pcss);
+const pop=document.createElement('div');pop.id='fpop';pop.innerHTML='<div class="sh"><h3 id="fpt"></h3><div class="fsub" id="fps"></div><div class="chips" id="fpc"></div><input id="fpname" placeholder="Your first name"><input id="fpn" placeholder="Note (optional): heading west, chasing a doe…"><button class="go" id="fpgo">👥 Send to club now</button><button class="later" id="fplater">Not now (keep it on my phone)</button></div>';document.body.appendChild(pop);
+const CHIPS={deer:['Buck','Doe','Fawn','Unknown'],sign:['Scrape','Rub','Tracks','Bed'],shot:['Buck','Doe'],rec:['Buck','Doe'],blood:['Bright red','Dark','Frothy','Drops']};
+let PI=null;
+function popMark(i){const m=MARKS[i];if(!m)return;PI=i;const T=TYPES[m.t];$f('#fpt').textContent=`${T.i} ${T.n} marked`;
+  const st=nearStand(m.lat,m.lon);$f('#fps').textContent=(st?`Near #${st}. `:'')+'Add a detail, then send it so the club sees it.';
+  const ch=CHIPS[m.t]||[];$f('#fpc').innerHTML=ch.map(c=>`<button data-c="${c}">${c}</button>`).join('');$f('#fpc').style.display=ch.length?'flex':'none';
+  $f('#fpc').querySelectorAll('button').forEach(b=>b.onclick=()=>{$f('#fpc').querySelectorAll('button').forEach(x=>x.classList.toggle('on',x===b&&!x.classList.contains('on')));});
+  const nm=LS.get('hb_name','');$f('#fpname').value=nm;$f('#fpname').style.display=nm?'none':'block';$f('#fpn').value=m.note||'';pop.style.display='flex';}
+function popSave(){if(PI==null)return;const m=MARKS[PI];const c=$f('#fpc .on');const n=$f('#fpn').value.trim();m.note=[c?c.dataset.c:'',n].filter(Boolean).join(', ');
+  const nm=$f('#fpname').value.trim();if(nm){LS.set('hb_name',nm);const fi=$f('#fname');if(fi)fi.value=nm;}save();list();}
+$f('#fpgo').onclick=async()=>{popSave();if(!myName()){$f('#fpname').style.display='block';$f('#fpname').focus();$f('#fpname').placeholder='Type your first name first';return}pop.style.display='none';PI=null;await sendClub();};
+$f('#fplater').onclick=()=>{popSave();pop.style.display='none';PI=null;sendBar();meMsg('Saved on your phone. Tap 👥 Send to club when you are ready.');};
 
 // ---- tabs: Stands / Map / Weather ----
 const pickCard=$f('#pickcard'),mapCard=$f('#mapHome').closest('.card'),wxCard=$f('#wxbd').closest('.card');
