@@ -48,7 +48,7 @@ function draw(){
   const rows=Object.entries(by).sort((a,b)=>b[1].deer-a[1].deer||b[1].sits-a[1].sits);
   $('#tbl').innerHTML=`<tr><th>Stand</th><th class="n">Sits</th><th class="n">Sits w/ deer</th><th class="n">Deer</th><th class="n">Bucks</th></tr>`+rows.map(([k,v])=>`<tr><td>#${esc(k)}</td><td class="n">${v.sits||'–'}</td><td class="n">${v.sits?v.hit:'–'}</td><td class="n">${v.deer}</td><td class="n">${v.buck}</td></tr>`).join('');
   $('#list').innerHTML=E.length?[...E].reverse().map(e=>`<div class="ev"><b>#${esc(e.stand)}</b> · ${esc(day(e.date))} ${esc(fmt(e.time))} · ${esc(e.who)}<br>${esc(e.what)}${e.dir?' · '+esc(e.dir):''}<br><small>${e.wind?'Wind '+esc(e.wind):'Wind ?'}${e.temp?' · '+e.temp+'°F':''}${e.note?' · '+esc(e.note):''}</small></div>`).join(''):'<div class="note">No sightings match these filters.</div>';
-  $('#sub').textContent=`${E.reduce((a,e)=>a+e.n,0)} deer in ${E.length} sightings · ${D.sits.length} logged sits · updated ${D.updated} · members shown by initials`;
+  $('#sub').textContent=`${E.reduce((a,e)=>a+e.n,0)} deer in ${E.length} sightings · ${D.sits.length} logged sits · updated ${D.updated}`;
 }
 fetch('sightings.json').then(r=>r.json()).then(j=>{D=j;
   [...new Set(D.events.map(e=>e.who))].forEach(w=>$('#fwho').insertAdjacentHTML('beforeend',`<option>${esc(w)}</option>`));
