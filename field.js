@@ -119,6 +119,33 @@ drawMap=function(R){baseDraw(R);const sv=document.querySelector('#mapbox svg.mp'
   if(typeof applyView==='function'&&view)applyView();};
 (function wait(){if(typeof D!=='undefined'&&D&&D.geo){list();drawMap();}else setTimeout(wait,200);})();
 
+
+// ---- full-screen map ----
+const fs=document.createElement('style');fs.textContent=`
+body.fullmap{overflow:hidden}
+body.fullmap #mapwrap{position:fixed;inset:0;z-index:1000;background:var(--bg);overflow-y:auto;padding:6px 6px calc(env(safe-area-inset-bottom) + 8px);margin:0}
+body.fullmap .basenote,body.fullmap #fieldbox .fhead,body.fullmap #flist .fi,body.fullmap #fieldbox a{display:none!important}
+body.fullmap .basesel{margin-bottom:4px}body.fullmap .basesel button{padding:5px 4px}
+body.fullmap .mapbox{border-radius:8px}
+body.fullmap .mapctl{margin-top:4px}body.fullmap .mapctl button,body.fullmap #fieldbox button{padding:7px 2px;font-size:12px}
+body.fullmap #fieldbox{margin-top:4px;padding:6px;border-radius:10px}body.fullmap #fieldbox .fbtns{margin-bottom:4px}
+body.fullmap #mestat{margin:4px 0;padding:5px 8px;font-size:12px}
+body.fullmap #fguidebox{padding:4px 8px}body.fullmap #farrow{font-size:30px}
+body.fullmap #standinfo{font-size:13px}`;document.head.appendChild(fs);
+const bfs=document.createElement('button');bfs.id='zfull';bfs.textContent='⛶ Big';ctl.appendChild(bfs);
+ctl.querySelectorAll('button').forEach(b=>{if(b.id==='zin')b.textContent='＋';if(b.id==='zout')b.textContent='－';});
+function sizeFull(){if(!document.body.classList.contains('fullmap')){ASP=null;return}
+  const mb=$f('#mapbox'),wrap=$f('#mapwrap');const W=mb.getBoundingClientRect().width||window.innerWidth;
+  let other=20;[...wrap.children].forEach(ch=>{if(ch!==mb&&!ch.contains(mb)&&getComputedStyle(ch).display!=='none'){const cs=getComputedStyle(ch);other+=ch.offsetHeight+parseFloat(cs.marginTop)+parseFloat(cs.marginBottom);}});const avail=window.innerHeight-Math.min(other,window.innerHeight*0.5);
+  const H0=D.geo.h/D.geo.w;ASP=Math.max(0.55,Math.min(2.4,avail/W));}
+function setFull(on){document.body.classList.toggle('fullmap',on);bfs.textContent=on?'✕ Exit':'⛶ Big';
+  if(on&&typeof mapHome==='function')mapHome();
+  const c=view?[view.x+view.w/2,view.y+view.h/2]:null;ASP=null;sizeFull();
+  if(view&&c){clampView();view.x=c[0]-view.w/2;view.y=c[1]-view.h/2;}drawMap();sizeFull();if(view){clampView();if(c){view.x=c[0]-view.w/2;view.y=c[1]-view.h/2;}}drawMap();
+  if(!on)window.scrollTo({top:$f('#mapwrap').getBoundingClientRect().top+window.scrollY-10});}
+bfs.onclick=()=>setFull(!document.body.classList.contains('fullmap'));
+window.addEventListener('resize',()=>{if(document.body.classList.contains('fullmap')){sizeFull();if(view)clampView();drawMap();}});
+
 // offline (only on the real website)
 if('serviceWorker' in navigator&&/github\.io$/.test(location.hostname)){navigator.serviceWorker.register('sw.js').catch(()=>{});}
 })();

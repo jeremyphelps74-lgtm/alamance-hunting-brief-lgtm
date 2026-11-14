@@ -391,7 +391,7 @@ function drawMap(R){
   const avail=R.filter(r=>r.status!=='taken').slice(0,4);
   const club=px(...D.club);
   const tw=D.windTowardDeg*Math.PI/180; const pxm=-g.fy[0]*g.scale/111320; const L=150*0.9144*pxm;
-  if(!view) view={x:0,y:0,w:W,h:H};
+  if(!view){view={x:0,y:0,w:W,h:H};clampView();};
   let s=`<svg class="mp" viewBox="${view.x} ${view.y} ${view.w} ${view.h}" xmlns="http://www.w3.org/2000/svg" ><image href="${BASE}" x="0" y="0" width="${W}" height="${H}" opacity="${BASE==='map-topo.jpg'?1:.85}" preserveAspectRatio="none"/>`;
   (D.trails||[]).forEach(t=>{const p=t.pts.map(q=>px(q[0],q[1]).join(',')).join(' ');s+=`<polyline points="${p}" fill="none" stroke="#000" stroke-opacity=".35" stroke-width="6" stroke-linejoin="round"/><polyline points="${p}" fill="none" stroke="#f2e3b3" stroke-width="3" stroke-linejoin="round"/>`;});
   if(!(MODE&&!sel))avail.forEach(r=>{const [x,y]=px(r.s.lat,r.s.lon);let pts=[[x,y]];for(let d=-22;d<=22;d+=4){const b=tw+d*Math.PI/180;pts.push([x+L*Math.sin(b),y-L*Math.cos(b)])}
@@ -432,7 +432,7 @@ function drawMap(R){
   if(D.parking){const [qx,qy]=px(...D.parking);s+=`<g class="mk" data-x="${qx}" data-y="${qy}"><rect x="${qx-13}" y="${qy-13}" width="26" height="26" rx="6" fill="#2f6fdf" stroke="#fff" stroke-width="3"/><text x="${qx}" y="${qy+8}" font-size="20" font-weight="800" text-anchor="middle" fill="#fff">P</text><text x="${qx+20}" y="${qy+8}" font-size="22" font-weight="700" fill="#fff" stroke="#000" stroke-width="5" paint-order="stroke">Parking Pond</text></g>`;}
   s+=`<g class="mk" data-x="${club[0]}" data-y="${club[1]}"><circle cx="${club[0]}" cy="${club[1]}" r="10" fill="#fff" stroke="#000" stroke-width="3"/><text x="${club[0]-16}" y="${club[1]-18}" font-size="24" font-weight="700" text-anchor="end" fill="#fff" stroke="#000" stroke-width="5" paint-order="stroke">Clubhouse</text></g>`;
   if(ME){const m=px(ME[0],ME[1]);const r=Math.max(8,ME[2]/0.9144*pxPerYd());s+=`<g class="me"><circle cx="${m[0]}" cy="${m[1]}" r="${r}" fill="rgba(66,165,255,.18)" stroke="rgba(66,165,255,.6)" stroke-width="2"/><circle cx="${m[0]}" cy="${m[1]}" r="11" fill="#2b8cff" stroke="#fff" stroke-width="4"/></g>`;}
-  s+='</svg>'; let o=`<svg class="ov" viewBox="0 0 ${W} ${H}" xmlns="http://www.w3.org/2000/svg">`;
+  s+='</svg>'; let o=`<svg class="ov" viewBox="0 0 ${W} ${H}" preserveAspectRatio="xMaxYMin meet" xmlns="http://www.w3.org/2000/svg">`;
   const ax=W-120,ay=80,al=46; o+=`<g transform="translate(${ax},${ay}) rotate(${D.windTowardDeg})"><circle r="56" fill="rgba(0,0,0,.55)"/><path d="M0 ${al} L0 ${-al+14}" stroke="#fff" stroke-width="8"/><path d="M0 ${-al-6} L-16 ${-al+20} L16 ${-al+20}Z" fill="#fff"/></g><text x="${ax}" y="${ay+86}" font-size="24" font-weight="700" text-anchor="middle" fill="#fff" stroke="#000" stroke-width="5" paint-order="stroke">Wind ${esc(D.wind.from)}</text>`;
   const L2=(x,y,t,a)=>`<text x="${x}" y="${y}" font-size="34" font-weight="800" text-anchor="${a||'middle'}" fill="#fff" stroke="#000" stroke-width="6" paint-order="stroke">${t}</text>`;
   if(MODE&&!sel){const k=MODE==='np'?'Why not: green = where deer come from · orange = your scent today':'More stands: green = where deer come from · orange = your scent';o+=`<rect x="16" y="58" width="${W-200}" height="46" rx="10" fill="rgba(0,0,0,.75)"/><text x="${(W-184)/2+8}" y="89" font-size="24" font-weight="700" text-anchor="middle" fill="#fff">${k}</text>`;}
@@ -448,7 +448,7 @@ function drawMap(R){
 function groupList(m){const R=ranked();if(m==='more')return R.filter(r=>r.status!=='taken').slice(4);if(m==='np')return (D.notPicked||[]).map(n=>Object.assign({},n,{s:STAND[n.id]})).filter(n=>n.s);return []}
 function fitGroup(m){const W=D.geo.w,H=D.geo.h;const L=groupList(m);const pts=[];L.forEach(r=>{pts.push(px(r.s.lat,r.s.lon))});if(!pts.length){view=null;return}
   let x0=Math.min(...pts.map(p=>p[0])),x1=Math.max(...pts.map(p=>p[0])),y0=Math.min(...pts.map(p=>p[1])),y1=Math.max(...pts.map(p=>p[1]));
-  let w=Math.min(W,Math.max(x1-x0+300,(y1-y0+340)*W/H));const hh=w*H/W;view={x:(x0+x1)/2-w/2,y:(y0+y1)/2-hh/2+90,w:w,h:hh};}
+  let w=Math.min(W,Math.max(x1-x0+300,(y1-y0+340)*W/H));const hh=w*(ASP||H/W);view={x:(x0+x1)/2-w/2,y:(y0+y1)/2-hh/2+90,w:w,h:hh};}
 function wedge(x,y,deg,len,half){const b=deg*Math.PI/180;let pts=[[x,y]];for(let d=-half;d<=half;d+=5){const a=b+d*Math.PI/180;pts.push([x+len*Math.sin(a),y-len*Math.cos(a)])}return pts.map(p=>p.join(',')).join(' ')}
 function mapToTop(){const t=document.querySelector('#toppick .plan')||document.querySelector('#toppick');if(t&&!sel&&!MODE){placeMap(t,true);const top=ranked().find(r=>r.status!=='taken');if(top){fitRoute(top.id);drawMap();}}}
 function mapHome(){const w=$('#mapwrap'),hm=$('#mapHome');if(w&&hm&&w.parentElement!==hm){const old=w.parentElement;hm.appendChild(w);if(old&&old.classList.contains('mapslot'))old.remove();}}
@@ -536,7 +536,7 @@ function walkHTML(r0,c,noHow){const r=eff(r0);if(!r||!r.steps)return '';return (
 function fitRoute(id){const W=D.geo.w,H=D.geo.h;const r=eff(ranked().find(x=>x.id===id)||(D.notPicked||[]).find(x=>x.id===id));const o=STAND[id];
   const pts=[...(r&&r.route?r.route:[]),...(o?[[o.lat,o.lon]]:[])].map(p=>px(...p));if(!pts.length){view=null;return}
   let x0=Math.min(...pts.map(p=>p[0])),x1=Math.max(...pts.map(p=>p[0])),y0=Math.min(...pts.map(p=>p[1])),y1=Math.max(...pts.map(p=>p[1]));
-  let w=Math.max(x1-x0,(y1-y0)*W/H)*1.35+120;w=Math.min(W,Math.max(w,W*0.45));const hh=w*H/W;view={x:(x0+x1)/2-w/2,y:(y0+y1)/2-hh/2,w:w,h:hh};}
+  let w=Math.max(x1-x0,(y1-y0)*W/H)*1.35+120;w=Math.min(W,Math.max(w,W*0.45));const hh=w*(ASP||H/W);view={x:(x0+x1)/2-w/2,y:(y0+y1)/2-hh/2,w:w,h:hh};}
 function showInfo(id){const box=$('#standinfo');const o=id&&STAND[id];if(!o){box.innerHTML='';return}
   const R=ranked();const r=R.find(x=>x.id===id);const npr=(D.notPicked||[]).find(x=>x.id===id);const tk=allTaken().find(t=>t.id===id);
   const row=(k,v)=>v?`<div class="k">${k}</div><div>${esc(v)}</div>`:'';
@@ -617,7 +617,8 @@ $('#takenBtn').onclick=()=>{const v=$('#takenInput').value;const add=parseTaken(
   $('#pickcard').scrollIntoView({behavior:'smooth'});};
 $('#takenInput').addEventListener('keydown',e=>{if(e.key==='Enter')$('#takenBtn').click()});
 // ---- pan / pinch / wheel zoom ----
-function clampView(){const W=D.geo.w,H=D.geo.h;view.w=Math.min(W,Math.max(W/5,view.w));view.h=view.w*H/W;
+var ASP=null;
+function clampView(){const W=D.geo.w,H=D.geo.h,a=ASP||H/W;view.w=Math.min(W,H/a,Math.max(W/5,view.w));view.h=view.w*a;
   view.x=Math.min(W-view.w,Math.max(0,view.x));view.y=Math.min(H-view.h,Math.max(0,view.y));}
 function applyView(){clampView();const sv=$('#mapbox svg.mp');if(!sv)return;sv.setAttribute('viewBox',`${view.x} ${view.y} ${view.w} ${view.h}`);
   const z=Math.pow(view.w/D.geo.w,0.6);
@@ -672,6 +673,6 @@ document.addEventListener('click',e=>{const b=e.target.closest('.stb,.ht');if(!b
 fetch('data.json',{cache:'no-store'}).then(r=>r.json()).then(d=>{D=d;d.stands.forEach(s=>STAND[s.id]=s);local=load(LS+D.date)||[];render();setBase(BASE);mapToTop();})
  .catch(e=>{$('#title').textContent='Could not load the brief';});
 </script>
-<script src="field.js?v=3"></script>
+<script src="field.js?v=4"></script>
 </body>
 </html>
