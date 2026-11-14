@@ -192,7 +192,7 @@ footer{font-size:11px;color:var(--mute);text-align:center;margin-top:14px;line-h
     <div class="bd">
       <div id="mapHome"><div id="mapwrap"><div class="basesel" id="basesel"><button data-b="map.jpg">Now · Oct 26</button><button data-b="map-aerial.jpg">Aerial</button><button data-b="map-topo.jpg">Topo</button></div>
       <div class="basenote" id="basenote"></div><div class="mapbox" id="mapbox"></div>
-      <div class="mapctl"><button id="zin">Zoom +</button><button id="zout">Zoom −</button><button id="zfit">Fit</button><button id="zme">📍 Me</button></div>
+      <div class="mapctl"><button id="zin">Zoom +</button><button id="zout">Zoom −</button><button id="zfit">Fit</button><button id="zme">📍 Me</button></div><div id="mestat" style="display:none;margin:6px 0 2px;padding:8px 10px;border-radius:10px;background:rgba(43,140,255,.15);border:1px solid rgba(43,140,255,.5);font-weight:600"></div>
       <div id="standinfo"></div></div></div>
       <div class="leg">
         <span><i style="background:var(--gold)"></i>Picks</span>
@@ -645,14 +645,14 @@ MB.addEventListener('click',e=>{if(dragged){e.stopPropagation();e.preventDefault
 MB.addEventListener('wheel',e=>{if(!view)return;e.preventDefault();const [sx,sy]=toSvg(e.clientX,e.clientY);zoomAt(Math.exp(-e.deltaY*0.002),sx,sy);},{passive:false});
 MB.addEventListener('dblclick',e=>{const [sx,sy]=toSvg(e.clientX,e.clientY);zoomAt(2,sx,sy);});
 let ME=null,MEW=null;
-function meMsg(t){const n=$('#basenote');if(n)n.textContent=t;}
+function meMsg(t){const n=$('#mestat');if(n){n.style.display=t?'block':'none';n.textContent=t;}}
 $('#zme').onclick=()=>{
-  if(MEW!==null){navigator.geolocation.clearWatch(MEW);MEW=null;ME=null;$('#zme').textContent='📍 Me';drawMap();meMsg('Location off');return;}
+  if(MEW!==null){navigator.geolocation.clearWatch(MEW);MEW=null;ME=null;$('#zme').textContent='📍 Me';drawMap();meMsg('');return;}
   if(!navigator.geolocation){meMsg('This browser has no GPS access');return;}
   meMsg('Finding you…');
   try{MEW=navigator.geolocation.watchPosition(p=>{ME=[p.coords.latitude,p.coords.longitude,p.coords.accuracy||10];$('#zme').textContent='📍 On';
     const g=D.geo,m=px(ME[0],ME[1]),inMap=m[0]>=0&&m[1]>=0&&m[0]<=g.w&&m[1]<=g.h;
-    meMsg(inMap?`You: ${ME[0].toFixed(5)}, ${ME[1].toFixed(5)} (±${Math.round(ME[2]/0.9144)} yd)`:`You're off the club map (${ME[0].toFixed(4)}, ${ME[1].toFixed(4)})`);drawMap();},
+    const dk=meters({lat:ME[0],lon:ME[1]},{lat:D.club[0],lon:D.club[1]});const far=dk>1609?`${(dk/1609.34).toFixed(1)} mi`:`${yd(dk)} yd`;meMsg(inMap?`📍 You're here: ${ME[0].toFixed(5)}, ${ME[1].toFixed(5)} (±${Math.round(ME[2]/0.9144)} yd) · ${far} from the clubhouse`:`📍 GPS works. You're off the club map, ${far} from the clubhouse (${ME[0].toFixed(4)}, ${ME[1].toFixed(4)}).`);drawMap();},
    e=>{meMsg('Location blocked: '+(e.message||e.code)+'. This page may not be allowed to use GPS.');MEW=null;$('#zme').textContent='📍 Me';},
    {enableHighAccuracy:true,maximumAge:5000,timeout:20000});}catch(e){meMsg('Location blocked here: '+e.message);MEW=null;}
 };
