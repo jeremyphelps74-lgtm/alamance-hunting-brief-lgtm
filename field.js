@@ -40,7 +40,12 @@ const css=document.createElement('style');css.textContent=`
 #flist .fi input{flex:1;min-width:0;background:var(--card);border:1px solid var(--line);color:var(--txt);border-radius:8px;padding:5px 6px;font-size:13px}
 #flist .fi .x{flex:0 0 auto;padding:4px 8px}
 #flist .fsum{font-size:13px;color:var(--mute);margin:4px 0}
-#flist .fact{display:flex;gap:6px;margin-top:6px}`;
+#flist .fact{display:flex;gap:6px;margin-top:6px}
+#fieldbox #fclub.hot{background:var(--orange);border-color:var(--orange);color:#111;font-weight:800;animation:fpulse 1.6s ease-in-out infinite}
+@keyframes fpulse{0%,100%{box-shadow:0 0 0 0 rgba(255,106,19,.6)}50%{box-shadow:0 0 0 7px rgba(255,106,19,0)}}
+#fsendbar{display:none;position:sticky;bottom:8px;z-index:60;margin-top:8px}
+#fsendbar button{width:100%;background:var(--orange);color:#111;border:2px solid #111;border-radius:12px;padding:12px;font:800 16px Inter,sans-serif;box-shadow:0 4px 14px rgba(0,0,0,.45)}
+body.fullmap #fsendbar{position:fixed;left:12px;right:12px;bottom:calc(env(safe-area-inset-bottom) + 12px);margin:0}`;
 document.head.appendChild(css);
 
 function save(){LS.set(FK,MARKS);LS.set(TK,TRACK);}
@@ -49,7 +54,7 @@ function needGPS(cb){if(ME){cb();return}PENDING=cb;if(MEW===null)$f('#zme').clic
 function addMark(t){needGPS(()=>{centerOn(ME[0],ME[1]);putMark(t,ME[0],ME[1],Math.round(ME[2]/0.9144),'gps');});}
 function putMark(t,lat,lon,acc,how){MARKS.push({t,lat:+lat.toFixed(6),lon:+lon.toFixed(6),acc,ts:Date.now(),note:'',how});save();list();drawMap();
   const n=MARKS.filter(m=>m.t===t).length;let rel='';if(ME&&how==='map'){const d=M([ME[0],ME[1]],[lat,lon]);rel=` · ${yd(d)} yd ${card(bearing([ME[0],ME[1]],[lat,lon]))} of you`;}
-  meMsg(`${TYPES[t].i} ${TYPES[t].n}${t==='blood'?' #'+n:''} marked${how==='map'?' where you tapped':' at your spot'}${rel}. Add a note below.`);}
+  meMsg(`${TYPES[t].i} ${TYPES[t].n}${t==='blood'?' #'+n:''} marked${how==='map'?' where you tapped':' at your spot'}${rel}. Add a note below, then tap 👥 Send to club.`);sendBar();}
 let PLACE=null;
 function placeMode(t){PLACE=t;$f('#fplace').style.display='block';$f('#mapbox').classList.add('placing');
   $f('#fplacetxt').textContent=`Tap the map where the ${t==='deer'?'deer was':t==='sign'?'sign is':t==='rec'?'deer was recovered':'deer stood when you shot'}. Zoom in first for a closer spot.`;$f('#mapwrap').scrollIntoView({block:'start',behavior:'smooth'});}
@@ -73,9 +78,9 @@ function list(){const L=$f('#flist');if(!MARKS.length&&TRACK.length<2){L.innerHT
   L.innerHTML=(trailSummary()?`<div class="fsum">🩸 ${esc(trailSummary())}</div>`:'')+
    MARKS.map((m,i)=>`<div class="fi"><span>${TYPES[m.t].i} ${hhmm(m.ts)}</span><input data-i="${i}" placeholder="note (buck, scrape, direction…)" value="${esc(m.note||'')}"><button class="x" data-del="${i}">✕</button></div>`).join('')+
    (TRACK.length>1?`<div class="fsum">〰 Track: ${TRACK.length} points since ${hhmm(TRACK[0][2])}</div>`:'')+
-   `<div class="fact">${CLUBMODE?'':'<button id="fshare">📤 Send to Claude</button>'}<button id="fclub">👥 Send to club${unsent()?' ('+unsent()+')':' ✓'}</button><button id="fclear">🗑 Clear</button></div>`;
+   `<div class="fact">${CLUBMODE?'':'<button id="fshare">📤 Send to Claude</button>'}<button id="fclub" class="${unsent()?'hot':''}">${unsent()?'👥 Send to club ('+unsent()+')':'👥 Sent to club ✓'}</button><button id="fclear">🗑 Clear</button></div>`;
   L.querySelectorAll('input[data-i]').forEach(x=>x.onchange=()=>{MARKS[+x.dataset.i].note=x.value;save();});
-  L.querySelectorAll('[data-del]').forEach(x=>x.onclick=()=>{MARKS.splice(+x.dataset.del,1);save();list();drawMap();});
+  L.querySelectorAll('[data-del]').forEach(x=>x.onclick=()=>{MARKS.splice(+x.dataset.del,1);save();list();drawMap();sendBar();});
   const fsh=$f('#fshare');if(fsh)fsh.onclick=async()=>{const t=shareText();try{if(navigator.share){await navigator.share({text:t});return}}catch(e){}
     try{await navigator.clipboard.writeText(t);meMsg('Copied. Paste it into your Claude chat.');}catch(e){meMsg('Copy failed. Long-press to copy:\n'+t);}};
   $f('#fclub').onclick=sendClub;
@@ -138,7 +143,14 @@ async function sendClub(){const name=myName();if(!name){meMsg('Type your first n
     p.set(ENT.name,name);p.set(ENT.stand,nearStand(m.lat,m.lon));p.set(ENT.what,TYPES[m.t].n);p.set(ENT.count,'1');p.set(ENT.dir,'');
     p.set(ENT.lat,String(m.lat));p.set(ENT.lon,String(m.lon));p.set(ENT.notes,(m.note||'')+(m.how==='map'?' [placed on map]':' [GPS]'));
     try{await fetch(FORM,{method:'POST',mode:'no-cors',body:p});m.sent=true;ok++;}catch(e){break}}
-  save();list();meMsg(ok===todo.length?`👥 Sent ${ok} report${ok>1?'s':''} to the club sheet. They'll show on everyone's map within a few minutes.`:`Sent ${ok} of ${todo.length}. No signal? Tap Send again later; unsent marks stay saved.`);loadClub(true);}
+  save();list();sendBar();meMsg(ok===todo.length?`👥 Sent ${ok} report${ok>1?'s':''} to the club sheet. They'll show on everyone's map within a few minutes.`:`Sent ${ok} of ${todo.length}. No signal? Tap Send again later; unsent marks stay saved.`);loadClub(true);}
+
+// floating send bar whenever there are unsent marks
+const sb=document.createElement('div');sb.id='fsendbar';sb.innerHTML='<button id="fsendbtn"></button>';$f('#mapwrap').appendChild(sb);
+function sendBar(){const n=unsent();sb.style.display=n?'block':'none';$f('#fsendbtn').textContent=`👥 Send ${n} report${n>1?'s':''} to the club`;}
+$f('#fsendbtn').onclick=()=>sendClub();
+setTimeout(sendBar,500);
+
 // name box
 const nb=document.createElement('div');nb.style.cssText='display:flex;gap:6px;align-items:center;margin-bottom:6px';
 nb.innerHTML='<span style="font-size:13px;color:var(--mute);white-space:nowrap">Your name</span><input id="fname" placeholder="first name (for club reports)" style="flex:1;min-width:0;background:var(--card);border:1px solid var(--line);color:var(--txt);border-radius:8px;padding:6px 8px;font-size:14px">';
