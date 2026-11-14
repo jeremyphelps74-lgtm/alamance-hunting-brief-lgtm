@@ -1,5 +1,6 @@
 // ---- Field tools: marks, blood trail, track, guide, rings, offline ----
 (function(){
+const CLUBMODE=!!window.CLUB;
 const FK='hb_marks', TK='hb_track';
 const LS={get(k,d){try{const v=JSON.parse(localStorage.getItem(k));return v==null?d:v}catch(e){return d}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
 let MARKS=LS.get(FK,[]), TRACK=LS.get(TK,[]), TRACKING=false, GUIDE=false, RINGS=false, HEAD=null, PENDING=null;
@@ -123,13 +124,12 @@ drawMap=function(R){baseDraw(R);const sv=document.querySelector('#mapbox svg.mp'
   if(s)sv.insertAdjacentHTML('beforeend',s);
   if(ME){const g=sv.querySelector('g.me');if(g)sv.appendChild(g);}
   if(typeof applyView==='function'&&view)applyView();};
-(function wait(){if(typeof D!=='undefined'&&D&&D.geo){list();drawMap();}else setTimeout(wait,200);})();
+(function wait(){if(window.HB_READY&&typeof D!=='undefined'&&D&&D.geo){list();drawMap();}else setTimeout(wait,200);})();
 
 
 
 
 // ---- club sharing (Google Form → Sheet) ----
-const CLUBMODE=!!window.CLUB;
 const FORM='https://docs.google.com/forms/d/e/1FAIpQLSf1w85uLUggm4mzQLEej-leYSOE0HfxpZrheFG15-XADt4tfQ/formResponse';
 const ENT={when:'entry.2006520658',name:'entry.854423478',stand:'entry.1711447138',what:'entry.478433125',count:'entry.289696493',dir:'entry.1471151470',lat:'entry.840621409',lon:'entry.359953880',notes:'entry.1376660535'};
 const CSV='https://docs.google.com/spreadsheets/d/e/2PACX-1vSILql_KgPsJOYaxNwjwyzE9ohCw-pMZFfhHHRRcxn4U12kG7vHdwBxDup70lrFJP8WPqviTAwinzse/pub?gid=2130860769&single=true&output=csv';
