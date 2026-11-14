@@ -191,6 +191,13 @@ function topLabel(){try{const top=ranked().find(r=>r.status!=='taken');const o=t
 const dm2=drawMap;drawMap=function(R){dm2(R);topLabel();};
 setTab(LS.get('hb_tab','stands'));
 
+
+// ---- promo card (e.g. quail on the preserve) ----
+(function wp(){if(typeof D==='undefined'||!D||!D.geo){setTimeout(wp,300);return}if(!D.promo||document.getElementById('promo'))return;const P=D.promo;
+  const c=document.createElement('details');c.id='promo';c.className='card';c.style.cssText='border-color:#c8a24a;background:linear-gradient(180deg,rgba(200,162,74,.18),var(--card))';
+  c.innerHTML=`<summary style="list-style:none;cursor:pointer;padding:12px 14px;text-transform:none;letter-spacing:0;display:flex;align-items:center;gap:10px"><span style="font-size:28px">${esc(P.icon||'⭐')}</span><span style="flex:1"><b style="font-size:16px">${esc(P.title)}</b><br><small style="color:var(--mute)">${esc(P.sub||'')}</small></span><span style="color:#c8a24a;font-weight:700">More ▾</span></summary><div style="padding:0 14px 12px">${(P.lines||[]).map(l=>`<div style="padding:5px 0;border-top:1px solid var(--line)">${esc(l)}</div>`).join('')}</div>`;
+  const tiles=document.getElementById('tiles');tiles.parentNode.insertBefore(c,tiles.nextSibling);})();
+
 // ---- full-screen map ----
 const fs=document.createElement('style');fs.textContent=`
 body.fullmap{overflow:hidden}
