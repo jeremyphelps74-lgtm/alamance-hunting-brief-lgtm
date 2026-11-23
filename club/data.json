@@ -1,20 +1,20 @@
 {
  "date": "2026-11-23",
  "title": "Monday, Nov 23",
- "sit": "Morning",
+ "sit": "Evening",
  "weapon": "Gun season: rifle, muzzleloader, shotgun or bow",
- "updated": "Mon Nov 23, 4:20 AM · AccuWeather Mebane · tap any stand for route + reasons",
+ "updated": "Mon Nov 23, 9:40 AM · AccuWeather Mebane · tap any stand for route + reasons",
  "hero": {
   "wake": "",
   "leave": "",
   "inStand": "",
   "legalStart": "6:32 AM",
   "sunrise": "7:02 AM",
-  "sitEnd": "11:00 AM",
+  "sitEnd": "5:35 PM",
   "sunset": "5:05 PM",
   "legalEnd": "5:35 PM"
  },
- "why": "Light W wind 5 mph (gusts ~12) turning WNW by 9; foggy and mild, 52° at first light to 63 by 10; pressure 29.93 and steady; woods wet and quiet after 0.66 in of rain yesterday. Picks are ranked for a W wind using each stand's good winds, favorites and recent reports: #30, then #15, #16 and #22. #26, #11, #20A, #17, #17A and #9L put scent onto their lanes. Saw something? Tap 🦌 Deer / 🩸 Blood / ✅ Found, tap the map, then 👥 Send to club.",
+ "why": "Light W wind 5-6 mph (gusts 10-14) that drifts NW early, swings SW at 3-4 PM and comes back W for the last hour; warm, 71° at 2 falling to 66 by sunset; pressure 29.98 and steady, front tonight. Picks are ranked for stands that hold up on W, NW and SW, then favorites and recent reports: #9B, then #24, #22 and #16. #26, #11, #20A, #17, #17A and #9L put scent onto their lanes. Saw something? Tap 🦌 Deer / 🩸 Blood / ✅ Found, tap the map, then 👥 Send to club.",
  "legal": [
   [
    "Season",
@@ -30,109 +30,101 @@
   ],
   [
    "Legal light",
-   "Starts 6:32 AM (sunrise 7:02)."
+   "Until 5:35 PM (sunset 5:05)."
   ]
  ],
  "wind": {
   "from": "W",
   "fromDeg": 270,
-  "speed": "5 mph, gusts 7-12",
-  "later": "W 5 from 6-8 AM, WNW 5 by 9-11 (gusts 12), NW by noon",
-  "note": "Light west breeze the whole sit, edging WNW mid-morning. Fog and damp ground after yesterday's rain; morning thermals pull downhill until it warms."
+  "speed": "5-6 mph, gusts 10-14",
+  "later": "NW-WNW 5 at 1-2 PM, swings WSW-SW 5 at 3-4 PM, back to W 6 by 5 (gusts 14), NW after dark",
+  "note": "Light westerly all evening but it wanders: NW early, SW mid-afternoon, W at prime time. Warm and dry; evening thermals rise as it cools after 4."
  },
  "hourly": [
   [
-   "5am",
-   53,
-   "W",
-   5,
-   12,
-   0
-  ],
-  [
-   "6am",
-   52,
-   "W",
-   5,
-   12,
-   0
-  ],
-  [
-   "7am",
-   54,
-   "W",
-   5,
-   7,
-   0
-  ],
-  [
-   "8am",
-   57,
-   "W",
-   5,
-   12,
-   0
-  ],
-  [
-   "9am",
-   60,
-   "WNW",
-   5,
-   12,
-   0
-  ],
-  [
-   "10am",
-   63,
-   "WNW",
-   5,
-   12,
-   0
-  ],
-  [
-   "11am",
-   65,
-   "WNW",
-   5,
-   12,
-   0
-  ],
-  [
    "12pm",
-   68,
+   67,
    "NW",
    5,
    12,
    0
+  ],
+  [
+   "1pm",
+   69,
+   "NW",
+   5,
+   12,
+   0
+  ],
+  [
+   "2pm",
+   71,
+   "WNW",
+   5,
+   12,
+   0
+  ],
+  [
+   "3pm",
+   70,
+   "WSW",
+   5,
+   12,
+   0
+  ],
+  [
+   "4pm",
+   68,
+   "SW",
+   5,
+   10,
+   0
+  ],
+  [
+   "5pm",
+   66,
+   "W",
+   6,
+   14,
+   0
+  ],
+  [
+   "6pm",
+   63,
+   "NW",
+   6,
+   15,
+   0
   ]
  ],
  "sitHours": [
-  "6am",
-  "7am",
-  "8am",
-  "9am",
-  "10am"
+  "1pm",
+  "2pm",
+  "3pm",
+  "4pm",
+  "5pm"
  ],
  "conditions": [
   [
    "Temp",
-   "52° at 6, 54 at 7, 57 at 8, 60 at 9, 63 by 10 (mild, humid)"
+   "69° at 1, 71 at 2, 70 at 3, 68 at 4, 66 at 5, ~64 by legal end (warm)"
   ],
   [
    "Pressure",
-   "29.93 and steady"
+   "29.98 and steady; front tonight (showers after 7 PM), NE wind and much cooler Tue"
   ],
   [
    "Sky",
-   "Fog until mid-morning (visibility ~0.5 mi), then partly sunny"
+   "Partly sunny"
   ],
   [
    "Rain",
-   "Dry (11% after 7 AM); 0.66 in fell in the last 24 h, so the woods are wet and quiet"
+   "Dry during the sit (≤6%); showers ~40% after 7 PM"
   ],
   [
    "Moon",
-   "Waxing gibbous, ~99% (full Nov 24)"
+   "Waxing gibbous, ~99% (full Nov 24); rises near sunset"
   ],
   [
    "Rut",
@@ -157,77 +149,8 @@
  ],
  "candidates": [
   {
-   "id": "30",
-   "why": "Favorite rifle stand and W is its best wind. Members report multiple deer here, and deer cross the W gully and the road behind it.",
-   "route": [
-    [
-     36.203217,
-     -79.272392
-    ],
-    [
-     36.202957,
-     -79.272338
-    ],
-    [
-     36.202525,
-     -79.271478
-    ],
-    [
-     36.202222,
-     -79.271263
-    ],
-    [
-     36.202197,
-     -79.270672
-    ],
-    [
-     36.202136,
-     -79.270543
-    ],
-    [
-     36.201012,
-     -79.270457
-    ],
-    [
-     36.200321,
-     -79.270349
-    ],
-    [
-     36.199888,
-     -79.270048
-    ]
-   ],
-   "walk": "Clubhouse → #30 · ~540 yd",
-   "steps": [
-    [
-     36.202828,
-     -79.272285,
-     "1",
-     "Clubhouse: head SE to the #27 corner."
-    ],
-    [
-     36.202222,
-     -79.271263,
-     "2",
-     "#27: turn left (E)."
-    ],
-    [
-     36.20205,
-     -79.2705,
-     "3",
-     "Dark tree line: turn right (S) and follow it down to #30."
-    ]
-   ],
-   "yd": 540,
-   "fromRoute": true,
-   "pro": "W wind in your face; scent goes E, off the twin pond crossing and the travel route behind. 200-yd looks over the cut.",
-   "con": "Rifle only. If the wind slips NW late, scent edges toward the route behind; if anyone's duck hunting the twin pond, skip it."
-  },
-  {
-   "id": "15",
-   "why": "Favorite; W and NW are good winds. Bullwinkle at the cut edge, 3 does in close last Sunday, and a new buck shot site reported nearby.",
-   "pro": "Faces NW: wind in your face; scent goes E/SE toward the road, off the cut.",
-   "con": "~720-yd walk. Don't pair with #13 (upwind of it on W/NW).",
+   "id": "9B",
+   "why": "Favorite box; SW and W are both good winds (faces SW), so it handles the whole swing. The #9 field has had the most action, and evening movement there runs SE edge → NW corner from about 4:15.",
    "route": [
     [
      36.198592,
@@ -246,38 +169,29 @@
      -79.27293
     ],
     [
-     36.197295,
-     -79.27308
+     36.197252,
+     -79.273113
     ],
     [
-     36.197209,
-     -79.273016
+     36.195739,
+     -79.274113
     ],
     [
-     36.196517,
-     -79.272392
+     36.195307,
+     -79.275725
     ],
     [
-     36.195566,
-     -79.271209
-    ],
-    [
-     36.195048,
-     -79.270779
-    ],
-    [
-     36.194788,
-     -79.270134
-    ],
-    [
-     36.194659,
-     -79.269543
+     36.195722,
+     -79.276639
     ]
    ],
-   "walk": "Parking Pond → #15 · ~720 yd · 12 min",
+   "fromRoute": true,
+   "pro": "Enclosed box; wind in your face or quartering. Scent goes E/NE behind it, off the field.",
+   "con": "Rifle only. Know who's in #9L and #10 before any long shot. ~720-yd walk.",
+   "walk": "Parking Pond → #9B · ~720 yd",
    "steps": [
     [
-     36.198353999999995,
+     36.198358,
      -79.273951,
      "A",
      "Parking Pond: head SE toward #12A."
@@ -286,21 +200,236 @@
      36.197295,
      -79.27308,
      "B",
-     "#12A: keep SE down the field strip."
+     "#12A: bear SW past the Refuge Pond."
     ],
     [
-     36.195048,
-     -79.270779,
+     36.195739,
+     -79.274113,
      "C",
-     "End of the strip: keep SE, then bend E into #15."
+     "Crossroads by the Refuge blind: turn right (W) past #10."
+    ],
+    [
+     36.19535,
+     -79.276048,
+     "D",
+     "#9 field: the box is in the NW part between two trees."
     ]
    ],
-   "yd": 720,
-   "fromRoute": true
+   "yd": 720
+  },
+  {
+   "id": "24",
+   "why": "SW, S and W are its good winds. Does are steady here and members report a nice buck missed here.",
+   "route": [
+    [
+     36.203217,
+     -79.272392
+    ],
+    [
+     36.202957,
+     -79.272338
+    ],
+    [
+     36.202525,
+     -79.271478
+    ],
+    [
+     36.202222,
+     -79.271263
+    ],
+    [
+     36.202188,
+     -79.270543
+    ],
+    [
+     36.202542,
+     -79.270037
+    ],
+    [
+     36.202171,
+     -79.269919
+    ],
+    [
+     36.201704,
+     -79.269704
+    ],
+    [
+     36.20147,
+     -79.268134
+    ],
+    [
+     36.201514,
+     -79.268091
+    ],
+    [
+     36.201963,
+     -79.268091
+    ],
+    [
+     36.202793,
+     -79.267887
+    ],
+    [
+     36.203467,
+     -79.267801
+    ],
+    [
+     36.204124,
+     -79.268038
+    ],
+    [
+     36.2046,
+     -79.268306
+    ]
+   ],
+   "walk": "Clubhouse → #24 · ~980 yd",
+   "steps": [
+    [
+     36.202828,
+     -79.272285,
+     "1",
+     "Clubhouse: head SE to the #27 corner."
+    ],
+    [
+     36.202222,
+     -79.271263,
+     "2",
+     "#27: turn left (E)."
+    ],
+    [
+     36.202214,
+     -79.2705,
+     "3",
+     "Dark tree line: turn left (N) up to the Penthouse."
+    ],
+    [
+     36.202542,
+     -79.270037,
+     "4",
+     "Penthouse: turn right (SE) toward the #21 field."
+    ],
+    [
+     36.201514,
+     -79.268091,
+     "5",
+     "Past #21, before #19A: turn left (N) along the property line."
+    ],
+    [
+     36.201963,
+     -79.268091,
+     "6",
+     "Keep N past #20A and #22 to #24 at the bend."
+    ]
+   ],
+   "yd": 980,
+   "fromRoute": true,
+   "pro": "Faces SW: the 3-4 PM SW swing is right in your face. Feeder at 20 yd; scent goes E/NE toward the east line.",
+   "con": "~980-yd walk, the longest of the four. NW at 1 PM quarters from behind for the first hour."
+  },
+  {
+   "id": "22",
+   "why": "W, NW and SW are all good winds (faces W), so the shifts don't hurt it. Does reported here; sits where two lanes meet.",
+   "route": [
+    [
+     36.203217,
+     -79.272392
+    ],
+    [
+     36.202957,
+     -79.272338
+    ],
+    [
+     36.202525,
+     -79.271478
+    ],
+    [
+     36.202222,
+     -79.271263
+    ],
+    [
+     36.202188,
+     -79.270543
+    ],
+    [
+     36.202542,
+     -79.270037
+    ],
+    [
+     36.202171,
+     -79.269919
+    ],
+    [
+     36.201704,
+     -79.269704
+    ],
+    [
+     36.20147,
+     -79.268134
+    ],
+    [
+     36.201514,
+     -79.268091
+    ],
+    [
+     36.201963,
+     -79.268091
+    ],
+    [
+     36.202793,
+     -79.267887
+    ],
+    [
+     36.203467,
+     -79.267801
+    ]
+   ],
+   "walk": "Clubhouse → #22 · ~830 yd",
+   "steps": [
+    [
+     36.202828,
+     -79.272285,
+     "1",
+     "Clubhouse: head SE to the #27 corner."
+    ],
+    [
+     36.202222,
+     -79.271263,
+     "2",
+     "#27: turn left (E)."
+    ],
+    [
+     36.202214,
+     -79.2705,
+     "3",
+     "Dark tree line: turn left (N) up to the Penthouse."
+    ],
+    [
+     36.202542,
+     -79.270037,
+     "4",
+     "Penthouse: turn right (SE) toward the #21 field."
+    ],
+    [
+     36.201514,
+     -79.268091,
+     "5",
+     "Past #21, before #19A: turn left (N) along the property line."
+    ],
+    [
+     36.202568,
+     -79.268038,
+     "6",
+     "Keep N past #20A; #22 is where a lane from the S comes in."
+    ]
+   ],
+   "yd": 830,
+   "fromRoute": true,
+   "pro": "Scent goes E off the property all evening.",
+   "con": "~830-yd walk; blank on its last logged sit. Don't pair with #24 (close by)."
   },
   {
    "id": "16",
-   "why": "W is a good wind (faces W). Bucks on the #16–#15 trail most of this month, plus a buck shot site reported just S of it.",
+   "why": "W, NW and SW are all good winds (faces W). Bucks on the #16–#15 trail most of this month, plus a buck shot site reported just S of it.",
    "route": [
     [
      36.203217,
@@ -421,221 +550,13 @@
    "yd": 940,
    "fromRoute": true,
    "pro": "Wind in your face; scent goes E behind the stand, off the trail.",
-   "con": "~940-yd walk. Shots out front go through branches; clean looks are on the trail (72 yd S, 78 yd N)."
+   "con": "~940-yd walk. Best as a bow stand; rifle shots out front go through branches (clean looks on the trail, 72 yd S, 78 yd N)."
   },
   {
-   "id": "22",
-   "why": "W is a good wind (faces W). Does reported here last week.",
-   "route": [
-    [
-     36.203217,
-     -79.272392
-    ],
-    [
-     36.202957,
-     -79.272338
-    ],
-    [
-     36.202525,
-     -79.271478
-    ],
-    [
-     36.202222,
-     -79.271263
-    ],
-    [
-     36.202188,
-     -79.270543
-    ],
-    [
-     36.202542,
-     -79.270037
-    ],
-    [
-     36.202171,
-     -79.269919
-    ],
-    [
-     36.201704,
-     -79.269704
-    ],
-    [
-     36.20147,
-     -79.268134
-    ],
-    [
-     36.201514,
-     -79.268091
-    ],
-    [
-     36.201963,
-     -79.268091
-    ],
-    [
-     36.202793,
-     -79.267887
-    ],
-    [
-     36.203467,
-     -79.267801
-    ]
-   ],
-   "walk": "Clubhouse → #22 · ~830 yd",
-   "steps": [
-    [
-     36.202828,
-     -79.272285,
-     "1",
-     "Clubhouse: head SE to the #27 corner."
-    ],
-    [
-     36.202222,
-     -79.271263,
-     "2",
-     "#27: turn left (E)."
-    ],
-    [
-     36.202214,
-     -79.2705,
-     "3",
-     "Dark tree line: turn left (N) up to the Penthouse."
-    ],
-    [
-     36.202542,
-     -79.270037,
-     "4",
-     "Penthouse: turn right (SE) toward the #21 field."
-    ],
-    [
-     36.201514,
-     -79.268091,
-     "5",
-     "Past #21, before #19A: turn left (N) along the property line."
-    ],
-    [
-     36.202568,
-     -79.268038,
-     "6",
-     "Keep N past #20A; #22 is where a lane from the S comes in."
-    ]
-   ],
-   "yd": 830,
-   "fromRoute": true,
-   "pro": "Scent goes E off the property; stand sits where two lanes meet.",
-   "con": "~830-yd walk; blank on its last logged sit."
-  },
-  {
-   "id": "24",
-   "why": "W is one of its good winds, and members report a nice buck missed here. Does are steady here.",
-   "route": [
-    [
-     36.203217,
-     -79.272392
-    ],
-    [
-     36.202957,
-     -79.272338
-    ],
-    [
-     36.202525,
-     -79.271478
-    ],
-    [
-     36.202222,
-     -79.271263
-    ],
-    [
-     36.202188,
-     -79.270543
-    ],
-    [
-     36.202542,
-     -79.270037
-    ],
-    [
-     36.202171,
-     -79.269919
-    ],
-    [
-     36.201704,
-     -79.269704
-    ],
-    [
-     36.20147,
-     -79.268134
-    ],
-    [
-     36.201514,
-     -79.268091
-    ],
-    [
-     36.201963,
-     -79.268091
-    ],
-    [
-     36.202793,
-     -79.267887
-    ],
-    [
-     36.203467,
-     -79.267801
-    ],
-    [
-     36.204124,
-     -79.268038
-    ],
-    [
-     36.2046,
-     -79.268306
-    ]
-   ],
-   "walk": "Clubhouse → #24 · ~980 yd",
-   "steps": [
-    [
-     36.202828,
-     -79.272285,
-     "1",
-     "Clubhouse: head SE to the #27 corner."
-    ],
-    [
-     36.202222,
-     -79.271263,
-     "2",
-     "#27: turn left (E)."
-    ],
-    [
-     36.202214,
-     -79.2705,
-     "3",
-     "Dark tree line: turn left (N) up to the Penthouse."
-    ],
-    [
-     36.202542,
-     -79.270037,
-     "4",
-     "Penthouse: turn right (SE) toward the #21 field."
-    ],
-    [
-     36.201514,
-     -79.268091,
-     "5",
-     "Past #21, before #19A: turn left (N) along the property line."
-    ],
-    [
-     36.201963,
-     -79.268091,
-     "6",
-     "Keep N past #20A and #22 to #24 at the bend."
-    ]
-   ],
-   "yd": 980,
-   "fromRoute": true,
-   "pro": "Feeder at 20 yd; scent goes E toward the east line.",
-   "con": "Ranks below the top 4: faces SW, so W quarters from the right, and deer have used the field behind it. ~980-yd walk."
-  },
-  {
-   "id": "9B",
-   "why": "Favorite box; W is a good wind (faces SW). The #9 field has had the most action this month.",
+   "id": "15",
+   "why": "Favorite; Bullwinkle was seen at the far cut edge on an evening, and a new buck shot site was reported nearby.",
+   "pro": "W and NW are good winds; scent goes E/SE toward the road.",
+   "con": "Ranks below the top 4: the 3-4 PM SW swing pushes scent NE across the stand's right side. ~720-yd walk.",
    "route": [
     [
      36.198592,
@@ -654,29 +575,38 @@
      -79.27293
     ],
     [
-     36.197252,
-     -79.273113
+     36.197295,
+     -79.27308
     ],
     [
-     36.195739,
-     -79.274113
+     36.197209,
+     -79.273016
     ],
     [
-     36.195307,
-     -79.275725
+     36.196517,
+     -79.272392
     ],
     [
-     36.195722,
-     -79.276639
+     36.195566,
+     -79.271209
+    ],
+    [
+     36.195048,
+     -79.270779
+    ],
+    [
+     36.194788,
+     -79.270134
+    ],
+    [
+     36.194659,
+     -79.269543
     ]
    ],
-   "fromRoute": true,
-   "pro": "Enclosed box, quiet on wet mornings. Scent goes E behind it.",
-   "con": "Ranks below the top 4: in fog the field's far edge may be hard to see at first light. ~720-yd walk.",
-   "walk": "Parking Pond → #9B · ~720 yd",
+   "walk": "Parking Pond → #15 · ~720 yd · 12 min",
    "steps": [
     [
-     36.198358,
+     36.198353999999995,
      -79.273951,
      "A",
      "Parking Pond: head SE toward #12A."
@@ -685,27 +615,89 @@
      36.197295,
      -79.27308,
      "B",
-     "#12A: bear SW past the Refuge Pond."
+     "#12A: keep SE down the field strip."
     ],
     [
-     36.195739,
-     -79.274113,
+     36.195048,
+     -79.270779,
      "C",
-     "Crossroads by the Refuge blind: turn right (W) past #10."
-    ],
-    [
-     36.19535,
-     -79.276048,
-     "D",
-     "#9 field: the box is in the NW part between two trees."
+     "End of the strip: keep SE, then bend E into #15."
     ]
    ],
-   "yd": 720
+   "yd": 720,
+   "fromRoute": true
+  },
+  {
+   "id": "30",
+   "why": "Favorite rifle stand and W is its best wind. Members report multiple deer here.",
+   "route": [
+    [
+     36.203217,
+     -79.272392
+    ],
+    [
+     36.202957,
+     -79.272338
+    ],
+    [
+     36.202525,
+     -79.271478
+    ],
+    [
+     36.202222,
+     -79.271263
+    ],
+    [
+     36.202197,
+     -79.270672
+    ],
+    [
+     36.202136,
+     -79.270543
+    ],
+    [
+     36.201012,
+     -79.270457
+    ],
+    [
+     36.200321,
+     -79.270349
+    ],
+    [
+     36.199888,
+     -79.270048
+    ]
+   ],
+   "walk": "Clubhouse → #30 · ~540 yd",
+   "steps": [
+    [
+     36.202828,
+     -79.272285,
+     "1",
+     "Clubhouse: head SE to the #27 corner."
+    ],
+    [
+     36.202222,
+     -79.271263,
+     "2",
+     "#27: turn left (E)."
+    ],
+    [
+     36.20205,
+     -79.2705,
+     "3",
+     "Dark tree line: turn right (S) and follow it down to #30."
+    ]
+   ],
+   "yd": 540,
+   "fromRoute": true,
+   "pro": "200-yd looks over the cut; W puts scent E off the twin pond and the route behind.",
+   "con": "Ranks below the top 4: rifle only, and the SW swing at 3-4 PM sends scent NE toward #21. If anyone's on the twin pond for ducks, skip it."
   },
   {
    "id": "5",
-   "why": "W is a good wind (faces WSW). Button buck reported here.",
-   "pro": "Short ~330-yd walk; wind in your face.",
+   "why": "W, WSW and SW are its good winds (faces WSW). Button buck reported here.",
+   "pro": "Short ~330-yd walk; wind in your face the whole evening.",
    "con": "Ranks below the top 4: few dated sightings.",
    "route": [
     [
@@ -2472,7 +2464,7 @@
   "wake": "",
   "inStand": "",
   "leave": "",
-  "note": "Mon PM: WSW-SW 5 mph, warm (69-71° at 3-4, ~68 by 5). SW picks: #24, #22, #9B, #16."
+  "note": "Tue AM: front overnight; cooler (~45-48° at dawn), NE 7-10 mph with gusts 20+. NE picks: #9L, #11, #26, #17A."
  },
  "parking": [
   36.198592,
@@ -2540,7 +2532,7 @@
   },
   {
    "id": "11",
-   "why": "W is a bad wind for #11 (faces E): scent goes straight out over its clearing.",
+   "why": "W and SW are bad winds for #11 (faces E): scent goes straight out over its clearing.",
    "route": [
     [
      36.198592,
@@ -2953,7 +2945,7 @@
   },
   {
    "id": "20A",
-   "why": "W is a bad wind for #20A: scent drifts into the lanes it watches.",
+   "why": "W/NW is a bad wind for #20A: scent drifts into the lanes it watches.",
    "route": [
     [
      36.203217,
@@ -3803,7 +3795,7 @@
   },
   {
    "id": "17A",
-   "why": "W is a bad wind for #17A (faces W, deer come from behind/E): scent goes right onto them.",
+   "why": "W and SW are bad for #17A (faces W, deer come from behind/E): scent goes right onto them.",
    "route": [
     [
      36.198592,
@@ -4166,7 +4158,7 @@
   },
   {
    "id": "9L",
-   "why": "W is a bad wind for #9L (faces NE): scent goes out over the #9 field. Sit 9B instead.",
+   "why": "SW and W are bad winds for #9L (faces NE): scent goes out over the #9 field. Sit 9B instead.",
    "route": [
     [
      36.198592,
@@ -4269,100 +4261,91 @@
   "W": "the #19A cutoff"
  },
  "wx": {
-  "src": "AccuWeather Mebane, 4:15 AM Mon",
-  "headline": "Mild and foggy: 52° at first light rising to 63 by 10, light W wind 5 mph turning WNW. Wet, quiet woods after yesterday's rain.",
-  "sky": "Fog, clearing to partly sunny",
-  "rain": "Dry (≤11%) · wet ground from 0.66 in yesterday",
+  "src": "AccuWeather Mebane, 9:38 AM Mon",
+  "headline": "Warm and dry: 69-71° early, 66 by sunset. Light W wind 5 mph that drifts NW, then SW at 3-4, back to W for the last hour.",
+  "sky": "Partly sunny",
+  "rain": "Dry (≤6%) · showers possible after 7 PM",
   "hours": [
    [
-    "5am",
-    53,
-    "W",
-    5,
-    12,
-    0
-   ],
-   [
-    "6am",
-    52,
-    "W",
-    5,
-    12,
-    0
-   ],
-   [
-    "7am",
-    54,
-    "W",
-    5,
-    7,
-    0
-   ],
-   [
-    "8am",
-    57,
-    "W",
-    5,
-    12,
-    0
-   ],
-   [
-    "9am",
-    60,
-    "WNW",
-    5,
-    12,
-    0
-   ],
-   [
-    "10am",
-    63,
-    "WNW",
-    5,
-    12,
-    0
-   ],
-   [
-    "11am",
-    65,
-    "WNW",
-    5,
-    12,
-    0
-   ],
-   [
     "12pm",
-    68,
+    67,
     "NW",
     5,
     12,
     0
+   ],
+   [
+    "1pm",
+    69,
+    "NW",
+    5,
+    12,
+    0
+   ],
+   [
+    "2pm",
+    71,
+    "WNW",
+    5,
+    12,
+    0
+   ],
+   [
+    "3pm",
+    70,
+    "WSW",
+    5,
+    12,
+    0
+   ],
+   [
+    "4pm",
+    68,
+    "SW",
+    5,
+    10,
+    0
+   ],
+   [
+    "5pm",
+    66,
+    "W",
+    6,
+    14,
+    0
+   ],
+   [
+    "6pm",
+    63,
+    "NW",
+    6,
+    15,
+    0
    ]
   ],
   "marks": {
-   "6am": "6:32 legal",
-   "7am": "7:02 sunrise"
+   "5pm": "5:05 sunset · 5:35 legal end"
   },
   "notes": [
    [
-    "Coolest",
-    "52° at 6 AM, feels ~50"
+    "Warmest",
+    "71° at 2 PM, feels ~73"
    ],
    [
-    "Warmest",
-    "63° by 10 AM, 65 at 11"
+    "Coolest",
+    "~64° at legal end, feels ~63"
    ],
    [
     "Scent",
-    "Drifts E all morning, ESE by 9-11"
+    "Drifts E most of the sit; NE at 3-4 PM on the SW swing"
    ],
    [
     "Pressure",
-    "29.93 and steady"
+    "29.98 and steady; front arrives tonight"
    ],
    [
     "Moon",
-    "Waxing gibbous, ~99%"
+    "Waxing gibbous, ~99% (full tomorrow)"
    ],
    [
     "Rut",
@@ -4387,5 +4370,5 @@
   36.1979,
   -79.27529
  ],
- "altLabel": "Monday evening option"
+ "altLabel": "Tuesday morning option"
 }
