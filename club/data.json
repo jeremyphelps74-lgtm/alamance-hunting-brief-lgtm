@@ -1,20 +1,20 @@
 {
  "date": "2026-11-24",
  "title": "Tuesday, Nov 24",
- "sit": "Morning",
+ "sit": "Evening",
  "weapon": "Gun season: rifle, muzzleloader, shotgun or bow",
- "updated": "Tue Nov 24, 4:20 AM · AccuWeather Mebane · tap any stand for route + reasons",
+ "updated": "Tue Nov 24, 9:40 AM · AccuWeather Mebane · tap any stand for route + reasons",
  "hero": {
-  "legalStart": "6:33 AM",
-  "sunrise": "7:03 AM",
-  "sitEnd": "10:30 AM",
-  "sunset": "5:05 PM",
-  "legalEnd": "5:35 PM",
   "wake": "",
   "leave": "",
-  "inStand": ""
+  "inStand": "",
+  "legalStart": "6:33 AM",
+  "sunrise": "7:03 AM",
+  "sitEnd": "5:35 PM",
+  "sunset": "5:05 PM",
+  "legalEnd": "5:35 PM"
  },
- "why": "NE wind 8-9 mph (gusts ~20-23) at first light, building to 12-13 with gusts 28-30 after 9. Cool after last night's front: 48-49° at legal light, 47 at 8, 51 by 11 (feels ~43). Pressure 30.18 and rising. Picks are stands that want a NE/E wind, then favorites and recent reports: #9L, then #11, #26 and #17A. #9B, #30, #24, #16, #22 and #5 put scent onto their lanes. Saw something? Tap 🦌 Deer / 🩸 Blood / ✅ Found, tap the map, then 👥 Send to club.",
+ "why": "NE wind 12-13 mph (gusts to 28) early, easing to 9-10 by 3-5 PM. Cool and dry behind the front: 53-54° early, 50 at sunset, 47 at dark (feels ~44). Pressure 30.35 and rising. Picks are stands that want a NE/E wind, then favorites and recent reports: #9L, then #11, #26 and #17A. #9B, #30, #24, #16, #22 and #5 put scent onto their lanes. Saw something? Tap 🦌 Deer / 🩸 Blood / ✅ Found, tap the map, then 👥 Send to club.",
  "legal": [
   [
    "Season",
@@ -30,101 +30,101 @@
   ],
   [
    "Legal light",
-   "Starts 6:33 AM (sunrise 7:03)."
+   "Ends 5:35 PM (sunset 5:05)."
   ]
  ],
  "wind": {
   "from": "NE",
   "fromDeg": 45,
-  "speed": "8-9 mph early, 12-13 after 9; gusts 20-30",
-  "later": "NNE 9 at 6, NE 8-9 at 7-8, NE 12-13 (gusts 28-30) 9-11",
-  "note": "Steady NE all morning, getting gusty after 9. Cool, dry air behind the front; morning thermals pull downhill until the sun warms things up."
+  "speed": "12-13 mph early, 9-10 by 3-5 PM; gusts 23-28",
+  "later": "NE 12-13 at 1-2, NE 10 at 3-4, NE 9 at 5, ENE 8 after dark",
+  "note": "Steady NE all evening, easing slowly toward dark. Evening thermals rise; cool dry air behind the front."
  },
  "hourly": [
   [
-   "5am",
-   50,
-   "NNE",
-   9,
-   23,
-   0
-  ],
-  [
-   "6am",
-   49,
-   "NNE",
-   9,
-   22,
-   0
-  ],
-  [
-   "7am",
-   48,
+   "12pm",
+   52,
    "NE",
-   8,
-   20,
-   0
-  ],
-  [
-   "8am",
-   47,
-   "NE",
-   9,
-   23,
-   0
-  ],
-  [
-   "9am",
-   48,
-   "NE",
-   12,
+   13,
    28,
    0
   ],
   [
-   "10am",
-   49,
+   "1pm",
+   53,
    "NE",
-   13,
-   30,
+   12,
+   26,
    0
   ],
   [
-   "11am",
+   "2pm",
+   54,
+   "NE",
+   12,
+   25,
+   0
+  ],
+  [
+   "3pm",
+   53,
+   "NE",
+   10,
+   25,
+   0
+  ],
+  [
+   "4pm",
    51,
    "NE",
-   13,
-   29,
+   10,
+   24,
+   0
+  ],
+  [
+   "5pm",
+   50,
+   "NE",
+   9,
+   23,
+   0
+  ],
+  [
+   "6pm",
+   47,
+   "ENE",
+   8,
+   20,
    0
   ]
  ],
  "sitHours": [
-  "6am",
-  "7am",
-  "8am",
-  "9am",
-  "10am"
+  "1pm",
+  "2pm",
+  "3pm",
+  "4pm",
+  "5pm"
  ],
  "conditions": [
   [
    "Temp",
-   "48-49° at legal light, 47 at 8, 48 at 9, 49 at 10, 51 by 11 (feels ~43 in the gusts)"
+   "53-54° early, 51 at 4, 50 at 5, 47 by 6 (feels ~44 at dark)"
   ],
   [
    "Pressure",
-   "30.18 and rising behind last night's front"
+   "30.35 and rising (high building)"
   ],
   [
    "Sky",
-   "Mostly cloudy early, partly sunny after 8"
+   "Partly sunny early, intermittent clouds (~70%) through the sit"
   ],
   [
    "Rain",
-   "Dry (0% after 7 AM); 0.13 in fell overnight, woods damp and quiet"
+   "Dry (0%). Rain moves in Wed afternoon and night"
   ],
   [
    "Moon",
-   "Full (~100%) today"
+   "Full (~100%), rises around sunset"
   ],
   [
    "Rut",
@@ -220,10 +220,10 @@
    ],
    "yd": 810,
    "id": "9L",
-   "why": "Favorite; faces NE, so today's NE wind is in your face. Scent goes SW behind you toward the south line, off the #9 field. 3 bucks seen here in archery; the #9 field has been the busiest spot.",
+   "why": "Favorite; faces NE, so the NE wind is in your face and scent goes SW behind you, off the #9 field. The field is the best evening spot lately: button bucks, a spike and an 8+ pt came out 4:15-5:05 PM on Nov 11; 3 bucks seen here in archery.",
    "fromRoute": true,
-   "pro": "NE is its best wind. Bow or rifle; the field gives rifle lanes.",
-   "con": "~810-yd walk through the #9 field: get in early and quiet. Know who's in 9B and #10."
+   "pro": "NE is its best wind. Evening field watch; rifle lanes across the field, bow along the edge.",
+   "con": "~810-yd walk through the #9 field: go in early and quiet. Know who's in 9B and #10."
   },
   {
    "route": [
@@ -635,10 +635,10 @@
    ],
    "yd": 630,
    "id": "11",
-   "why": "Faces E across its clearing; NE is a good wind, scent goes SW behind you. Bucks still moving here (4-pt reported, does on the road behind).",
+   "why": "Faces E across its clearing; NE is a good wind, scent goes SW behind you. Bucks still moving here (4-pt reported, does on the road behind in the evening).",
    "fromRoute": true,
    "pro": "Good NE wind. Short-to-medium shots; rifle or muzzleloader fit best.",
-   "con": "Gusts 25-30 after 9 may make deer edgy. ~630 yd from the Parking Pond."
+   "con": "Gusts to 25 early may keep deer tight until the wind eases after 4. ~630 yd from the Parking Pond."
   },
   {
    "route": [
@@ -696,9 +696,9 @@
    ],
    "yd": 250,
    "id": "26",
-   "why": "Faces E; NE is a good wind and scent goes SW toward the clubhouse, away from the field. Fawn and a deer right under the stand reported lately.",
+   "why": "Faces E over the grass field; NE is a good wind and scent goes SW toward the clubhouse, away from the field. Fawn and a deer right under the stand reported lately.",
    "fromRoute": true,
-   "pro": "Shortest walk (~250 yd from the clubhouse). Bow or rifle.",
+   "pro": "Shortest walk (~250 yd from the clubhouse). Field edge for last light. Bow or rifle.",
    "con": "Close to the clubhouse and driveway traffic."
   },
   {
@@ -1918,7 +1918,7 @@
    "why": "Faces S; E is a good wind, so NE is close. Doe reported here.",
    "fromRoute": true,
    "pro": "Scent mostly goes SW, off the front.",
-   "con": "N is a bad wind here; any swing toward N puts scent on its lanes."
+   "con": "Any swing toward N puts scent on its lanes."
   },
   {
    "route": [
@@ -1990,9 +1990,9 @@
    ],
    "yd": 720,
    "id": "15",
-   "why": "Favorite, Bullwinkle country. Faces NW; NE wind pushes scent SW behind-left of the stand.",
+   "why": "Favorite, Bullwinkle country (seen from here on an evening). Faces NW; NE pushes scent SW, behind-left of the stand.",
    "fromRoute": true,
-   "pro": "Covers the select-cut edge where the big buck was seen.",
+   "pro": "Covers the select-cut edge where the big buck was seen in the evening.",
    "con": "Crosswind at best; scent drifts toward the south line where deer may bed. Better on NW/W."
   }
  ],
@@ -3702,7 +3702,7 @@
   "wake": "",
   "inStand": "",
   "leave": "",
-  "note": "Tue PM: NE 10-12 mph (gusts ~25), 52-54°, dry. NE picks again: #11, #26, #17A, #9L."
+  "note": "Wed AM: NE 12-15 mph (gusts ~30), cloudy, high 51, rain by afternoon. NE picks again: #9L, #11, #26, #17A."
  },
  "parking": [
   36.198592,
@@ -4267,92 +4267,91 @@
   "W": "the #19A cutoff"
  },
  "wx": {
-  "src": "AccuWeather Mebane, 4:16 AM Tue",
-  "headline": "Cool and breezy behind the front: 48° at first light, 47 at 8, 51 by 11 (feels ~43). Steady NE wind 8-9 mph, gusty 12-13 (to 30) after 9.",
-  "sky": "Mostly cloudy early, partly sunny after 8",
-  "rain": "Dry · overnight rain done",
+  "src": "AccuWeather Mebane, 9:38 AM Tue",
+  "headline": "Cool and breezy: 53-54° early, 50 by sunset, 47 at dark (feels ~44). Steady NE wind 12-13 mph (gusts to 28), easing to 9 by 5.",
+  "sky": "Intermittent clouds (~70%)",
+  "rain": "Dry · 0%",
   "hours": [
    [
-    "5am",
-    50,
-    "NNE",
-    9,
-    23,
-    0
-   ],
-   [
-    "6am",
-    49,
-    "NNE",
-    9,
-    22,
-    0
-   ],
-   [
-    "7am",
-    48,
+    "12pm",
+    52,
     "NE",
-    8,
-    20,
-    0
-   ],
-   [
-    "8am",
-    47,
-    "NE",
-    9,
-    23,
-    0
-   ],
-   [
-    "9am",
-    48,
-    "NE",
-    12,
+    13,
     28,
     0
    ],
    [
-    "10am",
-    49,
+    "1pm",
+    53,
     "NE",
-    13,
-    30,
+    12,
+    26,
     0
    ],
    [
-    "11am",
+    "2pm",
+    54,
+    "NE",
+    12,
+    25,
+    0
+   ],
+   [
+    "3pm",
+    53,
+    "NE",
+    10,
+    25,
+    0
+   ],
+   [
+    "4pm",
     51,
     "NE",
-    13,
-    29,
+    10,
+    24,
+    0
+   ],
+   [
+    "5pm",
+    50,
+    "NE",
+    9,
+    23,
+    0
+   ],
+   [
+    "6pm",
+    47,
+    "ENE",
+    8,
+    20,
     0
    ]
   ],
   "marks": {
-   "6am": "6:33 legal",
-   "7am": "7:03 sunrise"
+   "5pm": "5:05 sunset · 5:35 end"
   },
   "notes": [
    [
     "Coolest",
-    "47° at 8 AM, feels ~43"
+    "50° at 5 PM, feels ~44"
    ],
    [
     "Warmest",
-    "51° by 11 AM"
+    "54° at 2 PM"
    ],
    [
     "Scent",
-    "Drifts SW all morning"
+    "Drifts SW all evening"
    ],
    [
     "Pressure",
-    "30.18 and rising"
+    "30.35 and rising"
    ],
    [
     "Moon",
-    "Full, ~100%"
+    "Full, ~100%, rises near sunset"
    ],
    [
     "Rut",
@@ -4377,5 +4376,5 @@
   36.1979,
   -79.27529
  ],
- "altLabel": "Tuesday evening option"
+ "altLabel": "Wednesday morning option"
 }
