@@ -1,20 +1,20 @@
 {
- "date": "2026-11-24",
- "title": "Tuesday, Nov 24",
- "sit": "Evening",
+ "date": "2026-11-25",
+ "title": "Wednesday, Nov 25",
+ "sit": "Morning",
  "weapon": "Gun season: rifle, muzzleloader, shotgun or bow",
- "updated": "Tue Nov 24, 9:40 AM · AccuWeather Mebane · tap any stand for route + reasons",
+ "updated": "Wed Nov 25, 4:20 AM · AccuWeather Mebane · tap any stand for route + reasons",
  "hero": {
   "wake": "",
   "leave": "",
   "inStand": "",
-  "legalStart": "6:33 AM",
-  "sunrise": "7:03 AM",
-  "sitEnd": "5:35 PM",
-  "sunset": "5:05 PM",
-  "legalEnd": "5:35 PM"
+  "legalStart": "6:34 AM",
+  "sunrise": "7:04 AM",
+  "sitEnd": "10:30 AM",
+  "sunset": "5:04 PM",
+  "legalEnd": "5:34 PM"
  },
- "why": "NE wind 12-13 mph (gusts to 28) early, easing to 9-10 by 3-5 PM. Cool and dry behind the front: 53-54° early, 50 at sunset, 47 at dark (feels ~44). Pressure 30.35 and rising. Picks are stands that want a NE/E wind, then favorites and recent reports: #9L, then #11, #26 and #17A. #9B, #30, #24, #16, #22 and #5 put scent onto their lanes. Saw something? Tap 🦌 Deer / 🩸 Blood / ✅ Found, tap the map, then 👥 Send to club.",
+ "why": "NNE wind 10-14 mph (gusts ~22) at first light, 15 with gusts 28-29 after 9, swinging NE by 11. Cold and gray: 36° all morning, 38 by 10, feels 24-25 in the wind. Pressure high (30.46) and steady; a big storm brings rain after 1 PM, a wind advisory and a flood watch tonight, so deer may feed hard this morning ahead of it. Picks are stands that want a N/NE/E wind, then favorites and recent reports: #9L, then #11, #26 and #17A. #9B, #30, #24, #16, #22, #5 and #17 put scent onto their lanes. Saw something? Tap 🦌 Deer / 🩸 Blood / ✅ Found, tap the map, then 👥 Send to club.",
  "legal": [
   [
    "Season",
@@ -30,101 +30,101 @@
   ],
   [
    "Legal light",
-   "Ends 5:35 PM (sunset 5:05)."
+   "Starts 6:34 AM (sunrise 7:04)."
   ]
  ],
  "wind": {
-  "from": "NE",
-  "fromDeg": 45,
-  "speed": "12-13 mph early, 9-10 by 3-5 PM; gusts 23-28",
-  "later": "NE 12-13 at 1-2, NE 10 at 3-4, NE 9 at 5, ENE 8 after dark",
-  "note": "Steady NE all evening, easing slowly toward dark. Evening thermals rise; cool dry air behind the front."
+  "from": "NNE",
+  "fromDeg": 25,
+  "speed": "10-14 mph early, 15 after 9; gusts 22-29",
+  "later": "NNE 10 at 6, NNE 13-14 at 7-8, NNE 15 (gusts 28-29) 9-10, NE 15 by 11",
+  "note": "Steady NNE all morning, building after 9 and backing NE late. Morning thermals pull downhill; the gusts will swirl in the open cut."
  },
  "hourly": [
   [
-   "12pm",
-   52,
-   "NE",
+   "5am",
+   36,
+   "NNE",
+   9,
+   22,
+   0
+  ],
+  [
+   "6am",
+   36,
+   "NNE",
+   10,
+   22,
+   0
+  ],
+  [
+   "7am",
+   36,
+   "NNE",
    13,
+   22,
+   0
+  ],
+  [
+   "8am",
+   36,
+   "NNE",
+   14,
+   22,
+   0
+  ],
+  [
+   "9am",
+   36,
+   "NNE",
+   15,
    28,
    0
   ],
   [
-   "1pm",
-   53,
-   "NE",
-   12,
-   26,
+   "10am",
+   38,
+   "NNE",
+   15,
+   29,
    0
   ],
   [
-   "2pm",
-   54,
+   "11am",
+   40,
    "NE",
-   12,
-   25,
-   0
-  ],
-  [
-   "3pm",
-   53,
-   "NE",
-   10,
-   25,
-   0
-  ],
-  [
-   "4pm",
-   51,
-   "NE",
-   10,
-   24,
-   0
-  ],
-  [
-   "5pm",
-   50,
-   "NE",
-   9,
-   23,
-   0
-  ],
-  [
-   "6pm",
-   47,
-   "ENE",
-   8,
-   20,
+   15,
+   29,
    0
   ]
  ],
  "sitHours": [
-  "1pm",
-  "2pm",
-  "3pm",
-  "4pm",
-  "5pm"
+  "6am",
+  "7am",
+  "8am",
+  "9am",
+  "10am"
  ],
  "conditions": [
   [
    "Temp",
-   "53-54° early, 51 at 4, 50 at 5, 47 by 6 (feels ~44 at dark)"
+   "36° from legal light through 9, 38 at 10, 40 by 11 (feels 24-25 in the wind)"
   ],
   [
    "Pressure",
-   "30.35 and rising (high building)"
+   "30.46, high and steady; falls this afternoon as the storm arrives"
   ],
   [
    "Sky",
-   "Partly sunny early, intermittent clouds (~70%) through the sit"
+   "Cloudy (100%) from first light"
   ],
   [
    "Rain",
-   "Dry (0%). Rain moves in Wed afternoon and night"
+   "Dry this morning (≤7%). Rain from ~1 PM, 2-5 in tonight; flood watch 4 PM Wed-10 AM Thu"
   ],
   [
    "Moon",
-   "Full (~100%), rises around sunset"
+   "Waning gibbous, ~98% (just past full)"
   ],
   [
    "Rut",
@@ -142,7 +142,7 @@
   "summary": ""
  },
  "checklist": [],
- "windTowardDeg": 225,
+ "windTowardDeg": 205,
  "club": [
   36.203217,
   -79.272392
@@ -220,9 +220,9 @@
    ],
    "yd": 810,
    "id": "9L",
-   "why": "Favorite; faces NE, so the NE wind is in your face and scent goes SW behind you, off the #9 field. The field is the best evening spot lately: button bucks, a spike and an 8+ pt came out 4:15-5:05 PM on Nov 11; 3 bucks seen here in archery.",
+   "why": "Favorite; faces NE, so the NNE wind is in your face and scent goes SSW behind you, off the #9 field. Deer have used the field all season (button bucks, a spike, 8+ pt; 3 bucks in archery).",
    "fromRoute": true,
-   "pro": "NE is its best wind. Evening field watch; rifle lanes across the field, bow along the edge.",
+   "pro": "NNE is its best wind. Rifle lanes across the field, bow along the edge.",
    "con": "~810-yd walk through the #9 field: go in early and quiet. Know who's in 9B and #10."
   },
   {
@@ -635,10 +635,10 @@
    ],
    "yd": 630,
    "id": "11",
-   "why": "Faces E across its clearing; NE is a good wind, scent goes SW behind you. Bucks still moving here (4-pt reported, does on the road behind in the evening).",
+   "why": "Faces E across its clearing; NNE/NE is a good wind, scent goes SSW behind you. Bucks still moving here (4-pt reported).",
    "fromRoute": true,
    "pro": "Good NE wind. Short-to-medium shots; rifle or muzzleloader fit best.",
-   "con": "Gusts to 25 early may keep deer tight until the wind eases after 4. ~630 yd from the Parking Pond."
+   "con": "Gusts to 28 after 9 may keep deer tight. ~630 yd from the Parking Pond."
   },
   {
    "route": [
@@ -696,9 +696,9 @@
    ],
    "yd": 250,
    "id": "26",
-   "why": "Faces E over the grass field; NE is a good wind and scent goes SW toward the clubhouse, away from the field. Fawn and a deer right under the stand reported lately.",
+   "why": "Faces E over the grass field; NNE is a good wind (N is a crosswind) and scent goes SSW toward the clubhouse. Fawn and a deer right under the stand reported lately.",
    "fromRoute": true,
-   "pro": "Shortest walk (~250 yd from the clubhouse). Field edge for last light. Bow or rifle.",
+   "pro": "Shortest walk (~250 yd from the clubhouse). Good if it's raw and you want to sit the full morning.",
    "con": "Close to the clubhouse and driveway traffic."
   },
   {
@@ -1061,10 +1061,85 @@
    ],
    "yd": 600,
    "id": "17A",
-   "why": "Faces W with deer coming from behind (E); a NE wind keeps scent off the E side. Doe seen at #17 recently.",
+   "why": "Faces W with deer coming from behind (E); a NNE/NE wind keeps scent off the E side. Doe seen at #17 recently.",
    "fromRoute": true,
    "pro": "NE is a good wind. Bow range; rifle OK.",
    "con": "Deer come from behind, so stay still and turn slowly. ~600-yd walk."
+  },
+  {
+   "route": [
+    [
+     36.198592,
+     -79.27422
+    ],
+    [
+     36.198116,
+     -79.273682
+    ],
+    [
+     36.19758,
+     -79.272822
+    ],
+    [
+     36.197416,
+     -79.27293
+    ],
+    [
+     36.197295,
+     -79.27308
+    ],
+    [
+     36.197209,
+     -79.273016
+    ],
+    [
+     36.196517,
+     -79.272392
+    ],
+    [
+     36.195566,
+     -79.271209
+    ],
+    [
+     36.195048,
+     -79.270779
+    ],
+    [
+     36.194788,
+     -79.270134
+    ],
+    [
+     36.194659,
+     -79.269543
+    ]
+   ],
+   "walk": "Parking Pond → #15 · ~720 yd · 12 min",
+   "steps": [
+    [
+     36.198353999999995,
+     -79.273951,
+     "A",
+     "Parking Pond: head SE toward #12A."
+    ],
+    [
+     36.197295,
+     -79.27308,
+     "B",
+     "#12A: keep SE down the field strip."
+    ],
+    [
+     36.195048,
+     -79.270779,
+     "C",
+     "End of the strip: keep SE, then bend E into #15."
+    ]
+   ],
+   "yd": 720,
+   "id": "15",
+   "why": "Favorite, Bullwinkle country. Faces NW; N is a good wind here, so NNE is close. 3 does came under it mid-morning on Nov 15.",
+   "fromRoute": true,
+   "pro": "Cold, calm-ish mornings have produced here; covers the select-cut edge.",
+   "con": "Wind is NE of its best, so scent drifts SSW toward the south line. Better on NW/W."
   },
   {
    "route": [
@@ -1534,466 +1609,10 @@
    ],
    "yd": 710,
    "id": "20A",
-   "why": "Favorite; NE is a crosswind here (faces SE), scent drifts SW. Spike reported at #20A.",
+   "why": "Favorite; NNE is a crosswind here (faces SE), scent drifts SSW. Spike reported at #20A.",
    "fromRoute": true,
    "pro": "Crosswind keeps scent off the SE lanes.",
-   "con": "NE is a crosswind, not ideal like the top 4. ~710-yd walk."
-  },
-  {
-   "route": [
-    [
-     36.198592,
-     -79.27422
-    ],
-    [
-     36.198549,
-     -79.274177
-    ],
-    [
-     36.198514,
-     -79.274134
-    ],
-    [
-     36.198471,
-     -79.274091
-    ],
-    [
-     36.198436,
-     -79.274037
-    ],
-    [
-     36.198393,
-     -79.273994
-    ],
-    [
-     36.19835,
-     -79.273951
-    ],
-    [
-     36.198315,
-     -79.273908
-    ],
-    [
-     36.198272,
-     -79.273865
-    ],
-    [
-     36.198237,
-     -79.273811
-    ],
-    [
-     36.198194,
-     -79.273768
-    ],
-    [
-     36.19816,
-     -79.273725
-    ],
-    [
-     36.198116,
-     -79.273682
-    ],
-    [
-     36.198082,
-     -79.273629
-    ],
-    [
-     36.198056,
-     -79.273575
-    ],
-    [
-     36.198021,
-     -79.273521
-    ],
-    [
-     36.197987,
-     -79.273467
-    ],
-    [
-     36.197952,
-     -79.273414
-    ],
-    [
-     36.197918,
-     -79.27336
-    ],
-    [
-     36.197892,
-     -79.273306
-    ],
-    [
-     36.197857,
-     -79.273252
-    ],
-    [
-     36.197822,
-     -79.273199
-    ],
-    [
-     36.197788,
-     -79.273145
-    ],
-    [
-     36.197753,
-     -79.273091
-    ],
-    [
-     36.197719,
-     -79.273037
-    ],
-    [
-     36.197684,
-     -79.272984
-    ],
-    [
-     36.19765,
-     -79.27293
-    ],
-    [
-     36.197615,
-     -79.272876
-    ],
-    [
-     36.19758,
-     -79.272822
-    ],
-    [
-     36.197572,
-     -79.272758
-    ],
-    [
-     36.197572,
-     -79.272693
-    ],
-    [
-     36.197572,
-     -79.272618
-    ],
-    [
-     36.197563,
-     -79.272553
-    ],
-    [
-     36.197554,
-     -79.272489
-    ],
-    [
-     36.197554,
-     -79.272414
-    ],
-    [
-     36.197554,
-     -79.272349
-    ],
-    [
-     36.197546,
-     -79.272285
-    ],
-    [
-     36.197546,
-     -79.27222
-    ],
-    [
-     36.197537,
-     -79.272156
-    ],
-    [
-     36.197537,
-     -79.27208
-    ],
-    [
-     36.197537,
-     -79.272016
-    ],
-    [
-     36.197537,
-     -79.271951
-    ],
-    [
-     36.197537,
-     -79.271876
-    ],
-    [
-     36.197529,
-     -79.271812
-    ],
-    [
-     36.197529,
-     -79.271747
-    ],
-    [
-     36.197563,
-     -79.271704
-    ],
-    [
-     36.197606,
-     -79.271661
-    ],
-    [
-     36.197641,
-     -79.271607
-    ],
-    [
-     36.197675,
-     -79.271564
-    ],
-    [
-     36.19771,
-     -79.2715
-    ],
-    [
-     36.197745,
-     -79.271446
-    ],
-    [
-     36.197779,
-     -79.271381
-    ],
-    [
-     36.197814,
-     -79.271317
-    ],
-    [
-     36.197848,
-     -79.271263
-    ],
-    [
-     36.197892,
-     -79.271209
-    ],
-    [
-     36.197926,
-     -79.271156
-    ],
-    [
-     36.197961,
-     -79.271102
-    ],
-    [
-     36.197995,
-     -79.271048
-    ],
-    [
-     36.198039,
-     -79.270994
-    ],
-    [
-     36.198073,
-     -79.270941
-    ],
-    [
-     36.198125,
-     -79.270908
-    ],
-    [
-     36.198185,
-     -79.270876
-    ],
-    [
-     36.198237,
-     -79.270844
-    ],
-    [
-     36.198289,
-     -79.270822
-    ],
-    [
-     36.19835,
-     -79.27079
-    ],
-    [
-     36.198402,
-     -79.270758
-    ],
-    [
-     36.198453,
-     -79.270736
-    ],
-    [
-     36.198505,
-     -79.270704
-    ],
-    [
-     36.198566,
-     -79.270672
-    ],
-    [
-     36.198566,
-     -79.270586
-    ],
-    [
-     36.198549,
-     -79.270511
-    ],
-    [
-     36.198531,
-     -79.270446
-    ],
-    [
-     36.198514,
-     -79.270382
-    ],
-    [
-     36.198497,
-     -79.270306
-    ],
-    [
-     36.198479,
-     -79.270242
-    ],
-    [
-     36.198453,
-     -79.270177
-    ],
-    [
-     36.198419,
-     -79.270113
-    ],
-    [
-     36.198393,
-     -79.270037
-    ],
-    [
-     36.198367,
-     -79.269973
-    ],
-    [
-     36.198324,
-     -79.269919
-    ],
-    [
-     36.198281,
-     -79.269865
-    ],
-    [
-     36.198246,
-     -79.269812
-    ],
-    [
-     36.198203,
-     -79.269758
-    ],
-    [
-     36.198151,
-     -79.269747
-    ],
-    [
-     36.19809,
-     -79.269747
-    ],
-    [
-     36.19805,
-     -79.269861
-    ]
-   ],
-   "walk": "Parking Pond → #17 · ~590 yd",
-   "steps": [
-    [
-     36.198358,
-     -79.273951,
-     "A",
-     "Parking Pond: head SE toward #12A."
-    ],
-    [
-     36.197572,
-     -79.272758,
-     "B",
-     "Just before #12A: turn left (E) past #12B."
-    ],
-    [
-     36.198566,
-     -79.270586,
-     "C",
-     "About halfway to #30: turn right (E) toward #17."
-    ],
-    [
-     36.198246,
-     -79.269865,
-     "D",
-     "#17 is just off the trail in the woods."
-    ]
-   ],
-   "yd": 590,
-   "id": "17",
-   "why": "Faces S; E is a good wind, so NE is close. Doe reported here.",
-   "fromRoute": true,
-   "pro": "Scent mostly goes SW, off the front.",
-   "con": "Any swing toward N puts scent on its lanes."
-  },
-  {
-   "route": [
-    [
-     36.198592,
-     -79.27422
-    ],
-    [
-     36.198116,
-     -79.273682
-    ],
-    [
-     36.19758,
-     -79.272822
-    ],
-    [
-     36.197416,
-     -79.27293
-    ],
-    [
-     36.197295,
-     -79.27308
-    ],
-    [
-     36.197209,
-     -79.273016
-    ],
-    [
-     36.196517,
-     -79.272392
-    ],
-    [
-     36.195566,
-     -79.271209
-    ],
-    [
-     36.195048,
-     -79.270779
-    ],
-    [
-     36.194788,
-     -79.270134
-    ],
-    [
-     36.194659,
-     -79.269543
-    ]
-   ],
-   "walk": "Parking Pond → #15 · ~720 yd · 12 min",
-   "steps": [
-    [
-     36.198353999999995,
-     -79.273951,
-     "A",
-     "Parking Pond: head SE toward #12A."
-    ],
-    [
-     36.197295,
-     -79.27308,
-     "B",
-     "#12A: keep SE down the field strip."
-    ],
-    [
-     36.195048,
-     -79.270779,
-     "C",
-     "End of the strip: keep SE, then bend E into #15."
-    ]
-   ],
-   "yd": 720,
-   "id": "15",
-   "why": "Favorite, Bullwinkle country (seen from here on an evening). Faces NW; NE pushes scent SW, behind-left of the stand.",
-   "fromRoute": true,
-   "pro": "Covers the select-cut edge where the big buck was seen in the evening.",
-   "con": "Crosswind at best; scent drifts toward the south line where deer may bed. Better on NW/W."
+   "con": "Crosswind, not ideal like the top 4. ~710-yd walk."
   }
  ],
  "taken": [],
@@ -3702,7 +3321,7 @@
   "wake": "",
   "inStand": "",
   "leave": "",
-  "note": "Wed AM: NE 12-15 mph (gusts ~30), cloudy, high 51, rain by afternoon. NE picks again: #9L, #11, #26, #17A."
+  "note": "Wed PM: skip it. Rain 75-85% from 1 PM, NE 14-15 gusting 25-29, wind advisory (gusts to 45) and flood watch. If you go, NE picks: #9L, #11, #26, #17A."
  },
  "parking": [
   36.198592,
@@ -3773,7 +3392,7 @@
    ],
    "yd": 720,
    "id": "9B",
-   "why": "Faces SW: a NE wind is at your back, so scent blows straight out over the #9 field. Sit #9L instead.",
+   "why": "Faces SW: a NNE wind is at your back, so scent blows straight out over the #9 field. Sit #9L instead.",
    "fromRoute": true,
    "tag": "Wrong wind"
   },
@@ -3839,7 +3458,7 @@
    ],
    "yd": 540,
    "id": "30",
-   "why": "NE is next to #30's worst wind (N): scent goes onto the travel route behind the stand.",
+   "why": "NNE is almost #30's worst wind (N): scent goes onto the travel route behind the stand.",
    "fromRoute": true,
    "tag": "Wrong wind"
   },
@@ -3947,7 +3566,7 @@
    ],
    "yd": 980,
    "id": "24",
-   "why": "NE is a bad wind for #24: scent goes SW over the lanes it faces.",
+   "why": "NNE/NE is a bad wind for #24: scent goes SW over the lanes it faces.",
    "fromRoute": true,
    "tag": "Wrong wind"
   },
@@ -4071,7 +3690,7 @@
    ],
    "yd": 940,
    "id": "16",
-   "why": "Faces W: NE puts scent out front and down the #16-#15 trail.",
+   "why": "Faces W: NNE pushes scent down the #16-#15 trail and out front.",
    "fromRoute": true,
    "tag": "Wrong wind"
   },
@@ -4171,7 +3790,7 @@
    ],
    "yd": 830,
    "id": "22",
-   "why": "Faces W: NE blows scent SW over the lanes in front.",
+   "why": "Faces W: NNE blows scent SSW over the lanes in front.",
    "fromRoute": true,
    "tag": "Wrong wind"
   },
@@ -4233,7 +3852,387 @@
    ],
    "yd": 330,
    "id": "5",
-   "why": "NE is a bad wind for #5 (faces WSW): scent goes out over its lanes.",
+   "why": "NNE/NE is a bad wind for #5 (faces WSW): scent goes out over its lanes.",
+   "fromRoute": true,
+   "tag": "Wrong wind"
+  },
+  {
+   "route": [
+    [
+     36.198592,
+     -79.27422
+    ],
+    [
+     36.198549,
+     -79.274177
+    ],
+    [
+     36.198514,
+     -79.274134
+    ],
+    [
+     36.198471,
+     -79.274091
+    ],
+    [
+     36.198436,
+     -79.274037
+    ],
+    [
+     36.198393,
+     -79.273994
+    ],
+    [
+     36.19835,
+     -79.273951
+    ],
+    [
+     36.198315,
+     -79.273908
+    ],
+    [
+     36.198272,
+     -79.273865
+    ],
+    [
+     36.198237,
+     -79.273811
+    ],
+    [
+     36.198194,
+     -79.273768
+    ],
+    [
+     36.19816,
+     -79.273725
+    ],
+    [
+     36.198116,
+     -79.273682
+    ],
+    [
+     36.198082,
+     -79.273629
+    ],
+    [
+     36.198056,
+     -79.273575
+    ],
+    [
+     36.198021,
+     -79.273521
+    ],
+    [
+     36.197987,
+     -79.273467
+    ],
+    [
+     36.197952,
+     -79.273414
+    ],
+    [
+     36.197918,
+     -79.27336
+    ],
+    [
+     36.197892,
+     -79.273306
+    ],
+    [
+     36.197857,
+     -79.273252
+    ],
+    [
+     36.197822,
+     -79.273199
+    ],
+    [
+     36.197788,
+     -79.273145
+    ],
+    [
+     36.197753,
+     -79.273091
+    ],
+    [
+     36.197719,
+     -79.273037
+    ],
+    [
+     36.197684,
+     -79.272984
+    ],
+    [
+     36.19765,
+     -79.27293
+    ],
+    [
+     36.197615,
+     -79.272876
+    ],
+    [
+     36.19758,
+     -79.272822
+    ],
+    [
+     36.197572,
+     -79.272758
+    ],
+    [
+     36.197572,
+     -79.272693
+    ],
+    [
+     36.197572,
+     -79.272618
+    ],
+    [
+     36.197563,
+     -79.272553
+    ],
+    [
+     36.197554,
+     -79.272489
+    ],
+    [
+     36.197554,
+     -79.272414
+    ],
+    [
+     36.197554,
+     -79.272349
+    ],
+    [
+     36.197546,
+     -79.272285
+    ],
+    [
+     36.197546,
+     -79.27222
+    ],
+    [
+     36.197537,
+     -79.272156
+    ],
+    [
+     36.197537,
+     -79.27208
+    ],
+    [
+     36.197537,
+     -79.272016
+    ],
+    [
+     36.197537,
+     -79.271951
+    ],
+    [
+     36.197537,
+     -79.271876
+    ],
+    [
+     36.197529,
+     -79.271812
+    ],
+    [
+     36.197529,
+     -79.271747
+    ],
+    [
+     36.197563,
+     -79.271704
+    ],
+    [
+     36.197606,
+     -79.271661
+    ],
+    [
+     36.197641,
+     -79.271607
+    ],
+    [
+     36.197675,
+     -79.271564
+    ],
+    [
+     36.19771,
+     -79.2715
+    ],
+    [
+     36.197745,
+     -79.271446
+    ],
+    [
+     36.197779,
+     -79.271381
+    ],
+    [
+     36.197814,
+     -79.271317
+    ],
+    [
+     36.197848,
+     -79.271263
+    ],
+    [
+     36.197892,
+     -79.271209
+    ],
+    [
+     36.197926,
+     -79.271156
+    ],
+    [
+     36.197961,
+     -79.271102
+    ],
+    [
+     36.197995,
+     -79.271048
+    ],
+    [
+     36.198039,
+     -79.270994
+    ],
+    [
+     36.198073,
+     -79.270941
+    ],
+    [
+     36.198125,
+     -79.270908
+    ],
+    [
+     36.198185,
+     -79.270876
+    ],
+    [
+     36.198237,
+     -79.270844
+    ],
+    [
+     36.198289,
+     -79.270822
+    ],
+    [
+     36.19835,
+     -79.27079
+    ],
+    [
+     36.198402,
+     -79.270758
+    ],
+    [
+     36.198453,
+     -79.270736
+    ],
+    [
+     36.198505,
+     -79.270704
+    ],
+    [
+     36.198566,
+     -79.270672
+    ],
+    [
+     36.198566,
+     -79.270586
+    ],
+    [
+     36.198549,
+     -79.270511
+    ],
+    [
+     36.198531,
+     -79.270446
+    ],
+    [
+     36.198514,
+     -79.270382
+    ],
+    [
+     36.198497,
+     -79.270306
+    ],
+    [
+     36.198479,
+     -79.270242
+    ],
+    [
+     36.198453,
+     -79.270177
+    ],
+    [
+     36.198419,
+     -79.270113
+    ],
+    [
+     36.198393,
+     -79.270037
+    ],
+    [
+     36.198367,
+     -79.269973
+    ],
+    [
+     36.198324,
+     -79.269919
+    ],
+    [
+     36.198281,
+     -79.269865
+    ],
+    [
+     36.198246,
+     -79.269812
+    ],
+    [
+     36.198203,
+     -79.269758
+    ],
+    [
+     36.198151,
+     -79.269747
+    ],
+    [
+     36.19809,
+     -79.269747
+    ],
+    [
+     36.19805,
+     -79.269861
+    ]
+   ],
+   "walk": "Parking Pond → #17 · ~590 yd",
+   "steps": [
+    [
+     36.198358,
+     -79.273951,
+     "A",
+     "Parking Pond: head SE toward #12A."
+    ],
+    [
+     36.197572,
+     -79.272758,
+     "B",
+     "Just before #12A: turn left (E) past #12B."
+    ],
+    [
+     36.198566,
+     -79.270586,
+     "C",
+     "About halfway to #30: turn right (E) toward #17."
+    ],
+    [
+     36.198246,
+     -79.269865,
+     "D",
+     "#17 is just off the trail in the woods."
+    ]
+   ],
+   "yd": 590,
+   "id": "17",
+   "why": "Faces S: N is a bad wind here, so NNE puts scent over its front lanes.",
    "fromRoute": true,
    "tag": "Wrong wind"
   }
@@ -4267,95 +4266,96 @@
   "W": "the #19A cutoff"
  },
  "wx": {
-  "src": "AccuWeather Mebane, 9:38 AM Tue",
-  "headline": "Cool and breezy: 53-54° early, 50 by sunset, 47 at dark (feels ~44). Steady NE wind 12-13 mph (gusts to 28), easing to 9 by 5.",
-  "sky": "Intermittent clouds (~70%)",
-  "rain": "Dry · 0%",
+  "src": "AccuWeather Mebane, 4:16 AM Wed",
+  "headline": "Cold and gray: 36° all morning, feels 24-25. NNE wind 10-14 mph, gusting 28-29 after 9. Dry until rain moves in after 1 PM.",
+  "sky": "Cloudy (100%)",
+  "rain": "Dry · rain after 1 PM",
   "hours": [
    [
-    "12pm",
-    52,
-    "NE",
+    "5am",
+    36,
+    "NNE",
+    9,
+    22,
+    0
+   ],
+   [
+    "6am",
+    36,
+    "NNE",
+    10,
+    22,
+    0
+   ],
+   [
+    "7am",
+    36,
+    "NNE",
     13,
+    22,
+    0
+   ],
+   [
+    "8am",
+    36,
+    "NNE",
+    14,
+    22,
+    0
+   ],
+   [
+    "9am",
+    36,
+    "NNE",
+    15,
     28,
     0
    ],
    [
-    "1pm",
-    53,
-    "NE",
-    12,
-    26,
+    "10am",
+    38,
+    "NNE",
+    15,
+    29,
     0
    ],
    [
-    "2pm",
-    54,
+    "11am",
+    40,
     "NE",
-    12,
-    25,
-    0
-   ],
-   [
-    "3pm",
-    53,
-    "NE",
-    10,
-    25,
-    0
-   ],
-   [
-    "4pm",
-    51,
-    "NE",
-    10,
-    24,
-    0
-   ],
-   [
-    "5pm",
-    50,
-    "NE",
-    9,
-    23,
-    0
-   ],
-   [
-    "6pm",
-    47,
-    "ENE",
-    8,
-    20,
+    15,
+    29,
     0
    ]
   ],
   "marks": {
-   "5pm": "5:05 sunset · 5:35 end"
+   "6am": "6:34 legal",
+   "7am": "7:04 sunrise"
   },
   "notes": [
    [
-    "Coolest",
-    "50° at 5 PM, feels ~44"
-   ],
-   [
-    "Warmest",
-    "54° at 2 PM"
+    "Coldest",
+    "36° all morning, feels ~24 at 8 AM"
    ],
    [
     "Scent",
-    "Drifts SW all evening"
+    "Drifts SSW, then SW by 11"
    ],
    [
     "Pressure",
-    "30.35 and rising"
+    "30.46, high and steady; falling this afternoon"
    ],
    [
     "Moon",
-    "Full, ~100%, rises near sunset"
+    "Waning gibbous, ~98%"
    ],
    [
     "Rut",
     "Post-peak"
+   ],
+   [
+    "Alerts",
+    "Wind advisory 1 PM Wed-10 AM Thu (NE gusts to 45); flood watch from 4 PM"
    ]
   ]
  },
@@ -4376,5 +4376,5 @@
   36.1979,
   -79.27529
  ],
- "altLabel": "Wednesday morning option"
+ "altLabel": "Wednesday evening option"
 }
