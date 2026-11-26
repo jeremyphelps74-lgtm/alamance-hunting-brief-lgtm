@@ -1,20 +1,20 @@
 {
- "date": "2026-11-25",
- "title": "Wednesday, Nov 25",
- "sit": "Evening",
+ "date": "2026-11-26",
+ "title": "Thursday, Nov 26",
+ "sit": "Morning",
  "weapon": "Gun season: rifle, muzzleloader, shotgun or bow",
- "updated": "Wed Nov 25, 9:45 AM · AccuWeather Mebane · tap any stand for route + reasons",
+ "updated": "Thu Nov 26, 4:20 AM · AccuWeather Mebane · tap any stand for route + reasons",
  "hero": {
   "wake": "",
   "leave": "",
   "inStand": "",
   "legalStart": "6:34 AM",
   "sunrise": "7:04 AM",
-  "sitEnd": "5:34 PM",
-  "sunset": "5:04 PM",
-  "legalEnd": "5:34 PM"
+  "sitEnd": "10:45 AM",
+  "sunset": "5:03 PM",
+  "legalEnd": "5:33 PM"
  },
- "why": "NE wind 14-16 mph all afternoon, gusting 25-30 (wind advisory to 45 tonight). 42-43°, feels about 30. Rain 75-85% from 1 to 4 PM, a short lull near 5, then heavy rain tonight (flood watch from 4 PM). Pressure 30.45 and steady this morning, falling as the storm arrives. Tough sit: deer tend to bed in steady wind and rain, so the best chance is the lull before dark. Picks are stands that want a NE/E wind, then favorites and recent reports: #9L, #11, #26 and #17A. #9B, #30, #24, #16, #22, #5 and #17 put scent onto their lanes. Saw something? Tap 🦌 Deer / 🩸 Blood / ✅ Found, tap the map, then 👥 Send to club.",
+ "why": "NNE wind 18-23 mph gusting 40-45 at dawn (wind advisory and flood watch until 10 AM), easing to NNE 13 by 10-11. 50-57°, feels 35-46. Rain 70-78% until about 9, drying out by 10. Pressure 29.75 and falling as the storm passes. Rough start: deer usually bed in hard wind and rain and get up once it quits, so the last hour (9:30-10:30+) is the best chance. Picks are stands that want a N/NE wind, then favorites and recent reports: #9L, #15, #11 and #26. #9B, #30, #24, #16, #22, #5 and #17 put scent onto their lanes. Watch for falling limbs and flooded low crossings. Saw something? Tap 🦌 Deer / 🩸 Blood / ✅ Found, tap the map, then 👥 Send to club.",
  "legal": [
   [
    "Season",
@@ -30,89 +30,89 @@
   ],
   [
    "Legal light",
-   "Ends 5:34 PM (sunset 5:04)."
+   "Starts 6:34 AM (sunrise 7:04)."
   ]
  ],
  "wind": {
-  "from": "NE",
-  "fromDeg": 45,
-  "speed": "14-16 mph; gusts 25-30",
-  "later": "NE 16 at noon, NE 14 at 1-2, NE 15 at 3-4, NE 16 (gusts 30) by 5",
-  "note": "Steady NE all afternoon, gusty, with a wind advisory from 1 PM (gusts to 45 tonight). Evening thermals rise; gusts will swirl in the open cut."
+  "from": "NNE",
+  "fromDeg": 25,
+  "speed": "18-23 mph; gusts 40-45",
+  "later": "NNE 23 (g45) at 6, NNE 18 (g45) at 8, NNE 16 (g39) at 9, NNE 13 (g32) at 10-11",
+  "note": "Steady NNE all morning, very gusty under the wind advisory until 10 AM, easing late. Gusts will swirl in the open cut and fields."
  },
  "hourly": [
   [
-   "12pm",
-   41,
-   "NE",
+   "5am",
+   50,
+   "NNE",
+   20,
+   40,
+   0
+  ],
+  [
+   "6am",
+   50,
+   "NNE",
+   23,
+   45,
+   0
+  ],
+  [
+   "7am",
+   53,
+   "NNE",
+   21,
+   44,
+   0
+  ],
+  [
+   "8am",
+   55,
+   "NNE",
+   18,
+   45,
+   0
+  ],
+  [
+   "9am",
+   56,
+   "NNE",
    16,
-   29,
+   39,
    0
   ],
   [
-   "1pm",
-   42,
-   "NE",
-   14,
-   25,
+   "10am",
+   57,
+   "NNE",
+   13,
+   32,
    0
   ],
   [
-   "2pm",
-   43,
-   "NE",
-   14,
-   26,
-   0
-  ],
-  [
-   "3pm",
-   43,
-   "NE",
-   15,
-   26,
-   0
-  ],
-  [
-   "4pm",
-   43,
-   "NE",
-   15,
-   28,
-   0
-  ],
-  [
-   "5pm",
-   43,
-   "NE",
-   16,
-   30,
-   0
-  ],
-  [
-   "6pm",
-   43,
-   "NE",
-   16,
-   30,
+   "11am",
+   57,
+   "NNE",
+   13,
+   32,
    0
   ]
  ],
  "sitHours": [
-  "1pm",
-  "2pm",
-  "3pm",
-  "4pm",
-  "5pm"
+  "6am",
+  "7am",
+  "8am",
+  "9am",
+  "10am"
  ],
  "conditions": [
   [
    "Temp",
-   "41° at noon, 42-43 from 1 PM to dark (feels 30-32 in the wind)"
+   "50° at dawn, 55 by 8, 57 by 10 (feels 35-46 in the wind)"
   ],
   [
    "Pressure",
-   "30.45, high and steady this morning; falling this afternoon as the storm moves in"
+   "29.75 and falling as the storm passes"
   ],
   [
    "Sky",
@@ -120,11 +120,11 @@
   ],
   [
    "Rain",
-   "Rain 75-85% 1-4 PM, ~50% at 5, then heavy rain tonight (2-5 in); flood watch 4 PM Wed-10 AM Thu"
+   "Rain 70-78% until about 9, ~40% at 10; flood watch and wind advisory until 10 AM"
   ],
   [
    "Moon",
-   "Waning gibbous, ~96%"
+   "Waning gibbous, ~90%"
   ],
   [
    "Rut",
@@ -142,7 +142,7 @@
   "summary": ""
  },
  "checklist": [],
- "windTowardDeg": 225,
+ "windTowardDeg": 205,
  "club": [
   36.203217,
   -79.272392
@@ -220,10 +220,85 @@
    ],
    "yd": 810,
    "id": "9L",
-   "why": "Favorite; faces NE, so the NE wind is in your face and scent goes SW behind you, off the #9 field. Deer have used the field all season (button bucks, a spike, 8+ pt; 3 bucks in archery), and evenings there have produced.",
+   "why": "Favorite; faces NE, so the NNE wind is in your face and scent goes SSW behind you, off the #9 field. The field has had deer all season (button bucks, spikes, 8+ pt).",
    "fromRoute": true,
-   "pro": "NE is one of its best winds. Rifle lanes across the field, bow along the edge.",
-   "con": "~810-yd walk in the rain. Know who's in 9B and #10."
+   "pro": "NNE/N/NE are its best winds. Field lanes for a rifle once the rain lets up.",
+   "con": "~810-yd walk in the rain past the Refuge Pond: low spots may be flooded. Know who's in 9B and #10."
+  },
+  {
+   "route": [
+    [
+     36.198592,
+     -79.27422
+    ],
+    [
+     36.198116,
+     -79.273682
+    ],
+    [
+     36.19758,
+     -79.272822
+    ],
+    [
+     36.197416,
+     -79.27293
+    ],
+    [
+     36.197295,
+     -79.27308
+    ],
+    [
+     36.197209,
+     -79.273016
+    ],
+    [
+     36.196517,
+     -79.272392
+    ],
+    [
+     36.195566,
+     -79.271209
+    ],
+    [
+     36.195048,
+     -79.270779
+    ],
+    [
+     36.194788,
+     -79.270134
+    ],
+    [
+     36.194659,
+     -79.269543
+    ]
+   ],
+   "walk": "Parking Pond → #15 · ~720 yd · 12 min",
+   "steps": [
+    [
+     36.198353999999995,
+     -79.273951,
+     "A",
+     "Parking Pond: head SE toward #12A."
+    ],
+    [
+     36.197295,
+     -79.27308,
+     "B",
+     "#12A: keep SE down the field strip."
+    ],
+    [
+     36.195048,
+     -79.270779,
+     "C",
+     "End of the strip: keep SE, then bend E into #15."
+    ]
+   ],
+   "yd": 720,
+   "id": "15",
+   "why": "Favorite and Bullwinkle country. Faces NW; N is one of its good winds, so NNE is close to ideal and scent drifts SSW toward the south line.",
+   "fromRoute": true,
+   "pro": "Covers the select-cut edge where the big buck showed. Long rifle lanes up the cut.",
+   "con": "~720-yd walk; NNE is a touch east of its best. Don't sit it with someone in #13."
   },
   {
    "route": [
@@ -635,10 +710,10 @@
    ],
    "yd": 630,
    "id": "11",
-   "why": "Faces E across its clearing; NE is a good wind, scent goes SW behind you. Bucks still moving here (4-pt reported).",
+   "why": "Faces E across its clearing; NE is a good wind and scent goes SW behind you. Bucks still moving here (4-pt reported).",
    "fromRoute": true,
-   "pro": "Good NE wind. Short-to-medium shots; rifle or muzzleloader fit best.",
-   "con": "Gusts 25-30 may keep deer bedded. ~630 yd from the Parking Pond."
+   "pro": "Good wind. Short-to-medium shots; rifle or muzzleloader fit best.",
+   "con": "~630 yd from the Parking Pond; gusts to 40+ may keep deer bedded until the rain quits."
   },
   {
    "route": [
@@ -696,9 +771,9 @@
    ],
    "yd": 250,
    "id": "26",
-   "why": "Faces E over the grass field; NE is a good wind and scent goes SW toward the clubhouse. Fawn and a deer right under the stand reported lately.",
+   "why": "Faces E over the grass field; NE is a good wind (N is a cross), scent goes SW toward the clubhouse. Fawn and a deer right under the stand reported lately.",
    "fromRoute": true,
-   "pro": "Shortest walk (~250 yd from the clubhouse): easiest sit in steady rain and wind.",
+   "pro": "Shortest walk (~250 yd from the clubhouse): easiest sit in rain and wind.",
    "con": "Close to the clubhouse and driveway traffic."
   },
   {
@@ -1061,85 +1136,10 @@
    ],
    "yd": 600,
    "id": "17A",
-   "why": "Faces W with deer coming from behind (E); a NE wind keeps scent off the E side. Doe seen at #17 recently.",
+   "why": "Faces W with deer coming from behind (E); a NNE-NE wind keeps scent off the E side. Doe seen at #17 recently.",
    "fromRoute": true,
-   "pro": "NE is a good wind. Bow range; rifle OK.",
-   "con": "Deer come from behind, so stay still and turn slowly. ~600-yd walk."
-  },
-  {
-   "route": [
-    [
-     36.198592,
-     -79.27422
-    ],
-    [
-     36.198116,
-     -79.273682
-    ],
-    [
-     36.19758,
-     -79.272822
-    ],
-    [
-     36.197416,
-     -79.27293
-    ],
-    [
-     36.197295,
-     -79.27308
-    ],
-    [
-     36.197209,
-     -79.273016
-    ],
-    [
-     36.196517,
-     -79.272392
-    ],
-    [
-     36.195566,
-     -79.271209
-    ],
-    [
-     36.195048,
-     -79.270779
-    ],
-    [
-     36.194788,
-     -79.270134
-    ],
-    [
-     36.194659,
-     -79.269543
-    ]
-   ],
-   "walk": "Parking Pond → #15 · ~720 yd · 12 min",
-   "steps": [
-    [
-     36.198353999999995,
-     -79.273951,
-     "A",
-     "Parking Pond: head SE toward #12A."
-    ],
-    [
-     36.197295,
-     -79.27308,
-     "B",
-     "#12A: keep SE down the field strip."
-    ],
-    [
-     36.195048,
-     -79.270779,
-     "C",
-     "End of the strip: keep SE, then bend E into #15."
-    ]
-   ],
-   "yd": 720,
-   "id": "15",
-   "why": "Favorite, Bullwinkle country, and evenings at the cut edge are when he was seen. Faces NW; NE is a crosswind here, scent drifts SW.",
-   "fromRoute": true,
-   "pro": "Covers the select-cut edge where the big buck showed up.",
-   "con": "Crosswind, not its best (NW/W/N). Scent drifts toward the south line. ~720-yd walk."
+   "pro": "Good wind. Bow range; rifle OK.",
+   "con": "Deer come from behind, so stay still and turn slowly. ~600-yd walk. Ranks below the top 4 on the N part of the wind."
   },
   {
    "route": [
@@ -1609,7 +1609,7 @@
    ],
    "yd": 710,
    "id": "20A",
-   "why": "Favorite; NE is a crosswind here (faces SE), scent drifts SW. Spike reported at #20A.",
+   "why": "Favorite; NNE is a crosswind here (faces SE), scent drifts SSW. Spike reported at #20A.",
    "fromRoute": true,
    "pro": "Crosswind keeps scent off the SE lanes.",
    "con": "Crosswind, not ideal like the top 4. ~710-yd walk."
@@ -3321,7 +3321,7 @@
   "wake": "",
   "inStand": "",
   "leave": "",
-  "note": "Thu AM (Thanksgiving): skip it. Rain and a N-NE wind gusting to 45 under the wind advisory until 10 AM. If you go, N/NE picks: #9L, #26, #11, #15."
+  "note": "Thu PM is better: rain over, wind dies to N 5 by 3 and WNW 6 by 4 PM, 57-58°. W/NW picks then: #30, #15, #16, #22."
  },
  "parking": [
   36.198592,
@@ -3392,7 +3392,7 @@
    ],
    "yd": 720,
    "id": "9B",
-   "why": "Faces SW: a NE wind is at your back, so scent blows straight out over the #9 field. Sit #9L instead.",
+   "why": "Faces SW: the NNE wind is at your back and blows scent straight out over the #9 field. Sit #9L instead.",
    "fromRoute": true,
    "tag": "Wrong wind"
   },
@@ -3458,7 +3458,7 @@
    ],
    "yd": 540,
    "id": "30",
-   "why": "NE is a bad wind for #30: scent goes onto the travel route behind the stand, and the tall pine sways in high wind.",
+   "why": "N-NNE is #30's worst wind (scent onto the route behind), and its tall pine sways badly in 40+ mph gusts.",
    "fromRoute": true,
    "tag": "Wrong wind"
   },
@@ -3566,7 +3566,7 @@
    ],
    "yd": 980,
    "id": "24",
-   "why": "NE is a bad wind for #24: scent goes SW over the lanes it faces.",
+   "why": "N/NE is a bad wind for #24: scent goes SW over the lanes it faces.",
    "fromRoute": true,
    "tag": "Wrong wind"
   },
@@ -3690,7 +3690,7 @@
    ],
    "yd": 940,
    "id": "16",
-   "why": "Faces W: NE pushes scent SW down the #16-#15 trail and out front.",
+   "why": "Faces W: NNE pushes scent down the #16-#15 trail and out front.",
    "fromRoute": true,
    "tag": "Wrong wind"
   },
@@ -3790,7 +3790,7 @@
    ],
    "yd": 830,
    "id": "22",
-   "why": "Faces W: NE blows scent SW over the lanes in front.",
+   "why": "Faces W: NNE blows scent SSW over the lanes in front.",
    "fromRoute": true,
    "tag": "Wrong wind"
   },
@@ -4232,7 +4232,7 @@
    ],
    "yd": 590,
    "id": "17",
-   "why": "Faces S: a NE wind puts scent over its SW front lanes.",
+   "why": "Faces S: a N-NNE wind puts scent over its front lanes.",
    "fromRoute": true,
    "tag": "Wrong wind"
   }
@@ -4266,87 +4266,88 @@
   "W": "the #19A cutoff"
  },
  "wx": {
-  "src": "AccuWeather Mebane, 9:38 AM Wed",
-  "headline": "Raw and wet: 42-43°, feels ~30. NE wind 14-16 mph gusting 25-30 all afternoon. Rain most of the sit, maybe a lull near 5.",
+  "src": "AccuWeather Mebane, 4:16 AM Thu",
+  "headline": "Wet and very windy: 50-57°, feels 35-46. NNE 18-23 mph gusting 40-45 until about 9, easing to 13 by 10. Rain most of the sit, drying out by 10.",
   "sky": "Cloudy (100%)",
-  "rain": "Rain 75-85% 1-4 PM · ~50% at 5",
+  "rain": "Rain 70-78% 5-9 AM (~0.1 in/hr) · 40% at 10",
   "hours": [
    [
-    "12pm",
-    41,
-    "NE",
+    "5am",
+    50,
+    "NNE",
+    20,
+    40,
+    0
+   ],
+   [
+    "6am",
+    50,
+    "NNE",
+    23,
+    45,
+    0
+   ],
+   [
+    "7am",
+    53,
+    "NNE",
+    21,
+    44,
+    0
+   ],
+   [
+    "8am",
+    55,
+    "NNE",
+    18,
+    45,
+    0
+   ],
+   [
+    "9am",
+    56,
+    "NNE",
     16,
-    29,
+    39,
     0
    ],
    [
-    "1pm",
-    42,
-    "NE",
-    14,
-    25,
+    "10am",
+    57,
+    "NNE",
+    13,
+    32,
     0
    ],
    [
-    "2pm",
-    43,
-    "NE",
-    14,
-    26,
-    0
-   ],
-   [
-    "3pm",
-    43,
-    "NE",
-    15,
-    26,
-    0
-   ],
-   [
-    "4pm",
-    43,
-    "NE",
-    15,
-    28,
-    0
-   ],
-   [
-    "5pm",
-    43,
-    "NE",
-    16,
-    30,
-    0
-   ],
-   [
-    "6pm",
-    43,
-    "NE",
-    16,
-    30,
+    "11am",
+    57,
+    "NNE",
+    13,
+    32,
     0
    ]
   ],
   "marks": {
-   "5pm": "5:04 sunset · 5:34 legal end"
+   "6am": "6:34 legal",
+   "7am": "7:04 sunrise"
   },
   "notes": [
    [
     "Coldest",
-    "42-43° all afternoon, feels 30-32"
+    "50° at dawn, feels ~35 in the wind"
    ],
    [
     "Scent",
-    "Drifts SW all sit"
+    "Drifts SSW all sit"
    ],
    [
     "Pressure",
-    "30.45 steady this morning; falling this afternoon as the storm arrives"
+    "29.75 and falling; bottoms out this morning, rising behind the storm tonight"
    ],
    [
     "Moon",
-    "Waning gibbous, ~96%"
+    "Waning gibbous, ~90%"
    ],
    [
     "Rut",
@@ -4354,7 +4355,7 @@
    ],
    [
     "Alerts",
-    "Wind advisory 1 PM Wed-10 AM Thu (NE gusts to 45); flood watch 4 PM Wed-10 AM Thu (2-5 in)"
+    "Wind advisory (NE gusts 35-45) and flood watch until 10 AM; 0.9 in fell in the last 24 h"
    ]
   ]
  },
@@ -4375,5 +4376,5 @@
   36.1979,
   -79.27529
  ],
- "altLabel": "Thursday morning option"
+ "altLabel": "Thursday evening option"
 }
