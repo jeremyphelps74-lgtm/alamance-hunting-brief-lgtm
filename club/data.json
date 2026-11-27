@@ -1,20 +1,20 @@
 {
  "date": "2026-11-27",
  "title": "Friday, Nov 27",
- "sit": "Morning",
+ "sit": "Evening",
  "weapon": "Gun season: rifle, muzzleloader, shotgun or bow",
- "updated": "Fri Nov 27, 4:20 AM · AccuWeather Mebane · tap any stand for route + reasons",
+ "updated": "Fri Nov 27, 9:45 AM · AccuWeather Mebane · tap any stand for route + reasons",
  "hero": {
-  "wake": "",
-  "leave": "",
-  "inStand": "",
   "legalStart": "6:35 AM",
   "sunrise": "7:05 AM",
-  "sitEnd": "11:05 AM",
-  "sunset": "5:03 PM",
-  "legalEnd": "5:33 PM"
+  "sitEnd": "5:34 PM",
+  "sunset": "5:04 PM",
+  "legalEnd": "5:34 PM",
+  "wake": "",
+  "leave": "",
+  "inStand": ""
  },
- "why": "Strong, steady SW wind: 16-18 mph gusting 32-35 at dawn, SW 20 gusting 36-37 by 10-11. 38-45°, feels 24-33, mostly cloudy, dry. Pressure 29.68 and steady. Deer tend to bed tight in wind like this, so sheltered woods edges and the last hours (9-11) may be best. Picks are stands that want a SW wind, then favorites and recent reports: #9B, #24, #16 and #22. #9L, #11, #17A, #26, #17 and #30 put scent onto their lanes or sway too much in the gusts. Saw something? Tap 🦌 Deer / 🩸 Blood / ✅ Found, tap the map, then 👥 Send to club.",
+ "why": "Strong WSW wind all evening: 20-21 mph gusting 36-39 from 1-3 PM, easing to 17 gusting 32 by sunset. 44-48°, feels 33-38, clouds breaking to some sun, dry. Pressure 29.76 and rising behind last night's front. Deer tend to bed tight in wind like this, so the last hour (4-5:30) as it eases is the best bet. Picks are stands that want a SW/W wind, then favorites and recent reports: #9B, #24, #16 and #22. #9L, #11, #17A, #26, #17, #20A and #30 put scent onto their lanes or sway in the gusts. Saw something? Tap 🦌 Deer / 🩸 Blood / ✅ Found, tap the map, then 👥 Send to club.",
  "legal": [
   [
    "Season",
@@ -30,65 +30,17 @@
   ],
   [
    "Legal light",
-   "Starts 6:35 AM (sunrise 7:05)."
+   "Ends 5:34 PM (sunset 5:04)."
   ]
  ],
  "wind": {
-  "from": "SW",
-  "fromDeg": 225,
-  "speed": "16-20 mph; gusts 32-37",
-  "later": "SW 16 (g32) at 6, SW 18 (g33-36) 7-9, SW 20 (g36-37) at 10-11, WSW 20 by noon",
-  "note": "Steady SW all morning and getting stronger. Gusts will swirl in the open cut and fields; tall ladders will sway."
+  "from": "WSW",
+  "fromDeg": 243,
+  "speed": "17-21 mph; gusts 32-39",
+  "later": "WSW 21 (g39) at 1, WSW 20-21 (g36-38) 2-3, WSW 18 (g33) at 4, WSW 17 (g32) at sunset, WSW 9 after 7",
+  "note": "Steady WSW all evening, strongest early, easing toward dark. Gusts will swirl in the open cut and fields; tall ladders will sway."
  },
  "hourly": [
-  [
-   "6am",
-   40,
-   "SW",
-   16,
-   32,
-   0
-  ],
-  [
-   "7am",
-   38,
-   "SW",
-   18,
-   33,
-   0
-  ],
-  [
-   "8am",
-   39,
-   "SW",
-   18,
-   35,
-   0
-  ],
-  [
-   "9am",
-   40,
-   "SW",
-   18,
-   36,
-   0
-  ],
-  [
-   "10am",
-   42,
-   "SW",
-   20,
-   36,
-   0
-  ],
-  [
-   "11am",
-   45,
-   "SW",
-   20,
-   37,
-   0
-  ],
   [
    "12pm",
    46,
@@ -96,27 +48,75 @@
    20,
    38,
    0
+  ],
+  [
+   "1pm",
+   47,
+   "WSW",
+   21,
+   39,
+   0
+  ],
+  [
+   "2pm",
+   48,
+   "WSW",
+   21,
+   38,
+   0
+  ],
+  [
+   "3pm",
+   47,
+   "WSW",
+   20,
+   36,
+   0
+  ],
+  [
+   "4pm",
+   46,
+   "WSW",
+   18,
+   33,
+   0
+  ],
+  [
+   "5pm",
+   44,
+   "WSW",
+   17,
+   32,
+   0
+  ],
+  [
+   "6pm",
+   44,
+   "WSW",
+   16,
+   30,
+   0
   ]
  ],
  "sitHours": [
-  "7am",
-  "8am",
-  "9am",
-  "10am",
-  "11am"
+  "1pm",
+  "2pm",
+  "3pm",
+  "4pm",
+  "5pm"
  ],
  "conditions": [
   [
    "Temp",
-   "40° at 6, 38 at sunrise (coldest), 40 at 9, 45 by 11 (feels 24-33 in the wind)"
+   "46° at noon, 48 at 2 (warmest), 46 at 4, 44 by sunset (feels 33-38 in the wind)"
   ],
   [
    "Pressure",
-   "29.68 and steady"
+   "29.76 and rising"
   ],
   [
    "Sky",
-   "Cloudy early, partly sunny around sunrise, clouding back up by 10"
+   "Clouds breaking to intermittent sun after 1"
   ],
   [
    "Rain",
@@ -124,7 +124,7 @@
   ],
   [
    "Moon",
-   "Waning gibbous, ~89%"
+   "Waning gibbous, ~88%"
   ],
   [
    "Rut",
@@ -142,7 +142,7 @@
   "summary": ""
  },
  "checklist": [],
- "windTowardDeg": 45,
+ "windTowardDeg": 63,
  "club": [
   36.203217,
   -79.272392
@@ -213,8 +213,8 @@
    "yd": 720,
    "id": "9B",
    "fromRoute": true,
-   "why": "Favorite box; faces SW, so the SW wind is in your face and scent goes NE behind you. Box keeps you out of the 35-mph gusts. #9 field has had deer all season (button bucks, spikes, 8+ pt).",
-   "pro": "SW is its best wind. Field lanes for a rifle; box blocks the wind.",
+   "why": "Favorite box; faces SW, so the WSW wind is in your face and scent goes ENE behind you. Box keeps you out of the gusts. Evening field movement here on Nov 11 (button bucks, spike, 8+ pt at ~5:06).",
+   "pro": "Good wind. Field lanes for the rifle; box blocks the wind.",
    "con": "~720-yd walk past the Refuge Pond. Know who's in 9L and #10 before any long shot."
   },
   {
@@ -322,9 +322,9 @@
    "yd": 980,
    "id": "24",
    "fromRoute": true,
-   "why": "Faces SW, its best wind; scent goes NE off the property. Does steady here and the tall 8-pt tended a doe here.",
+   "why": "Faces SW; WSW is in your face and scent goes ENE off the property. Does steady here and the tall 8-pt chased a doe here at 4:20 PM on Nov 9.",
    "pro": "Wind in your face. Woods and creek behind give deer shelter in a blow; the crossing behind is in rifle range.",
-   "con": "~980 yd from the clubhouse (come in on the boundary trail). Ladder will move in the gusts."
+   "con": "~980 yd from the clubhouse (boundary trail). Ladder will move in the gusts."
   },
   {
    "route": [
@@ -447,7 +447,7 @@
    "yd": 940,
    "id": "16",
    "fromRoute": true,
-   "why": "Faces W; the SW wind quarters in from the left and carries scent NE, off the #16-#15 trail. Bucks and shot sites reported here.",
+   "why": "Faces W; WSW is nearly in your face and carries scent ENE, off the #16-#15 trail. Bucks and shot sites reported here; Bullwinkle was seen near #15 on an evening.",
    "pro": "Clean trail shots 72 yd S and 78 yd N. Sits in the woods, out of the worst wind.",
    "con": "~940-yd walk. Out front is cluttered with branches. Know who's in #15 and #13."
   },
@@ -548,8 +548,8 @@
    "yd": 830,
    "id": "22",
    "fromRoute": true,
-   "why": "Faces W; SW wind blows scent NE, off the property. Sits where two lanes meet at the edge of the cut and thicker cover.",
-   "pro": "Good SW wind. Long looks into the cut for the rifle.",
+   "why": "Faces W; WSW blows scent ENE, off the property. Sits where two lanes meet at the edge of the cut and thicker cover.",
+   "pro": "Good wind. Long looks into the cut for the rifle.",
    "con": "~830-yd walk. Nothing seen on one sit there; open cut gets the full gusts."
   },
   {
@@ -611,8 +611,8 @@
    "yd": 330,
    "id": "5",
    "fromRoute": true,
-   "why": "Faces WSW; SW is a good wind and scent goes NE away from the front. Short walk.",
-   "pro": "~330-yd walk, quick in the cold. Fawn and button buck reported here.",
+   "why": "Faces WSW; the wind is straight in your face and scent goes ENE away from the front. Short walk.",
+   "pro": "~330-yd walk. Fawn and button buck reported here.",
    "con": "Less recent buck activity than the top 4; that's why it's below them."
   },
   {
@@ -686,482 +686,9 @@
    "yd": 720,
    "id": "15",
    "fromRoute": true,
-   "why": "Favorite and Bullwinkle country, but SW is a crosswind here: scent drifts NE toward #16's trail and the deer coming from your right.",
-   "pro": "Long rifle lanes up the select cut; deer came in close mid-morning on Nov 15.",
+   "why": "Favorite and Bullwinkle country (seen on an evening), but WSW is a crosswind here: scent drifts ENE toward #16's trail and the deer coming from your right.",
+   "pro": "Long rifle lanes up the select cut; deer came in close on Nov 15.",
    "con": "Not its best wind (wants NW/W/N). Ranks below the top 4 today."
-  },
-  {
-   "route": [
-    [
-     36.203217,
-     -79.272392
-    ],
-    [
-     36.203165,
-     -79.272381
-    ],
-    [
-     36.203113,
-     -79.272371
-    ],
-    [
-     36.203061,
-     -79.27236
-    ],
-    [
-     36.203009,
-     -79.272349
-    ],
-    [
-     36.202957,
-     -79.272338
-    ],
-    [
-     36.202931,
-     -79.272274
-    ],
-    [
-     36.202897,
-     -79.272209
-    ],
-    [
-     36.202871,
-     -79.272156
-    ],
-    [
-     36.202845,
-     -79.272091
-    ],
-    [
-     36.20281,
-     -79.272027
-    ],
-    [
-     36.202784,
-     -79.271962
-    ],
-    [
-     36.202758,
-     -79.271908
-    ],
-    [
-     36.202724,
-     -79.271855
-    ],
-    [
-     36.202698,
-     -79.271801
-    ],
-    [
-     36.202672,
-     -79.271747
-    ],
-    [
-     36.202637,
-     -79.271693
-    ],
-    [
-     36.202611,
-     -79.27164
-    ],
-    [
-     36.202586,
-     -79.271586
-    ],
-    [
-     36.202551,
-     -79.271532
-    ],
-    [
-     36.202525,
-     -79.271478
-    ],
-    [
-     36.202473,
-     -79.271446
-    ],
-    [
-     36.202421,
-     -79.271403
-    ],
-    [
-     36.202378,
-     -79.271371
-    ],
-    [
-     36.202326,
-     -79.271338
-    ],
-    [
-     36.202274,
-     -79.271295
-    ],
-    [
-     36.202222,
-     -79.271263
-    ],
-    [
-     36.202222,
-     -79.271199
-    ],
-    [
-     36.202214,
-     -79.271134
-    ],
-    [
-     36.202214,
-     -79.27107
-    ],
-    [
-     36.202214,
-     -79.271005
-    ],
-    [
-     36.202205,
-     -79.270941
-    ],
-    [
-     36.202205,
-     -79.270865
-    ],
-    [
-     36.202197,
-     -79.270801
-    ],
-    [
-     36.202197,
-     -79.270736
-    ],
-    [
-     36.202197,
-     -79.270672
-    ],
-    [
-     36.202188,
-     -79.270607
-    ],
-    [
-     36.202188,
-     -79.270543
-    ],
-    [
-     36.202222,
-     -79.270489
-    ],
-    [
-     36.202266,
-     -79.270435
-    ],
-    [
-     36.2023,
-     -79.270371
-    ],
-    [
-     36.202343,
-     -79.270317
-    ],
-    [
-     36.202378,
-     -79.270263
-    ],
-    [
-     36.202421,
-     -79.270209
-    ],
-    [
-     36.202465,
-     -79.270156
-    ],
-    [
-     36.202499,
-     -79.270091
-    ],
-    [
-     36.20249,
-     -79.270016
-    ],
-    [
-     36.202439,
-     -79.270005
-    ],
-    [
-     36.202387,
-     -79.269984
-    ],
-    [
-     36.202326,
-     -79.269962
-    ],
-    [
-     36.202274,
-     -79.269951
-    ],
-    [
-     36.202222,
-     -79.26993
-    ],
-    [
-     36.202171,
-     -79.269919
-    ],
-    [
-     36.202119,
-     -79.269898
-    ],
-    [
-     36.202067,
-     -79.269876
-    ],
-    [
-     36.202015,
-     -79.269855
-    ],
-    [
-     36.201963,
-     -79.269822
-    ],
-    [
-     36.201911,
-     -79.269801
-    ],
-    [
-     36.201859,
-     -79.269779
-    ],
-    [
-     36.201808,
-     -79.269747
-    ],
-    [
-     36.201756,
-     -79.269726
-    ],
-    [
-     36.201704,
-     -79.269704
-    ],
-    [
-     36.201695,
-     -79.26964
-    ],
-    [
-     36.201687,
-     -79.269575
-    ],
-    [
-     36.201678,
-     -79.269511
-    ],
-    [
-     36.201669,
-     -79.269446
-    ],
-    [
-     36.201652,
-     -79.269371
-    ],
-    [
-     36.201643,
-     -79.269306
-    ],
-    [
-     36.201635,
-     -79.269242
-    ],
-    [
-     36.201626,
-     -79.269177
-    ],
-    [
-     36.201617,
-     -79.269113
-    ],
-    [
-     36.201609,
-     -79.269048
-    ],
-    [
-     36.2016,
-     -79.268984
-    ],
-    [
-     36.201591,
-     -79.268919
-    ],
-    [
-     36.201583,
-     -79.268855
-    ],
-    [
-     36.201565,
-     -79.268779
-    ],
-    [
-     36.201557,
-     -79.268715
-    ],
-    [
-     36.201548,
-     -79.26865
-    ],
-    [
-     36.20154,
-     -79.268586
-    ],
-    [
-     36.201531,
-     -79.268521
-    ],
-    [
-     36.201522,
-     -79.268457
-    ],
-    [
-     36.201514,
-     -79.268392
-    ],
-    [
-     36.201496,
-     -79.268328
-    ],
-    [
-     36.201488,
-     -79.268263
-    ],
-    [
-     36.201479,
-     -79.268199
-    ],
-    [
-     36.20147,
-     -79.268134
-    ],
-    [
-     36.201514,
-     -79.268091
-    ],
-    [
-     36.201574,
-     -79.268091
-    ],
-    [
-     36.201626,
-     -79.268091
-    ],
-    [
-     36.201687,
-     -79.268091
-    ],
-    [
-     36.201738,
-     -79.268091
-    ],
-    [
-     36.201799,
-     -79.268091
-    ],
-    [
-     36.201851,
-     -79.268091
-    ],
-    [
-     36.201911,
-     -79.268091
-    ],
-    [
-     36.201963,
-     -79.268091
-    ],
-    [
-     36.201972,
-     -79.268027
-    ],
-    [
-     36.201989,
-     -79.267962
-    ],
-    [
-     36.201998,
-     -79.267898
-    ],
-    [
-     36.202006,
-     -79.267833
-    ],
-    [
-     36.202024,
-     -79.267769
-    ],
-    [
-     36.202032,
-     -79.267715
-    ],
-    [
-     36.20205,
-     -79.26765
-    ],
-    [
-     36.202058,
-     -79.267586
-    ],
-    [
-     36.202067,
-     -79.267521
-    ],
-    [
-     36.202084,
-     -79.267457
-    ],
-    [
-     36.202127,
-     -79.26751
-    ]
-   ],
-   "walk": "Clubhouse → #20A · ~710 yd",
-   "steps": [
-    [
-     36.202828,
-     -79.272285,
-     "1",
-     "Clubhouse: head SE to the #27 corner."
-    ],
-    [
-     36.202222,
-     -79.271263,
-     "2",
-     "#27: turn left (E)."
-    ],
-    [
-     36.202214,
-     -79.2705,
-     "3",
-     "Dark tree line: turn left (N) up to the Penthouse."
-    ],
-    [
-     36.202542,
-     -79.270037,
-     "4",
-     "Penthouse: turn right (SE) toward the #21 field."
-    ],
-    [
-     36.201514,
-     -79.268091,
-     "5",
-     "Past #21: turn left (N) along the property line."
-    ],
-    [
-     36.201963,
-     -79.268091,
-     "6",
-     "At the trail to #20A: turn right (E)."
-    ]
-   ],
-   "yd": 710,
-   "id": "20A",
-   "fromRoute": true,
-   "why": "Faces SE; SW is a crosswind (NE/SW cross), scent goes NE along the back.",
-   "pro": "Favorite; spike reported here.",
-   "con": "Crosswind only; fine but weaker than the SW-facing picks."
   }
  ],
  "taken": [],
@@ -2870,7 +2397,7 @@
   "wake": "",
   "inStand": "",
   "leave": "",
-  "note": "Fri PM: still WSW 18-21 gusting 33-39, 46-48°, cloudy. Wind eases after dark. Same SW picks: #9B, #24, #16, #22."
+  "note": "Sat AM: much lighter, SW 5 gusting 14 at dawn, WSW 8 by mid-morning, ~35° at dawn, clear and sunny (high 60). Same SW picks: #9B, #24, #16, #22. Last day of the duck split: ask about the ponds."
  },
  "parking": [
   36.198592,
@@ -2950,7 +2477,7 @@
    "yd": 810,
    "id": "9L",
    "fromRoute": true,
-   "why": "Faces NE: the SW wind is at your back and pushes scent onto the #9 field.",
+   "why": "Faces NE: the WSW wind is at your back and pushes scent onto the #9 field.",
    "tag": "Wrong wind"
   },
   {
@@ -3364,7 +2891,7 @@
    "yd": 630,
    "id": "11",
    "fromRoute": true,
-   "why": "Faces E: SW wind puts scent out front onto the clearing.",
+   "why": "Faces E: WSW wind puts scent out front onto the clearing.",
    "tag": "Wrong wind"
   },
   {
@@ -3728,7 +3255,7 @@
    "yd": 600,
    "id": "17A",
    "fromRoute": true,
-   "why": "SW is a bad wind here; scent blows onto the lane in front.",
+   "why": "Wrong wind: WSW blows scent onto the lane in front.",
    "tag": "Wrong wind"
   },
   {
@@ -3788,7 +3315,7 @@
    "yd": 250,
    "id": "26",
    "fromRoute": true,
-   "why": "Faces E: SW wind quarters from behind and carries scent onto the field.",
+   "why": "Faces E: WSW wind comes from behind and carries scent onto the field.",
    "tag": "Wrong wind"
   },
   {
@@ -4168,7 +3695,479 @@
    "yd": 590,
    "id": "17",
    "fromRoute": true,
-   "why": "Faces S: SW quartering from the right pushes scent onto its lanes.",
+   "why": "Faces S: WSW quartering from the right pushes scent onto its lanes.",
+   "tag": "Wrong wind"
+  },
+  {
+   "route": [
+    [
+     36.203217,
+     -79.272392
+    ],
+    [
+     36.203165,
+     -79.272381
+    ],
+    [
+     36.203113,
+     -79.272371
+    ],
+    [
+     36.203061,
+     -79.27236
+    ],
+    [
+     36.203009,
+     -79.272349
+    ],
+    [
+     36.202957,
+     -79.272338
+    ],
+    [
+     36.202931,
+     -79.272274
+    ],
+    [
+     36.202897,
+     -79.272209
+    ],
+    [
+     36.202871,
+     -79.272156
+    ],
+    [
+     36.202845,
+     -79.272091
+    ],
+    [
+     36.20281,
+     -79.272027
+    ],
+    [
+     36.202784,
+     -79.271962
+    ],
+    [
+     36.202758,
+     -79.271908
+    ],
+    [
+     36.202724,
+     -79.271855
+    ],
+    [
+     36.202698,
+     -79.271801
+    ],
+    [
+     36.202672,
+     -79.271747
+    ],
+    [
+     36.202637,
+     -79.271693
+    ],
+    [
+     36.202611,
+     -79.27164
+    ],
+    [
+     36.202586,
+     -79.271586
+    ],
+    [
+     36.202551,
+     -79.271532
+    ],
+    [
+     36.202525,
+     -79.271478
+    ],
+    [
+     36.202473,
+     -79.271446
+    ],
+    [
+     36.202421,
+     -79.271403
+    ],
+    [
+     36.202378,
+     -79.271371
+    ],
+    [
+     36.202326,
+     -79.271338
+    ],
+    [
+     36.202274,
+     -79.271295
+    ],
+    [
+     36.202222,
+     -79.271263
+    ],
+    [
+     36.202222,
+     -79.271199
+    ],
+    [
+     36.202214,
+     -79.271134
+    ],
+    [
+     36.202214,
+     -79.27107
+    ],
+    [
+     36.202214,
+     -79.271005
+    ],
+    [
+     36.202205,
+     -79.270941
+    ],
+    [
+     36.202205,
+     -79.270865
+    ],
+    [
+     36.202197,
+     -79.270801
+    ],
+    [
+     36.202197,
+     -79.270736
+    ],
+    [
+     36.202197,
+     -79.270672
+    ],
+    [
+     36.202188,
+     -79.270607
+    ],
+    [
+     36.202188,
+     -79.270543
+    ],
+    [
+     36.202222,
+     -79.270489
+    ],
+    [
+     36.202266,
+     -79.270435
+    ],
+    [
+     36.2023,
+     -79.270371
+    ],
+    [
+     36.202343,
+     -79.270317
+    ],
+    [
+     36.202378,
+     -79.270263
+    ],
+    [
+     36.202421,
+     -79.270209
+    ],
+    [
+     36.202465,
+     -79.270156
+    ],
+    [
+     36.202499,
+     -79.270091
+    ],
+    [
+     36.20249,
+     -79.270016
+    ],
+    [
+     36.202439,
+     -79.270005
+    ],
+    [
+     36.202387,
+     -79.269984
+    ],
+    [
+     36.202326,
+     -79.269962
+    ],
+    [
+     36.202274,
+     -79.269951
+    ],
+    [
+     36.202222,
+     -79.26993
+    ],
+    [
+     36.202171,
+     -79.269919
+    ],
+    [
+     36.202119,
+     -79.269898
+    ],
+    [
+     36.202067,
+     -79.269876
+    ],
+    [
+     36.202015,
+     -79.269855
+    ],
+    [
+     36.201963,
+     -79.269822
+    ],
+    [
+     36.201911,
+     -79.269801
+    ],
+    [
+     36.201859,
+     -79.269779
+    ],
+    [
+     36.201808,
+     -79.269747
+    ],
+    [
+     36.201756,
+     -79.269726
+    ],
+    [
+     36.201704,
+     -79.269704
+    ],
+    [
+     36.201695,
+     -79.26964
+    ],
+    [
+     36.201687,
+     -79.269575
+    ],
+    [
+     36.201678,
+     -79.269511
+    ],
+    [
+     36.201669,
+     -79.269446
+    ],
+    [
+     36.201652,
+     -79.269371
+    ],
+    [
+     36.201643,
+     -79.269306
+    ],
+    [
+     36.201635,
+     -79.269242
+    ],
+    [
+     36.201626,
+     -79.269177
+    ],
+    [
+     36.201617,
+     -79.269113
+    ],
+    [
+     36.201609,
+     -79.269048
+    ],
+    [
+     36.2016,
+     -79.268984
+    ],
+    [
+     36.201591,
+     -79.268919
+    ],
+    [
+     36.201583,
+     -79.268855
+    ],
+    [
+     36.201565,
+     -79.268779
+    ],
+    [
+     36.201557,
+     -79.268715
+    ],
+    [
+     36.201548,
+     -79.26865
+    ],
+    [
+     36.20154,
+     -79.268586
+    ],
+    [
+     36.201531,
+     -79.268521
+    ],
+    [
+     36.201522,
+     -79.268457
+    ],
+    [
+     36.201514,
+     -79.268392
+    ],
+    [
+     36.201496,
+     -79.268328
+    ],
+    [
+     36.201488,
+     -79.268263
+    ],
+    [
+     36.201479,
+     -79.268199
+    ],
+    [
+     36.20147,
+     -79.268134
+    ],
+    [
+     36.201514,
+     -79.268091
+    ],
+    [
+     36.201574,
+     -79.268091
+    ],
+    [
+     36.201626,
+     -79.268091
+    ],
+    [
+     36.201687,
+     -79.268091
+    ],
+    [
+     36.201738,
+     -79.268091
+    ],
+    [
+     36.201799,
+     -79.268091
+    ],
+    [
+     36.201851,
+     -79.268091
+    ],
+    [
+     36.201911,
+     -79.268091
+    ],
+    [
+     36.201963,
+     -79.268091
+    ],
+    [
+     36.201972,
+     -79.268027
+    ],
+    [
+     36.201989,
+     -79.267962
+    ],
+    [
+     36.201998,
+     -79.267898
+    ],
+    [
+     36.202006,
+     -79.267833
+    ],
+    [
+     36.202024,
+     -79.267769
+    ],
+    [
+     36.202032,
+     -79.267715
+    ],
+    [
+     36.20205,
+     -79.26765
+    ],
+    [
+     36.202058,
+     -79.267586
+    ],
+    [
+     36.202067,
+     -79.267521
+    ],
+    [
+     36.202084,
+     -79.267457
+    ],
+    [
+     36.202127,
+     -79.26751
+    ]
+   ],
+   "walk": "Clubhouse → #20A · ~710 yd",
+   "steps": [
+    [
+     36.202828,
+     -79.272285,
+     "1",
+     "Clubhouse: head SE to the #27 corner."
+    ],
+    [
+     36.202222,
+     -79.271263,
+     "2",
+     "#27: turn left (E)."
+    ],
+    [
+     36.202214,
+     -79.2705,
+     "3",
+     "Dark tree line: turn left (N) up to the Penthouse."
+    ],
+    [
+     36.202542,
+     -79.270037,
+     "4",
+     "Penthouse: turn right (SE) toward the #21 field."
+    ],
+    [
+     36.201514,
+     -79.268091,
+     "5",
+     "Past #21: turn left (N) along the property line."
+    ],
+    [
+     36.201963,
+     -79.268091,
+     "6",
+     "At the trail to #20A: turn right (E)."
+    ]
+   ],
+   "yd": 710,
+   "id": "20A",
+   "fromRoute": true,
+   "why": "Wrong wind: WSW is close to W, which puts scent onto its lanes.",
    "tag": "Wrong wind"
   },
   {
@@ -4234,8 +4233,8 @@
    "yd": 540,
    "id": "30",
    "fromRoute": true,
-   "why": "SW isn't its wind (wants W/NW), the tall pine sways in 35-mph gusts, and it's duck season on the twin pond.",
-   "tag": "Gusts + wrong wind"
+   "why": "Tall pine sways in 35+ mph gusts, and it's duck season on the twin pond (through Sat).",
+   "tag": "Gusts + ducks"
   }
  ],
  "trailNames": {
@@ -4267,59 +4266,11 @@
   "W": "the #19A cutoff"
  },
  "wx": {
-  "src": "AccuWeather Mebane, 4:15 AM Fri",
-  "headline": "Cold and very windy: 38-45°, feels mid-20s to low 30s. SW 16-20 mph gusting 32-37 all morning, dry.",
-  "sky": "Mostly cloudy, some sun around sunrise",
+  "src": "AccuWeather Mebane, 9:39 AM Fri",
+  "headline": "Cool and very windy: 44-48°, feels mid-30s. WSW 17-21 mph gusting 32-39, easing toward sunset, dry.",
+  "sky": "Intermittent clouds, some sun",
   "rain": "Dry (4%)",
   "hours": [
-   [
-    "6am",
-    40,
-    "SW",
-    16,
-    32,
-    0
-   ],
-   [
-    "7am",
-    38,
-    "SW",
-    18,
-    33,
-    0
-   ],
-   [
-    "8am",
-    39,
-    "SW",
-    18,
-    35,
-    0
-   ],
-   [
-    "9am",
-    40,
-    "SW",
-    18,
-    36,
-    0
-   ],
-   [
-    "10am",
-    42,
-    "SW",
-    20,
-    36,
-    0
-   ],
-   [
-    "11am",
-    45,
-    "SW",
-    20,
-    37,
-    0
-   ],
    [
     "12pm",
     46,
@@ -4327,28 +4278,79 @@
     20,
     38,
     0
+   ],
+   [
+    "1pm",
+    47,
+    "WSW",
+    21,
+    39,
+    0
+   ],
+   [
+    "2pm",
+    48,
+    "WSW",
+    21,
+    38,
+    0
+   ],
+   [
+    "3pm",
+    47,
+    "WSW",
+    20,
+    36,
+    0
+   ],
+   [
+    "4pm",
+    46,
+    "WSW",
+    18,
+    33,
+    0
+   ],
+   [
+    "5pm",
+    44,
+    "WSW",
+    17,
+    32,
+    0
+   ],
+   [
+    "6pm",
+    44,
+    "WSW",
+    16,
+    30,
+    0
    ]
   ],
   "marks": {
-   "6am": "6:35 legal",
-   "7am": "7:05 sunrise"
+   "5pm": "5:04 sunset · 5:34 end"
   },
   "notes": [
    [
+    "Warmest",
+    "48° at 2 PM, feels ~38"
+   ],
+   [
     "Coldest",
-    "38° at 7 AM, feels ~24 in the wind"
+    "44° at sunset, feels ~33"
    ],
    [
     "Scent",
-    "Drifts NE all sit"
+    "Drifts ENE all sit"
    ],
    [
     "Pressure",
-    "29.68 and steady"
+    "29.76 and rising (front passed)"
    ],
    [
     "Moon",
-    "Waning gibbous, ~89%"
+    "Waning gibbous, ~88%"
    ],
    [
     "Rut",
@@ -4356,7 +4358,7 @@
    ],
    [
     "Wind",
-    "Gusts 32-37 mph: watch for falling limbs; skip swaying ladders"
+    "Gusts to 39 mph early: watch for falling limbs; skip swaying ladders"
    ]
   ]
  },
@@ -4377,5 +4379,5 @@
   36.1979,
   -79.27529
  ],
- "altLabel": "Friday evening option"
+ "altLabel": "Saturday morning option"
 }
