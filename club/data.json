@@ -1,9 +1,9 @@
 {
- "date": "2026-11-27",
- "title": "Friday, Nov 27",
- "sit": "Evening",
+ "date": "2026-11-28",
+ "title": "Saturday, Nov 28",
+ "sit": "Morning",
  "weapon": "Gun season: rifle, muzzleloader, shotgun or bow",
- "updated": "Fri Nov 27, 9:45 AM · AccuWeather Mebane · tap any stand for route + reasons",
+ "updated": "Sat Nov 28, 4:25 AM · AccuWeather Mebane · tap any stand for route + reasons",
  "hero": {
   "legalStart": "6:35 AM",
   "sunrise": "7:05 AM",
@@ -14,7 +14,7 @@
   "leave": "",
   "inStand": ""
  },
- "why": "Strong WSW wind all evening: 20-21 mph gusting 36-39 from 1-3 PM, easing to 17 gusting 32 by sunset. 44-48°, feels 33-38, clouds breaking to some sun, dry. Pressure 29.76 and rising behind last night's front. Deer tend to bed tight in wind like this, so the last hour (4-5:30) as it eases is the best bet. Picks are stands that want a SW/W wind, then favorites and recent reports: #9B, #24, #16 and #22. #9L, #11, #17A, #26, #17, #20A and #30 put scent onto their lanes or sway in the gusts. Saw something? Tap 🦌 Deer / 🩸 Blood / ✅ Found, tap the map, then 👥 Send to club.",
+ "why": "Steady WSW wind, 7-10 mph gusting 16-23, building through the morning. 40-43° at dawn (feels 36-39), warming to 54 by 11; clouds clear to sun after sunrise, dry. Pressure 29.83 and steady. Much calmer than Friday, so deer should move better early. Picks are stands that want a SW/W wind, then favorites and recent reports: #9B, #24, #16 and #22. #9L, #11, #17A, #26, #17 and #20A put scent onto their lanes. Last day of the duck split: #30 only if nobody's on the twin pond. Saw something? Tap 🦌 Deer / 🩸 Blood / ✅ Found, tap the map, then 👥 Send to club.",
  "legal": [
   [
    "Season",
@@ -30,101 +30,101 @@
   ],
   [
    "Legal light",
-   "Ends 5:34 PM (sunset 5:04)."
+   "Starts 6:36 AM (sunrise 7:06)."
   ]
  ],
  "wind": {
   "from": "WSW",
-  "fromDeg": 243,
-  "speed": "17-21 mph; gusts 32-39",
-  "later": "WSW 21 (g39) at 1, WSW 20-21 (g36-38) 2-3, WSW 18 (g33) at 4, WSW 17 (g32) at sunset, WSW 9 after 7",
-  "note": "Steady WSW all evening, strongest early, easing toward dark. Gusts will swirl in the open cut and fields; tall ladders will sway."
+  "fromDeg": 246,
+  "speed": "7-10 mph; gusts 16-23",
+  "later": "WSW 7 (g16-18) 6-8, WSW 8 (g21) at 9, WSW 9-10 (g23) 10-11",
+  "note": "Steady WSW all morning, light at dawn and picking up after 9. Gusts will swirl some in the open cut and fields."
  },
  "hourly": [
   [
-   "12pm",
-   46,
+   "6am",
+   40,
    "WSW",
-   20,
-   38,
-   0
-  ],
-  [
-   "1pm",
-   47,
-   "WSW",
-   21,
-   39,
-   0
-  ],
-  [
-   "2pm",
-   48,
-   "WSW",
-   21,
-   38,
-   0
-  ],
-  [
-   "3pm",
-   47,
-   "WSW",
-   20,
-   36,
-   0
-  ],
-  [
-   "4pm",
-   46,
-   "WSW",
-   18,
-   33,
-   0
-  ],
-  [
-   "5pm",
-   44,
-   "WSW",
+   7,
    17,
-   32,
    0
   ],
   [
-   "6pm",
-   44,
+   "7am",
+   43,
    "WSW",
+   7,
    16,
-   30,
+   0
+  ],
+  [
+   "8am",
+   41,
+   "WSW",
+   7,
+   18,
+   0
+  ],
+  [
+   "9am",
+   46,
+   "WSW",
+   8,
+   21,
+   0
+  ],
+  [
+   "10am",
+   51,
+   "WSW",
+   9,
+   23,
+   0
+  ],
+  [
+   "11am",
+   54,
+   "WSW",
+   10,
+   23,
+   0
+  ],
+  [
+   "12pm",
+   57,
+   "WSW",
+   10,
+   23,
    0
   ]
  ],
  "sitHours": [
-  "1pm",
-  "2pm",
-  "3pm",
-  "4pm",
-  "5pm"
+  "7am",
+  "8am",
+  "9am",
+  "10am",
+  "11am"
  ],
  "conditions": [
   [
    "Temp",
-   "46° at noon, 48 at 2 (warmest), 46 at 4, 44 by sunset (feels 33-38 in the wind)"
+   "40° at 6, 43 at sunrise, 41 at 8, 46 at 9, 51 at 10, 54 by 11 (feels 36-39 early)"
   ],
   [
    "Pressure",
-   "29.76 and rising"
+   "29.83 and steady"
   ],
   [
    "Sky",
-   "Clouds breaking to intermittent sun after 1"
+   "Cloudy before dawn, clearing to mostly sunny after sunrise"
   ],
   [
    "Rain",
-   "Dry (4%)"
+   "Dry (0-7%)"
   ],
   [
    "Moon",
-   "Waning gibbous, ~88%"
+   "Waning gibbous, ~80%"
   ],
   [
    "Rut",
@@ -142,7 +142,7 @@
   "summary": ""
  },
  "checklist": [],
- "windTowardDeg": 63,
+ "windTowardDeg": 66,
  "club": [
   36.203217,
   -79.272392
@@ -213,8 +213,8 @@
    "yd": 720,
    "id": "9B",
    "fromRoute": true,
-   "why": "Favorite box; faces SW, so the WSW wind is in your face and scent goes ENE behind you. Box keeps you out of the gusts. Evening field movement here on Nov 11 (button bucks, spike, 8+ pt at ~5:06).",
-   "pro": "Good wind. Field lanes for the rifle; box blocks the wind.",
+   "why": "Favorite box; faces SW, so the WSW wind is in your face and scent goes ENE behind you. Field movement here Nov 11 (button bucks, spike, 8+ pt).",
+   "pro": "Good wind. Field lanes for the rifle.",
    "con": "~720-yd walk past the Refuge Pond. Know who's in 9L and #10 before any long shot."
   },
   {
@@ -322,9 +322,9 @@
    "yd": 980,
    "id": "24",
    "fromRoute": true,
-   "why": "Faces SW; WSW is in your face and scent goes ENE off the property. Does steady here and the tall 8-pt chased a doe here at 4:20 PM on Nov 9.",
-   "pro": "Wind in your face. Woods and creek behind give deer shelter in a blow; the crossing behind is in rifle range.",
-   "con": "~980 yd from the clubhouse (boundary trail). Ladder will move in the gusts."
+   "why": "Faces SW; WSW is in your face and scent goes ENE off the property. Does steady here; the tall 8-pt and his doe crossed the field behind it heading NW on a morning (Nov 10).",
+   "pro": "Wind in your face. The crossing behind is in rifle range.",
+   "con": "~980 yd from the clubhouse (boundary trail). Ladder moves some in the gusts."
   },
   {
    "route": [
@@ -447,8 +447,8 @@
    "yd": 940,
    "id": "16",
    "fromRoute": true,
-   "why": "Faces W; WSW is nearly in your face and carries scent ENE, off the #16-#15 trail. Bucks and shot sites reported here; Bullwinkle was seen near #15 on an evening.",
-   "pro": "Clean trail shots 72 yd S and 78 yd N. Sits in the woods, out of the worst wind.",
+   "why": "Faces W; WSW is nearly in your face and carries scent ENE, off the #16-#15 trail. Bucks and shot sites reported here.",
+   "pro": "Clean trail shots 72 yd S and 78 yd N. Sits in the woods, out of the wind.",
    "con": "~940-yd walk. Out front is cluttered with branches. Know who's in #15 and #13."
   },
   {
@@ -548,9 +548,76 @@
    "yd": 830,
    "id": "22",
    "fromRoute": true,
-   "why": "Faces W; WSW blows scent ENE, off the property. Sits where two lanes meet at the edge of the cut and thicker cover.",
+   "why": "Faces W; WSW blows scent ENE, off the property. Two lanes meet at the edge of the cut; 2 does reported here.",
    "pro": "Good wind. Long looks into the cut for the rifle.",
-   "con": "~830-yd walk. Nothing seen on one sit there; open cut gets the full gusts."
+   "con": "~830-yd walk. Nothing seen on Jeremy's sit there."
+  },
+  {
+   "route": [
+    [
+     36.203217,
+     -79.272392
+    ],
+    [
+     36.202957,
+     -79.272338
+    ],
+    [
+     36.202525,
+     -79.271478
+    ],
+    [
+     36.202222,
+     -79.271263
+    ],
+    [
+     36.202197,
+     -79.270672
+    ],
+    [
+     36.202136,
+     -79.270543
+    ],
+    [
+     36.201012,
+     -79.270457
+    ],
+    [
+     36.200321,
+     -79.270349
+    ],
+    [
+     36.199888,
+     -79.270048
+    ]
+   ],
+   "walk": "Clubhouse → #30 · ~540 yd",
+   "steps": [
+    [
+     36.202828,
+     -79.272285,
+     "1",
+     "Clubhouse: head SE to the #27 corner."
+    ],
+    [
+     36.202222,
+     -79.271263,
+     "2",
+     "#27: turn left (E)."
+    ],
+    [
+     36.20205,
+     -79.2705,
+     "3",
+     "Dark tree line: turn right (S) and follow it down to #30."
+    ]
+   ],
+   "yd": 540,
+   "id": "30",
+   "fromRoute": true,
+   "why": "Favorite rifle stand; WSW is close to its best wind (W), scent goes ENE off the twin pond crossing and the route behind. Deer on multiple hunts here.",
+   "pro": "Easy 200-yd looks; big platform. Calmer gusts today.",
+   "con": "Last day of duck season: if anyone's hunting the twin pond, #30 is out. Ranks below the top 4 for that."
   },
   {
    "route": [
@@ -613,7 +680,7 @@
    "fromRoute": true,
    "why": "Faces WSW; the wind is straight in your face and scent goes ENE away from the front. Short walk.",
    "pro": "~330-yd walk. Fawn and button buck reported here.",
-   "con": "Less recent buck activity than the top 4; that's why it's below them."
+   "con": "Less recent buck activity than the top 4."
   },
   {
    "route": [
@@ -686,9 +753,9 @@
    "yd": 720,
    "id": "15",
    "fromRoute": true,
-   "why": "Favorite and Bullwinkle country (seen on an evening), but WSW is a crosswind here: scent drifts ENE toward #16's trail and the deer coming from your right.",
-   "pro": "Long rifle lanes up the select cut; deer came in close on Nov 15.",
-   "con": "Not its best wind (wants NW/W/N). Ranks below the top 4 today."
+   "why": "Favorite and Bullwinkle country, but WSW is a crosswind here: scent drifts ENE toward #16's trail and deer coming from your right.",
+   "pro": "Long rifle lanes up the select cut; deer came in close on a Nov 15 morning.",
+   "con": "Not its best wind (wants NW/W/N). Ranks below the top 4."
   }
  ],
  "taken": [],
@@ -2397,7 +2464,7 @@
   "wake": "",
   "inStand": "",
   "leave": "",
-  "note": "Sat AM: much lighter, SW 5 gusting 14 at dawn, WSW 8 by mid-morning, ~35° at dawn, clear and sunny (high 60). Same SW picks: #9B, #24, #16, #22. Last day of the duck split: ask about the ponds."
+  "note": "Sat PM: SW 8-10 gusting 17-22, warm 59-61°, sunny and dry. Same SW picks: #9B, #24, #16, #22. Duck split ends today."
  },
  "parking": [
   36.198592,
@@ -4169,72 +4236,6 @@
    "fromRoute": true,
    "why": "Wrong wind: WSW is close to W, which puts scent onto its lanes.",
    "tag": "Wrong wind"
-  },
-  {
-   "route": [
-    [
-     36.203217,
-     -79.272392
-    ],
-    [
-     36.202957,
-     -79.272338
-    ],
-    [
-     36.202525,
-     -79.271478
-    ],
-    [
-     36.202222,
-     -79.271263
-    ],
-    [
-     36.202197,
-     -79.270672
-    ],
-    [
-     36.202136,
-     -79.270543
-    ],
-    [
-     36.201012,
-     -79.270457
-    ],
-    [
-     36.200321,
-     -79.270349
-    ],
-    [
-     36.199888,
-     -79.270048
-    ]
-   ],
-   "walk": "Clubhouse → #30 · ~540 yd",
-   "steps": [
-    [
-     36.202828,
-     -79.272285,
-     "1",
-     "Clubhouse: head SE to the #27 corner."
-    ],
-    [
-     36.202222,
-     -79.271263,
-     "2",
-     "#27: turn left (E)."
-    ],
-    [
-     36.20205,
-     -79.2705,
-     "3",
-     "Dark tree line: turn right (S) and follow it down to #30."
-    ]
-   ],
-   "yd": 540,
-   "id": "30",
-   "fromRoute": true,
-   "why": "Tall pine sways in 35+ mph gusts, and it's duck season on the twin pond (through Sat).",
-   "tag": "Gusts + ducks"
   }
  ],
  "trailNames": {
@@ -4266,79 +4267,80 @@
   "W": "the #19A cutoff"
  },
  "wx": {
-  "src": "AccuWeather Mebane, 9:39 AM Fri",
-  "headline": "Cool and very windy: 44-48°, feels mid-30s. WSW 17-21 mph gusting 32-39, easing toward sunset, dry.",
-  "sky": "Intermittent clouds, some sun",
-  "rain": "Dry (4%)",
+  "src": "AccuWeather Mebane, 4:16 AM Sat",
+  "headline": "Cool and breezy: 40-43° at dawn (feels upper 30s), mid-50s by 11. WSW 7-10 mph gusting 16-23, clearing to sun, dry.",
+  "sky": "Clearing to mostly sunny after sunrise",
+  "rain": "Dry (0-7%)",
   "hours": [
    [
-    "12pm",
-    46,
+    "6am",
+    40,
     "WSW",
-    20,
-    38,
-    0
-   ],
-   [
-    "1pm",
-    47,
-    "WSW",
-    21,
-    39,
-    0
-   ],
-   [
-    "2pm",
-    48,
-    "WSW",
-    21,
-    38,
-    0
-   ],
-   [
-    "3pm",
-    47,
-    "WSW",
-    20,
-    36,
-    0
-   ],
-   [
-    "4pm",
-    46,
-    "WSW",
-    18,
-    33,
-    0
-   ],
-   [
-    "5pm",
-    44,
-    "WSW",
+    7,
     17,
-    32,
     0
    ],
    [
-    "6pm",
-    44,
+    "7am",
+    43,
     "WSW",
+    7,
     16,
-    30,
+    0
+   ],
+   [
+    "8am",
+    41,
+    "WSW",
+    7,
+    18,
+    0
+   ],
+   [
+    "9am",
+    46,
+    "WSW",
+    8,
+    21,
+    0
+   ],
+   [
+    "10am",
+    51,
+    "WSW",
+    9,
+    23,
+    0
+   ],
+   [
+    "11am",
+    54,
+    "WSW",
+    10,
+    23,
+    0
+   ],
+   [
+    "12pm",
+    57,
+    "WSW",
+    10,
+    23,
     0
    ]
   ],
   "marks": {
-   "5pm": "5:04 sunset · 5:34 end"
+   "6am": "6:36 legal",
+   "7am": "7:06 sunrise"
   },
   "notes": [
    [
-    "Warmest",
-    "48° at 2 PM, feels ~38"
+    "Coldest",
+    "40° at 6 AM, feels ~36"
    ],
    [
-    "Coldest",
-    "44° at sunset, feels ~33"
+    "Warmest",
+    "54° at 11, feels ~54"
    ],
    [
     "Scent",
@@ -4346,19 +4348,15 @@
    ],
    [
     "Pressure",
-    "29.76 and rising (front passed)"
+    "29.83 and steady"
    ],
    [
     "Moon",
-    "Waning gibbous, ~88%"
+    "Waning gibbous, ~80%"
    ],
    [
     "Rut",
     "Post-peak"
-   ],
-   [
-    "Wind",
-    "Gusts to 39 mph early: watch for falling limbs; skip swaying ladders"
    ]
   ]
  },
@@ -4379,5 +4377,5 @@
   36.1979,
   -79.27529
  ],
- "altLabel": "Saturday morning option"
+ "altLabel": "Saturday evening option"
 }
